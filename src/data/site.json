@@ -1,11 +1,11 @@
 {
-  "name": "Eleventy Duo",
-  "description": "Eleventy Duo is a minimal and beautiful Eleventy theme for personal blogs.",
+  "name": "Bastian Gruber",
+  "description": "Personal blog of Bastian Gruber.",
   "url": "https://eleventyduo.netlify.app",
   "author": {
-    "name": "Author Name",
-    "email": "author@site.com",
-    "twitterHandle": "author_handle"
+    "name": "Bastian Gruber",
+    "email": "info@bastiangruber.ca",
+    "twitterHandle": "recvonline"
   },
   "defaultSocialImage": "/images/default-social-image.png",
   "headerLinks": [
@@ -21,19 +21,14 @@
     }
   ],
   "socialLinks": [
-    {
-      "text": "Instagram",
-      "url": "https://instagram.com/",
-      "external": true
-    },
-    {
+   {
       "text": "GitHub",
-      "url": "https://github.com/yinkakun/eleventy-duo",
+      "url": "https://github.com/gruberb",
       "external": true
     },
     {
-      "text": "Twitter",
-      "url": "https://twitter.com/",
+      "text": "Mastodon",
+      "url": "https://hachyderm.io/@bastian",
       "external": true
     }
   ],

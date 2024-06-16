@@ -1,7 +1,7 @@
-name: Build on PR
+name: Build & Deploy
 
 on:
-  pull_request:
+  push:
     branches: ['main']
 
 jobs:
@@ -10,7 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: ['14.17.6']
+        node-version: ['20.14.0']
 
     steps:
       - uses: actions/checkout@v4
@@ -24,5 +24,17 @@ jobs:
       - name: Install packages
         run: npm ci
 
+      - name: Install Sass
+        run: npm install -g sass
+
       - name: Run npm build
         run: npm run build
+
+      - name: Create CNAME file
+        run: echo 'bastiangruber.ca' > public/CNAME
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public

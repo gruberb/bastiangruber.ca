@@ -54,3 +54,25 @@
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
+
+.sidecar {
+  background-color: rgba(200,1,1, 0.1);
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 85%;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+
+.sidecar h5 {
+  font-weight: bold;
+}
+
+.info {
+  padding: 15px;
+  font-size: 85%;
+  background-color: rgba(195, 255, 104, 0.5);
+  margin-bottom: 10px;
+}
