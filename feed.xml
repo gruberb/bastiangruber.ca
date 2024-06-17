@@ -26,7 +26,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 </div>
 <hr>
 <h4>TL;DR</h4>
-<img src="https://recv.online/share/tco_overview.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png" />
 <hr>
 <p>When we talk about a web service, we, more often than not, mean deployed code which listens on a certain IP address and port and responds to HTTP messages. There are many steps involved for two parties to be able to communicate with each other. Application developers are mainly confronted with two pieces of this process: TCP and HTTP.</p>
 <p>TCP is a protocol which two parties use to establish a connection. They follow a certain pattern (three-way-handshake) where they send and receive short messages to negotiate the connection details. After establishing this connection, you can receive and send HTTP messages to the other party. HTTP is a stateless protocol which demands a response for every request, and defines, besides other options, the size and format of the data it is sending.</p>
