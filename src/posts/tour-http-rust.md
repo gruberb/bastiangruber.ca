@@ -13,7 +13,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 
 ---
 <h4>TL;DR</h4>
-<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png?raw=true" />
 
 ---
 
@@ -83,7 +83,7 @@ Therefore, Rust decided just to include a basic understanding of TCP in the stan
 
 There are also crates for web frameworks, which include all the layers beneath them (HTTP, TCP etc.) and offer all the modern ergonomics like parsing URL query parameter, reading and returning JSON and so on.
 
-<img src="https://recv.online/share/crates.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/figure_14.png?raw=true" />
 
 This also gives you a greater choice: If you just want a minimal functioning application server without much bloat doing one thing, you can create the few functions you need by hand and have a lightweight solution afterwards.
 
@@ -102,7 +102,7 @@ When the client sends a HTTP request, the kernel is wrapping the data in a packa
 
 If you want to dig deeper into the kernel side of networking, I highly recommend <a href="https://beej.us/guide/bgnet/html/" target="_blank">Beej's Guide to Network Programming</a>.
 
-<img src="https://recv.online/share/kernel.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/kernel.png?raw=true"/>
 
 When we run a web server in Rust, we also have a socket to the operating system side where we can listen to incoming messages. The kernel’s job is to copy the data from the incoming TCP message onto our internal socket and notifies us when new data arrived.
 
