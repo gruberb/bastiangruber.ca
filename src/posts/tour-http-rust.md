@@ -13,7 +13,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 
 ---
 <h4>TL;DR</h4>
-<img src="https://recv.online/share/tco_overview.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png" />
 
 ---
 
