@@ -30,7 +30,12 @@
       "text": "Mastodon",
       "url": "https://hachyderm.io/@bastian",
       "external": true
-    }
+    },
+    {
+      "text": "Book",
+      "url": "https://www.manning.com/books/rust-web-development",
+      "external": true
+    }  
   ],
   "footerLinks": [
     {
