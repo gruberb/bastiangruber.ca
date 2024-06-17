@@ -5,4 +5,4 @@ title: 'Bastian Gruber'
 
 # Hello World
 
-This the personal website of Bastian Gruber, Software Engineer working at mozilla.
+This the personal website of Bastian Gruber, Software Engineer working at Mozilla.
