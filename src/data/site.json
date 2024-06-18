@@ -15,13 +15,18 @@
       "external": false
     },
     {
+      "text": "Talks & Interviews",
+      "url": "/talks",
+      "external": false
+    },
+    {
       "text": "About",
       "url": "/about",
       "external": false
     }
   ],
   "socialLinks": [
-   {
+    {
       "text": "GitHub",
       "url": "https://github.com/gruberb",
       "external": true
@@ -40,7 +45,7 @@
       "text": "Website for the book",
       "url": "https://rustwebdevelopment.com",
       "external": true
-    }  
+    }
   ],
   "footerLinks": [
     {
