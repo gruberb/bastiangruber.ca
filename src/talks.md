@@ -15,9 +15,9 @@ layout: talks.njk
 
 # Talks
 * [2023][Video] [Live Series Webinar - Asynchronous Rust](https://www.youtube.com/watch?v=kSQ9-JSl0z4)
-* [2023][Slides] [Rust MeetUp Melbourne - The Joy and Adventures of Writing Rust for the Web](https://www.slideshare.net/slideshow/rust-melbourne-meetup-rust-web-development/269743693)
-* [2021] Rust Vancouver MeetUp - Your Rust Web Development Tool Set
-* [2021] Rust Oslo MeetUp - Rust for Web Development
+* [2023][Slides] [Rust Melbourne - The Joy and Adventures of Writing Rust for the Web](https://www.slideshare.net/slideshow/rust-melbourne-meetup-rust-web-development/269743693)
+* [2021] Rust Vancouver - Your Rust Web Development Tool Set
+* [2021] Rust Oslo - Rust for Web Development
 * [2021][Video] [Rust&Tell Berlin - One tutorial to rule them all](https://youtu.be/QoatPlzc0-Y)
 * [2021][Video] [Why you want to choose Rust for Web Development](https://youtu.be/s2Xk3dMTHg8)
 * [2021][Video] [Rust Web Development Q&A](https://youtu.be/t14FkAChaxQ)

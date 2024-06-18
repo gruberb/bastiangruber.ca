@@ -38,11 +38,6 @@
     },
     {
       "text": "Book",
-      "url": "https://www.manning.com/books/rust-web-development",
-      "external": true
-    },
-    {
-      "text": "Website for the book",
       "url": "https://rustwebdevelopment.com",
       "external": true
     }
