@@ -52,13 +52,13 @@ A message sent to a server has to go through multiple layers and geographically 
 
 As we can see in the following figure, a client can’t just send over data to a server. It needs to go through many different routers to find the right server. For it not to get lost, a user application and the kernel are adding several headers to it, so each layer of the communication process knows where to route it to.
 
-<img src="https://recv.online/share/osi.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/osi.png?raw=true" />
 
 A packet goes through these different layers, and almost all of them add an extra header on top so the next layer knows how to deal with the information. Your application adds a HTTP header on top of the data it wants to send, before the kernel adds the TCP, IP and Ethernet header.
 
 The receiving server goes through the same process but in reverse. It has to dismantle each header until it can read the data inside of it.
 
-<img src="https://recv.online/share/layers.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/header.png?raw=true" />
 
 The added header sizes are standardized, so the operating system and the kernel know how many bytes they have to strip out until they can read the data. We can use this information now to get a better grasp on our data we receive.
 
