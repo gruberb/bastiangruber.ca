@@ -51,10 +51,10 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 </div>
 <p>A message sent to a server has to go through multiple layers and geographically different locations for it to arrive. To get a better understanding of these different layers, the OSI model was created. It is a conceptual framework to standardize the communications.</p>
 <p>As we can see in the following figure, a client can’t just send over data to a server. It needs to go through many different routers to find the right server. For it not to get lost, a user application and the kernel are adding several headers to it, so each layer of the communication process knows where to route it to.</p>
-<img src="https://recv.online/share/osi.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/osi.png?raw=true" />
 <p>A packet goes through these different layers, and almost all of them add an extra header on top so the next layer knows how to deal with the information. Your application adds a HTTP header on top of the data it wants to send, before the kernel adds the TCP, IP and Ethernet header.</p>
 <p>The receiving server goes through the same process but in reverse. It has to dismantle each header until it can read the data inside of it.</p>
-<img src="https://recv.online/share/layers.png" />
+<img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/header.png?raw=true" />
 <p>The added header sizes are standardized, so the operating system and the kernel know how many bytes they have to strip out until they can read the data. We can use this information now to get a better grasp on our data we receive.</p>
 <p>In the OSI overview figure earlier, we see that the ethernet and IP header are pretty non-negotiable. But everything else is more in our control. We can choose UDP for example instead of TCP and can use our own protocol instead of using HTTP. We can, for example, have security reasons to implement our own protocol (with an own header size), so intruders who are reading our messages can’t make sense of them.</p>
 <p>Where does Rust come into play? A web service has to support the following mechanism for it to be able to create connection, receiving messages and sending responses:</p>
