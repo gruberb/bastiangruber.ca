@@ -145,13 +145,9 @@ This is a step in the right direction. But why don’t we see any data or HTTP h
 
 When reading from the stream like that, the baseline we expect is UTF8 encoded text. At this point, the kernel already stripped away the TCP header and all we have left is the data encapsulated in it. This can either be HTTP headers + data or some other headers attached to the data.
 
-<img src="https://recv.online/share/message.png" />
-
-We marked the Session layer with an asterisk (*), because technically, the Linux Kernel doesn’t concern itself with the OSI model and implements its own mechanics. However, the idea of keeping a connection is handled in the kernel, and when copying the data over to the socket for the Rust application, the TCP header will be removed.
-
 Parsing our stream content, we should see the headers and also the data in plain text, and it is on us to strip away the headers to get to the real data of the message. Headers however play an important role: They help us interpret the data we receive.
 
-There are plenty of different HTTP header, and the server is in charge to interpret them in the right way and work with them.
+There are many [different HTTP headers](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers), and the server is in charge to interpret them in the right way and work with them.
 
 When using a web framework later on, all the details are abstracted away. However it is vital to understand the flow how information arrives at your application so later on, you can choose asynchronous strategies, your own protocol and where to look for optimizations.
 
