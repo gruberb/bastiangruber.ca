@@ -5,7 +5,7 @@
   <link href="https://eleventyduo.netlify.app/feed.xml" rel="self"/>
   <link href="https://eleventyduo.netlify.app/"/>
   
-    <updated>2024-06-16T00:00:00Z</updated>
+    <updated>2024-07-18T00:00:00Z</updated>
   
   <id>https://eleventyduo.netlify.app</id>
   <author>
@@ -139,6 +139,45 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 <div class="info">
 This article is part of a chapter of <a href="https://www.manning.com/books/rust-web-development" target="_blank">Rust Web Development</a> which didn't make the cut to be in the book.
 </div>
+
+    ]]>
+      </content>
+    </entry>
+  
+    
+    <entry>
+      <title>Is this product helping to build community?</title>
+      <link href="https://eleventyduo.netlify.app/posts/is-this-product-helping-to-build-community/"/>
+      <updated>2024-07-18T00:00:00Z</updated>
+      <id>https://eleventyduo.netlify.app/posts/is-this-product-helping-to-build-community/</id>
+      <content type="html">
+        <![CDATA[
+      <p>I met a friend the other day, and we got to talk about community owned products. He works in the field of equalizing internet access for remote communities, but mentioned that not just remote communities profit from owning their own fibre connection, but every commounity would.</p>
+<p>Two sentences (which serve as a perfect TL;DR) stuck with me:</p>
+<blockquote>
+<p>Is the money you spend a one-way street, or is it flowing back into the local community?</p>
+</blockquote>
+<blockquote>
+<p>Self-made solutions cause friction, and are not as easy to use as ready-made products by big corporations. But this gives people the chance to work together, udnerstand the underlying technologie, and build (or strengthen) a community along the way.</p>
+</blockquote>
+<p>Which means for me, seeing products not as a &quot;How easy is it to fit them into my lifestyle&quot;, but more: Do they offer a chance to share this experience with a community, do I need help building or using them from a community? And if I purchase a ready-made product, does the money I spent stay in the community, or is it a &quot;one-way-street&quot;.</p>
+<p>His example was using Starlink. On paper, it seems nice to connect remote locations to the internet. But a) the money spend is a one-way-street into Elons Musk pocket, and doesn't flow back to the remote location (aka either owning the infrastructure, or paying a local provider which then in returns spends the money locally again). And b), you buy a ready-made product which is meant to isolate oneself even more from a community. <a href="https://theconversation.com/the-remote-british-village-that-built-one-of-the-fastest-internet-networks-in-the-uk-137946">You don't need a bunch of people</a> setting it up <a href="https://www.youtube.com/watch?v=dmAkjKQF0D0">and maintaining it</a>. You pay a corporation far, far away from you.</p>
+<p>There are lots of thoughts which came up for me after this conversation. Having moved from Berlin, Germany, to a small community in Nova Scotia, Canada, this struck a chord. I went through my hardware and software decisions, and re-visited them through the &quot;community lens&quot;.</p>
+<h3>Laptop: Framework AMD 13&quot;</h3>
+<p>I think this is a rather good decision. It's not the best one, but there is a vibrant community of Linux OS developers trying to optimize for this device. It just happened that the company is going down the grassroots path, where their hope is to gather developers and builders, so they can compete with the larger manufactures.</p>
+<p>Another good criteria is that I can replace parts of the laptop. Which means I can teach people, we can get together and help each other repair laptops.</p>
+<h3>Arch Linux</h3>
+<p>My main OS on this device is Arch. I think Linux is one of the best options if you look at this decision through the community lens. Open Source, you can technically contribute and engage with the community.</p>
+<h3>iPhone 13</h3>
+<p>Not a good decision, but I don't see much of a good decision when it comes to smartphones. Maybe the <a href="https://www.thelightphone.com/lightiii">Lightphone</a> or the <a href="https://shop.fairphone.com/fairphone-5">Fairphone</a> are better alternatives.</p>
+<h3>Internet connection</h3>
+<p>I don't own my fibre connection, and I am reliant on a big provider. At least I run my own DNS server, so I can filter and block requests to advertisers and other websites I don't want to see or engage with. But this doesn't allow me to understand the technology better, nor does it build community. I would really love to co-own my fibre connection.</p>
+<h3>Digital life</h3>
+<p>I am slowly moving away from my iCloud environment, and run my own server with everything I need: Files, RSS reader, DNS server etc. Does this help build community? A bit. With this knowledge, I can teach others how to run their own DNS server, or host community shared files without relying on Google. I could even run my own physical home server, and community members could pay me a small fee instead of Google or Apple.</p>
+<h3>Living in a Co-Housing community</h3>
+<p>Definetely the best decision in this regards, which opened my eyes a lot. I moved with my family to a co-housing community from Berlin to Nova Scotia. Every day I meet people I would usually never engage with. I know all my neighbours, share food, tools and other resources. I learn from them and give knowledge and help back. This new way of living opened my eyes what should be front and centre: Local community helping each other out. Other things like professions, careers and products are secondary.</p>
+<hr>
+<p>This is just a small blog post to keep reminding me what I should look out for when building and purchasing products. This also reminds me of blogging and building more. Sharing what I have built, and engage with other communities.</p>
 
     ]]>
       </content>
