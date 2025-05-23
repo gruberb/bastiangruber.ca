@@ -1,8 +1,15 @@
---- 
-layout: base.njk 
-permalink: /blog/ 
 ---
-
+layout: base.njk
+permalink: /blog/
+---
+<section class="projects-hero">
+  <div class="projects-hero__content">
+    <h1 class="projects-hero__title">Blog</h1>
+    <p class="projects-hero__description">
+      Thoughts and in-depth articles about Software Engineering and anything which just comes to my mind.
+    </p>
+  </div>
+</section>
 <div class="compact-blog">
   {% set postslist = collections.posts %}
   {% include "compact-posts-list.njk" %}
