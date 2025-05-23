@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Bastian Gruber</title>
   <subtitle></subtitle>
-  <link href="https://eleventyduo.netlify.app/feed.xml" rel="self"/>
-  <link href="https://eleventyduo.netlify.app/"/>
+  <link href="https://bastiangruber.ca/feed.xml" rel="self"/>
+  <link href="https://bastiangruber.ca/"/>
   
-    <updated>2024-07-18T00:00:00Z</updated>
+    <updated>2024-06-16T00:00:00Z</updated>
   
-  <id>https://eleventyduo.netlify.app</id>
+  <id>https://bastiangruber.ca</id>
   <author>
     <name>Bastian Gruber</name>
     <email>info@bastiangruber.ca</email>
@@ -16,16 +16,16 @@
     
     <entry>
       <title>Tour of a HTTP request in Rust</title>
-      <link href="https://eleventyduo.netlify.app/posts/tour-of-a-http-request-in-rust/"/>
+      <link href="https://bastiangruber.ca/posts/tour-of-a-http-request-in-rust/"/>
       <updated>2024-06-16T00:00:00Z</updated>
-      <id>https://eleventyduo.netlify.app/posts/tour-of-a-http-request-in-rust/</id>
+      <id>https://bastiangruber.ca/posts/tour-of-a-http-request-in-rust/</id>
       <content type="html">
         <![CDATA[
       <div class="info">
 This article is part of a chapter of <a href="https://www.manning.com/books/rust-web-development" target="_blank">Rust Web Development</a> which didn't make the cut to be in the book.
 </div>
 <hr>
-<h4>TL;DR</h4>
+<h4 class="tldr">TL;DR</h4>
 <img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png?raw=true" />
 <hr>
 <p>When we talk about a web service, we, more often than not, mean deployed code which listens on a certain IP address and port and responds to HTTP messages. There are many steps involved for two parties to be able to communicate with each other. Application developers are mainly confronted with two pieces of this process: TCP and HTTP.</p>
@@ -76,7 +76,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 <p>This also gives you a greater choice: If you just want a minimal functioning application server without much bloat doing one thing, you can create the few functions you need by hand and have a lightweight solution afterwards.</p>
 <p>If you are coming from Go, NodeJS or Java, this means a shift in perspective. You probably have to look for a library which supports your needs from the start instead of going a few more miles without thinking about help from the community.</p>
 <p>In addition to HTTP, you also need to make sure the connection between client and server is secure. This is handled via TLS (Transport Layer Security), a successor of SSL. Rust also hasn’t built-in TLS support, but there exist a few packages which support you in enabling TLS in your application.</p>
-<h3>Opening a connection</h3>
+<h2>Opening a connection</h2>
 <p>We look at an example where a browser application is sending a HTTP request to our web service which is written in Rust. We will dive shortly into how exactly the bytes arrive at the kernel, and how our Rust application is getting the bytes delivered into the running application. Note that this is all abstracted away through libraries, but you can later on choose not to use such library and implement something via the Rust core library itself.</p>
 <p>In addition, it is helpful to know or at least heart about it once how exactly the flow of bytes in a web service works, so you can spot bugs, bottlenecks and other misconfigurations later on in your running application.</p>
 <p>When the client sends a HTTP request, the kernel is wrapping the data in a package with a HTTP and TCP header attached to it. It arrives on our server at the so called NIC (network interface card). The client first has to establish a TCP connection to our server. Once done, our kernel opened a socket to which is listening to this address for incoming messages.</p>
@@ -103,7 +103,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 <p>Parsing our stream content, we should see the headers and also the data in plain text, and it is on us to strip away the headers to get to the real data of the message. Headers however play an important role: They help us interpret the data we receive.</p>
 <p>There are many <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers">different HTTP headers</a>, and the server is in charge to interpret them in the right way and work with them.</p>
 <p>When using a web framework later on, all the details are abstracted away. However it is vital to understand the flow how information arrives at your application so later on, you can choose asynchronous strategies, your own protocol and where to look for optimizations.</p>
-<h3>Adding HTTP</h3>
+<h2>Adding HTTP</h2>
 <p>The <code>TcpListener</code> gave us a stream, which we need to read and interpret. We have to somehow take this stream and read what’s in it. For this, we need a few components. First, we need to create a new function which takes an incoming stream and writes the bytes back to a local buffer. From there we can parse the data accordingly and send back an answer.</p>
 <p>We add a helper function which does exactly that for us.</p>
 <pre class="language-rust"><code class="language-rust">…<br><br><span class="token keyword">fn</span> <span class="token function-definition function">handle_stream</span><span class="token punctuation">(</span><span class="token keyword">mut</span> stream<span class="token punctuation">:</span> <span class="token class-name">TcpStream</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>    <span class="token keyword">let</span> <span class="token keyword">mut</span> buffer <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token number">1024</span><span class="token punctuation">]</span><span class="token punctuation">;</span><br>    stream<span class="token punctuation">.</span><span class="token function">read</span><span class="token punctuation">(</span><span class="token operator">&amp;</span><span class="token keyword">mut</span> buffer<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">unwrap</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token macro property">println!</span><span class="token punctuation">(</span><span class="token string">"Request: {}"</span><span class="token punctuation">,</span> <span class="token class-name">String</span><span class="token punctuation">::</span><span class="token function">from_utf8_lossy</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>buffer<span class="token punctuation">[</span><span class="token punctuation">..</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token punctuation">}</span><br>…<br></code></pre>
@@ -139,45 +139,6 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 <div class="info">
 This article is part of a chapter of <a href="https://www.manning.com/books/rust-web-development" target="_blank">Rust Web Development</a> which didn't make the cut to be in the book.
 </div>
-
-    ]]>
-      </content>
-    </entry>
-  
-    
-    <entry>
-      <title>Is this product helping to build community?</title>
-      <link href="https://eleventyduo.netlify.app/posts/is-this-product-helping-to-build-community/"/>
-      <updated>2024-07-18T00:00:00Z</updated>
-      <id>https://eleventyduo.netlify.app/posts/is-this-product-helping-to-build-community/</id>
-      <content type="html">
-        <![CDATA[
-      <p>I met a friend the other day, and we got to talk about community owned products. He works in the field of equalizing internet access for remote communities, but mentioned that not just remote communities profit from owning their own fibre connection, but every commounity would.</p>
-<p>Two sentences (which serve as a perfect TL;DR) stuck with me:</p>
-<blockquote>
-<p>Is the money you spend a one-way street, or is it flowing back into the local community?</p>
-</blockquote>
-<blockquote>
-<p>Self-made solutions cause friction, and are not as easy to use as ready-made products by big corporations. But this gives people the chance to work together, udnerstand the underlying technologie, and build (or strengthen) a community along the way.</p>
-</blockquote>
-<p>Which means for me, seeing products not as a &quot;How easy is it to fit them into my lifestyle&quot;, but more: Do they offer a chance to share this experience with a community, do I need help building or using them from a community? And if I purchase a ready-made product, does the money I spent stay in the community, or is it a &quot;one-way-street&quot;.</p>
-<p>His example was using Starlink. On paper, it seems nice to connect remote locations to the internet. But a) the money spend is a one-way-street into Elons Musk pocket, and doesn't flow back to the remote location (aka either owning the infrastructure, or paying a local provider which then in returns spends the money locally again). And b), you buy a ready-made product which is meant to isolate oneself even more from a community. <a href="https://theconversation.com/the-remote-british-village-that-built-one-of-the-fastest-internet-networks-in-the-uk-137946">You don't need a bunch of people</a> setting it up <a href="https://www.youtube.com/watch?v=dmAkjKQF0D0">and maintaining it</a>. You pay a corporation far, far away from you.</p>
-<p>There are lots of thoughts which came up for me after this conversation. Having moved from Berlin, Germany, to a small community in Nova Scotia, Canada, this struck a chord. I went through my hardware and software decisions, and re-visited them through the &quot;community lens&quot;.</p>
-<h3>Laptop: Framework AMD 13&quot;</h3>
-<p>I think this is a rather good decision. It's not the best one, but there is a vibrant community of Linux OS developers trying to optimize for this device. It just happened that the company is going down the grassroots path, where their hope is to gather developers and builders, so they can compete with the larger manufactures.</p>
-<p>Another good criteria is that I can replace parts of the laptop. Which means I can teach people, we can get together and help each other repair laptops.</p>
-<h3>Arch Linux</h3>
-<p>My main OS on this device is Arch. I think Linux is one of the best options if you look at this decision through the community lens. Open Source, you can technically contribute and engage with the community.</p>
-<h3>iPhone 13</h3>
-<p>Not a good decision, but I don't see much of a good decision when it comes to smartphones. Maybe the <a href="https://www.thelightphone.com/lightiii">Lightphone</a> or the <a href="https://shop.fairphone.com/fairphone-5">Fairphone</a> are better alternatives.</p>
-<h3>Internet connection</h3>
-<p>I don't own my fibre connection, and I am reliant on a big provider. At least I run my own DNS server, so I can filter and block requests to advertisers and other websites I don't want to see or engage with. But this doesn't allow me to understand the technology better, nor does it build community. I would really love to co-own my fibre connection.</p>
-<h3>Digital life</h3>
-<p>I am slowly moving away from my iCloud environment, and run my own server with everything I need: Files, RSS reader, DNS server etc. Does this help build community? A bit. With this knowledge, I can teach others how to run their own DNS server, or host community shared files without relying on Google. I could even run my own physical home server, and community members could pay me a small fee instead of Google or Apple.</p>
-<h3>Living in a Co-Housing community</h3>
-<p>Definetely the best decision in this regards, which opened my eyes a lot. I moved with my family to a co-housing community from Berlin to Nova Scotia. Every day I meet people I would usually never engage with. I know all my neighbours, share food, tools and other resources. I learn from them and give knowledge and help back. This new way of living opened my eyes what should be front and centre: Local community helping each other out. Other things like professions, careers and products are secondary.</p>
-<hr>
-<p>This is just a small blog post to keep reminding me what I should look out for when building and purchasing products. This also reminds me of blogging and building more. Sharing what I have built, and engage with other communities.</p>
 
     ]]>
       </content>

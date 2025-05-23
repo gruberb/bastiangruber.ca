@@ -3,7 +3,7 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/posts/tour-of-a-http-request-in-rust/</loc>
+        <loc>https://bastiangruber.ca/posts/tour-of-a-http-request-in-rust/</loc>
         
           <lastmod>2024-06-16T00:00:00.000Z</lastmod>
         
@@ -14,20 +14,9 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/posts/is-this-product-helping-to-build-community/</loc>
+        <loc>https://bastiangruber.ca/about/</loc>
         
-          <lastmod>2024-07-18T00:00:00.000Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://eleventyduo.netlify.app/about/</loc>
-        
-          <lastmod>2024-07-19T02:06:44.542Z</lastmod>
+          <lastmod>2025-05-23T18:00:36.905Z</lastmod>
         
         
         
@@ -36,20 +25,9 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/blog/</loc>
+        <loc>https://bastiangruber.ca/blog/</loc>
         
-          <lastmod>2024-07-19T02:06:44.542Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://eleventyduo.netlify.app/</loc>
-        
-          <lastmod>2024-07-19T02:06:44.550Z</lastmod>
+          <lastmod>2025-05-23T18:00:36.905Z</lastmod>
         
         
         
@@ -58,20 +36,9 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/robots.txt</loc>
+        <loc>https://bastiangruber.ca/</loc>
         
-          <lastmod>2024-07-19T02:06:44.550Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://eleventyduo.netlify.app/tags/community/</loc>
-        
-          <lastmod>2024-07-19T02:06:44.550Z</lastmod>
+          <lastmod>2025-05-23T18:00:36.915Z</lastmod>
         
         
         
@@ -80,9 +47,9 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/tags/rust/</loc>
+        <loc>https://bastiangruber.ca/projects/</loc>
         
-          <lastmod>2024-07-19T02:06:44.550Z</lastmod>
+          <lastmod>2025-05-23T18:00:36.916Z</lastmod>
         
         
         
@@ -91,9 +58,31 @@
   
     
       <url>
-        <loc>https://eleventyduo.netlify.app/talks/</loc>
+        <loc>https://bastiangruber.ca/robots.txt</loc>
         
-          <lastmod>2024-07-19T02:06:44.550Z</lastmod>
+          <lastmod>2025-05-23T18:00:36.916Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/rust/</loc>
+        
+          <lastmod>2025-05-23T18:00:36.916Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/talks/</loc>
+        
+          <lastmod>2025-05-23T18:00:36.916Z</lastmod>
         
         
         
