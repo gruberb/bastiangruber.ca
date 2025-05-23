@@ -5,7 +5,7 @@ layout: base
 
 <section class="projects-hero">
   <div class="projects-hero__content">
-    <h1 class="projects-hero__title">Projects</h1>
+    <h1 class="projects-hero__title">Side Projects</h1>
     <p class="projects-hero__description">
       A collection of tools and applications I've built to solve real-world problems.
     </p>

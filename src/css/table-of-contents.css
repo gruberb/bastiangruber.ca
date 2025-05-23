@@ -48,7 +48,7 @@
     display: block;
     padding: 0.5rem 0.75rem;
     font-size: var(--text-sm);
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     border-radius: var(--radius-md);
     transition: all 0.2s ease;
@@ -57,15 +57,13 @@
 }
 
 .toc-link:hover {
-    color: var(--primary);
-    background-color: var(--surface);
-    border-left-color: var(--primary);
+    color: var(--text-primary);
+    background: var(--primary);
 }
 
 .toc-link.active {
-    color: var(--primary);
-    background-color: var(--surface);
-    border-left-color: var(--primary);
+    color: var(--text-primary);
+    background: var(--primary);
     font-weight: 500;
 }
 
