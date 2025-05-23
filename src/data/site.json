@@ -37,8 +37,18 @@
       "external": true
     },
     {
+      "text": "LinkedIn",
+      "url": "https://www.linkedin.com/in/bastiangruber/",
+      "external": true
+    },
+    {
       "text": "Mastodon",
       "url": "https://hachyderm.io/@bastian",
+      "external": true
+    },
+    {
+      "text": "Bluesky",
+      "url": "https://bsky.app/profile/bastiangruber.bsky.social",
       "external": true
     },
     {

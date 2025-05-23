@@ -1,12 +1,19 @@
 ---
-title: About Bastian Gruber
-layout: about.njk
-name: Bastian Gruber
+layout: base.njk
+# Title and hero subtitle
+hero:
+  title: "Bastian Gruber"
+  subtext: "Senior Software Engineer, meetup-organizer, and ultra-marathon enthusiast living on Nova Scotia’s South Shore."
+# Main profile image, referenced once
 image: '/images/me.png'
 ---
 
-Bastian Gruber is a Software Engineer working at Mozilla, with well over 15 years of experience. 
-
-Before moving to the East Coast of Canada, he lived for 10 years in Berlin, Germany. He worked in StartUps and bigger corporations, and is a serial MeetUp group founder. With the most popular one being "Rust & Tell". 
-
-Next tinkering with Software (and Hardware), Bastian likes to challenge himself in long-distance endurance events, and is training for his first 100 mile ultra marathon.
+<section class="about-hero">
+  <div class="about-hero__content">
+      <img src="{{ image }}" alt="{{ name }}" class="about__image">
+    <h1 class="about-hero__title">{{ hero.title }}</h1>
+    <p class="about-hero__description">
+        Software Craftsman, Ultra Runner and Tinkerer.
+    </p>
+  </div>
+</section>

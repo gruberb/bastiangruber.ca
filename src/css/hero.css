@@ -192,7 +192,8 @@
 .recent-posts {
     padding: 3rem 0;
     background: var(--surface);
-    padding-top: 0;
+    padding-top: 20px;
+
 }
 
 .recent-posts .section-header {
@@ -238,7 +239,8 @@
     }
 
     .hero-text h1 {
-        font-size: 2.5rem;
+        font-size: 3.8rem;
+        margin-bottom: -1.25rem;
     }
 
     .hero-subtitle {
@@ -276,7 +278,8 @@
 
 @media (max-width: 640px) {
     .hero-text h1 {
-        font-size: 2rem;
+        font-size: 3.8rem;
+        margin-bottom: -1.25rem;
     }
 
     .hero-subtitle {
@@ -309,8 +312,8 @@
     }
 
     .hero-text h1 {
-        font-size: 1.8rem;
-        margin-bottom: 0.75rem;
+        font-size: 3.8rem;
+        margin-bottom: -1.25rem;
     }
 
     .hero-subtitle {
