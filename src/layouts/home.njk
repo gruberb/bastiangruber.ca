@@ -68,36 +68,10 @@ layout: base
       <p class="section-subtitle">Thoughts on Rust, web development, and software engineering</p>
     </div>
     <div class="posts-grid">
-      {% set recentPosts = collections.posts | head(-3) %}
-      {% for post in recentPosts %}
-        <article class="post-card">
-          {% if post.data.tags %}
-            {% set firstValidTag = '' %}
-            {% for tag in post.data.tags %}
-              {% if tag != 'posts' and firstValidTag == '' %}
-                {% set firstValidTag = tag %}
-              {% endif %}
-            {% endfor %}
-            {% if firstValidTag %}
-              <span class="post-tag">{{ firstValidTag }}</span>
-            {% endif %}
-          {% endif %}
-          <h3>
-            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-          </h3>
-          {% if post.data.description %}
-            <p class="post-excerpt">{{ post.data.description }}</p>
-          {% else %}
-            <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
-          {% endif %}
-          <div class="post-meta">
-            <time datetime="{{ post.date | htmlDateString }}">
-              {{ post.date | readableDate }}
-            </time>
-            <a href="{{ post.url | url }}" class="read-more">Read More →</a>
-          </div>
-        </article>
-      {% endfor %}
+    {% set recentPosts = collections.posts | head(-3) %}
+    {% for post in recentPosts %}
+      {% include "post-card.njk" %}
+    {% endfor %}
     </div>
     <div style="text-align: center; margin-top: 1rem;">
       <a class="all-posts-link" href="{{ '/blog/' | url }}">View All Posts →</a>

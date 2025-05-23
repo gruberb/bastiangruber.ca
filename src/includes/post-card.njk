@@ -1,0 +1,27 @@
+<article class="post-card">
+  {% if post.data.tags %}
+    {% set firstValidTag = '' %}
+    {% for tag in post.data.tags %}
+      {% if tag != 'posts' and firstValidTag == '' %}
+        {% set firstValidTag = tag %}
+      {% endif %}
+    {% endfor %}
+    {% if firstValidTag %}
+      <span class="post-tag">{{ firstValidTag }}</span>
+    {% endif %}
+  {% endif %}
+  <h3>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  </h3>
+  {% if post.data.description %}
+    <p class="post-excerpt">{{ post.data.description }}</p>
+  {% else %}
+    <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+  {% endif %}
+  <div class="post-meta">
+    <time datetime="{{ post.date | htmlDateString }}">
+      {{ post.date | readableDate }}
+    </time>
+    <a href="{{ post.url | url }}" class="read-more">Read More →</a>
+  </div>
+</article>

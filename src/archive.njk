@@ -10,7 +10,10 @@ permalink: /blog/
     </p>
   </div>
 </section>
-<div class="compact-blog">
-  {% set postslist = collections.posts %}
-  {% include "compact-posts-list.njk" %}
-</div>
+    <div class="posts-grid">
+        {% set allPosts = collections.posts %}
+        {% for post in allPosts %}
+        {% include "post-card.njk" %}
+        {% endfor %}
+    </div>
+</section>
