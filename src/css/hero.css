@@ -92,7 +92,7 @@
 }
 
 .code-window {
-    background: #1a1a1a;
+    background: var(--surface);
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: var(--shadow-xl);
@@ -100,7 +100,7 @@
     width: 100%;
     overflow: hidden;
     animation: float 6s ease-in-out infinite;
-    border: 1px solid #333;
+    border: 1px solid var(--border);
 }
 
 @keyframes float {
@@ -191,9 +191,9 @@
 /* Recent Posts Section */
 .recent-posts {
     padding: 3rem 0;
-    background: var(--surface);
+    background: var(--background);
     padding-top: 20px;
-
+    border-top: 1px solid var(--border);
 }
 
 .recent-posts .section-header {
@@ -208,7 +208,7 @@
     margin-top: 3rem;
     padding: 1rem 2rem;
     background: var(--primary);
-    color: white;
+    color: var(--background);
     text-decoration: none;
     border-radius: 0.5rem;
     font-weight: 500;
@@ -220,7 +220,7 @@
 .all-posts-link:hover {
     background: var(--primary-light);
     transform: translateY(-2px);
-    color: white;
+    color: var(--background);
     text-decoration: none;
 }
 

@@ -1,39 +1,39 @@
 :root {
-  /* Primary Colors - Modern Professional Blue */
-  --accent: #2563eb;
-  --primary: #2563eb;
-  --primary-rgb: 37, 99, 235;
-  --primary-light: #3b82f6;
+  /* Primary Colors - Professional Golden Amber */
+  --accent: #d97706;
+  --primary: #d97706;
+  --primary-rgb: 217, 119, 6;
+  --primary-light: #f59e0b;
   --secondary: #64748b;
   
   /* Background & Surface */
-  --background: #ffffff;
-  --surface: #f8fafc;
+  --background: #0f1419;
+  --surface: #1a1f29;
   
   /* Text Colors */
-  --text-primary: #1e293b;
-  --text-secondary: #64748b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
   
   /* Border & Dividers */
-  --border: #e2e8f0;
+  --border: #2d3748;
   
   /* Legacy color variables for backward compatibility */
-  --color: #1e293b;
-  --color-80: rgba(30, 41, 59, 0.8);
-  --color-30: rgba(30, 41, 59, 0.3);
-  --color-10: rgba(30, 41, 59, 0.1);
+  --color: #e2e8f0;
+  --color-80: rgba(226, 232, 240, 0.8);
+  --color-30: rgba(226, 232, 240, 0.3);
+  --color-10: rgba(226, 232, 240, 0.1);
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.5);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.7);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.8);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.9);
   
   /* Additional Semantic Colors */
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
-  --info: #3b82f6;
+  --info: #0ea5e9;
   
   /* Spacing */
   --space-xs: 0.25rem;

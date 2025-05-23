@@ -14,8 +14,8 @@
     right: 0;
     bottom: 0;
     background-image:
-        linear-gradient(rgba(226, 232, 240, 0.8) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(226, 232, 240, 0.8) 1px, transparent 1px);
+        linear-gradient(rgba(217, 119, 6, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(217, 119, 6, 0.1) 1px, transparent 1px);
     background-size: 20px 20px;
     pointer-events: none;
     z-index: 0;
@@ -29,8 +29,8 @@
     right: 0;
     bottom: 0;
     background:
-        radial-gradient(ellipse at center, transparent 60%, rgba(255, 255, 254, 0.3) 80%, rgba(255, 255, 254, 0.7) 95%),
-        linear-gradient(to bottom, rgba(255, 255, 254, 0.2) 0%, transparent 10%, transparent 90%, rgba(255, 255, 254, 0.4) 100%);
+        radial-gradient(ellipse at center, transparent 60%, rgba(15, 20, 25, 0.3) 80%, rgba(15, 20, 25, 0.7) 95%),
+        linear-gradient(to bottom, rgba(15, 20, 25, 0.2) 0%, transparent 10%, transparent 90%, rgba(15, 20, 25, 0.4) 100%);
     pointer-events: none;
     z-index: 0;
 }
@@ -57,7 +57,7 @@
 
 .btn-primary {
     background: var(--primary);
-    color: white;
+    color: var(--background);
     box-shadow: var(--shadow-md);
 }
 
@@ -65,7 +65,7 @@
     background: var(--primary-light);
     transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
-    color: white;
+    color: var(--background);
 }
 
 .btn-secondary {
@@ -103,7 +103,7 @@ body {
 }
 
 .post-card {
-    background: var(--background);
+    background: var(--surface);
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 2rem;
@@ -121,8 +121,8 @@ body {
 }
 
 .post-tag {
-    background: var(--primary);
-    color: white;
+    background: rgba(217, 119, 6, 0.1);
+    color: var(--primary-light);
     padding: 0.25rem 0.75rem;
     border-radius: 1rem;
     font-size: 0.75rem;
@@ -131,6 +131,7 @@ body {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 .post-card h3 {

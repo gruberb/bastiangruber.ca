@@ -21,7 +21,7 @@
     padding: 1rem;
     margin-top: 1rem;
     backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(15, 20, 25, 0.95);
 }
 
 .site-title {
@@ -69,7 +69,7 @@
 }
 
 .nav__list a[aria-current="page"] {
-    color: white;
+    color: var(--background);
     background-color: var(--primary);
     font-weight: 600;
 }
@@ -251,7 +251,7 @@
 
 .mobile-nav-item a:hover {
     color: var(--primary);
-    background: rgba(0, 0, 0, 0.02);
+    background: rgba(255, 255, 255, 0.05);
     padding-left: 1.5rem;
 }
 
@@ -260,9 +260,9 @@
 }
 
 .mobile-nav-item a[aria-current="page"] {
-    color: var(--primary);
+    color: var(--primary-light);
     font-weight: 600;
-    background: rgba(var(--primary-rgb), 0.08);
+    background: rgba(var(--primary-rgb), 0.15);
 }
 
 .mobile-nav-item a[aria-current="page"]::before {

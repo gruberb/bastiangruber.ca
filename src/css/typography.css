@@ -79,10 +79,11 @@ em, i {
 code {
   font-family: 'IBM Plex Mono', 'Fira Code', Consolas, 'Courier New', monospace;
   font-size: 0.875em;
-  background-color: var(--surface);
+  background-color: rgba(217, 119, 6, 0.1);
   padding: 0.125rem 0.25rem;
   border-radius: var(--radius-sm);
-  color: var(--text-primary);
+  color: var(--primary-light);
+  border: 1px solid rgba(217, 119, 6, 0.2);
 }
 
 blockquote {
