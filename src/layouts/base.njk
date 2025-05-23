@@ -18,6 +18,8 @@
     <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
     <link rel="me" href="https://hachyderm.io/@bastian">
 
+    <script defer data-domain="bastiangruber.ca" src="https://plausible.io/js/script.js"></script>
+
     <meta property="og:title" content="{{  title or site.name | escape }}">
     <meta property="og:site_name" content="{{ site.name }}"/>
     <meta property="og:type" content="website"/>
@@ -56,7 +58,7 @@
     <div class="reading-progress">
       <div class="reading-progress-bar" id="reading-progress-bar"></div>
     </div>
-    
+
     <div class="layout-wrapper">
 
       {% if layout != "home" %}<header class="header">
@@ -101,7 +103,7 @@
             <nav class="mobile-nav" id="mobileNav">
               <!-- Close button -->
               <div class="mobile-nav-close" id="mobileNavClose"></div>
-              
+
               <ul class="mobile-nav__list">
                 {% for item in site.headerLinks %}
                   {% set currentAttribute = '' %}
@@ -181,7 +183,7 @@
         <!-- Dynamically populated -->
       </ul>
     </div>
-    
+
     <!-- Mobile TOC Toggle Button -->
     <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
       <svg viewBox="0 0 24 24">
