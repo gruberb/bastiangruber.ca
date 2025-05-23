@@ -2,37 +2,105 @@
 layout: base
 ---
 
-<header class="hero">
-  <div class="hero-content">
-    <div class="intro">
-      {{ content | safe }}
+<section class="hero grid-background">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>{{ site.name }}</h1>
+        <p class="hero-subtitle">Software Engineer & Author</p>
+        <div class="hero-description">
+          {{ content | safe }}
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="code-window">
+          <div class="window-header">
+            <div class="window-dot dot-red"></div>
+            <div class="window-dot dot-yellow"></div>
+            <div class="window-dot dot-green"></div>
+          </div>
+          <div class="code-display">
+            <div class="code-line">
+              <span class="line-number">1</span>
+              <span class="code-content"><span class="rust-keyword">use</span> <span class="rust-type">axum</span>::{response::Json, routing::get, Router};</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">2</span>
+              <span class="code-content"></span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">3</span>
+              <span class="code-content"><span class="rust-keyword">async fn</span> <span class="rust-type">hello</span>() -> Json&lt;&amp;'static str&gt; {</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">4</span>
+              <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;Json(<span class="rust-string">"Building with Rust!"</span>)</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">5</span>
+              <span class="code-content">}</span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">6</span>
+              <span class="code-content"></span>
+            </div>
+            <div class="code-line">
+              <span class="line-number">7</span>
+              <span class="code-content"><span class="rust-comment">// "Building with Rust!" 🦀</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    {% if site.socialLinks %}
-      <ul class="hero__social-links">
-        {% for item in site.socialLinks %}
-          {% set externalAttribute = '' %}
-
-          {% if item.external %}
-            {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-          {% endif %}
-
-          <li>
-            <a href="{{ item.url | url }}" {{ externalAttribute | safe }}>{{ item.text }}</a>
-          </li>
-        {% endfor %}
-      </ul>
-    {% endif %}
+    <div class="cta-buttons">
+        <a href="{{ '/blog/' | url }}" class="btn btn-secondary">Blog</a>
+        <a href="{{ '/talks/' | url }}" class="btn btn-secondary">Talks & Interviews</a>
+        <a href="{{ '/projects/' | url }}" class="btn btn-secondary">Side Projects</a>
+        <a href="{{ '/about/' | url }}" class="btn btn-secondary">About Me</a>
+        <a href="https://rustwebdevelopment.com" class="btn btn-secondary" target="_blank" rel="noopener">My Book →</a>
+    </div>
   </div>
-
-</header>
-
-<section class="post-list__wrapper">
-  <h2 class="post-list__heading">Recent Posts</h2>
-
-  {% set postslist = collections.posts | head(-10) %}
-  {% include "posts-list.njk" %}
-
 </section>
-
-<a class="all-posts-link" href="{{ '/blog/' | url }}">View All Posts</a>
+<section class="recent-posts">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">Recent Posts</h2>
+      <p class="section-subtitle">Thoughts on Rust, web development, and software engineering</p>
+    </div>
+    <div class="posts-grid">
+      {% set recentPosts = collections.posts | head(-3) %}
+      {% for post in recentPosts %}
+        <article class="post-card">
+          {% if post.data.tags %}
+            {% set firstValidTag = '' %}
+            {% for tag in post.data.tags %}
+              {% if tag != 'posts' and firstValidTag == '' %}
+                {% set firstValidTag = tag %}
+              {% endif %}
+            {% endfor %}
+            {% if firstValidTag %}
+              <span class="post-tag">{{ firstValidTag }}</span>
+            {% endif %}
+          {% endif %}
+          <h3>
+            <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+          </h3>
+          {% if post.data.description %}
+            <p class="post-excerpt">{{ post.data.description }}</p>
+          {% else %}
+            <p class="post-excerpt">{{ post.templateContent | excerpt }}</p>
+          {% endif %}
+          <div class="post-meta">
+            <time datetime="{{ post.date | htmlDateString }}">
+              {{ post.date | readableDate }}
+            </time>
+            <a href="{{ post.url | url }}" class="read-more">Read More →</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+    <div style="text-align: center; margin-top: 3rem;">
+      <a class="all-posts-link" href="{{ '/blog/' | url }}">View All Posts →</a>
+    </div>
+  </div>
+</section>

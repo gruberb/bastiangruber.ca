@@ -1,11 +1,12 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--background);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -15,7 +16,6 @@ body::-webkit-scrollbar {
 body {
   scrollbar-width: thin;
   scrollbar-color: var(--color-80) var(--background);
-  height: 100%;
 }
 
 body::-webkit-scrollbar-track {

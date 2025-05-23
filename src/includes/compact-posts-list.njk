@@ -1,0 +1,30 @@
+<!-- Compact Space-Efficient Blog List -->
+<div class="compact-post-list">
+  {% for post in postslist | reverse %}
+    <a href="{{ post.url }}" class="compact-post-item">
+      <time class="compact-post-date" datetime="{{ post.date | htmlDateString }}">
+        {{ post.date | readableDate }}
+      </time>
+
+      <h3 class="compact-post-title">{{ post.data.title }}</h3>
+
+      <div class="compact-post-meta">
+        {% set firstValidTag = '' %}
+        {% for tag in post.data.tags %}
+          {%- if collections.tagList.indexOf(tag) != -1 and tag != 'posts' and firstValidTag == '' -%}
+            {% set firstValidTag = tag %}
+          {%- endif -%}
+        {% endfor %}
+        {% if firstValidTag %}
+          <span class="compact-post-tag">{{ firstValidTag }}</span>
+        {% endif %}
+      </div>
+
+      <div class="compact-post-arrow">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </a>
+  {% endfor %}
+</div>

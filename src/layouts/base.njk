@@ -9,15 +9,15 @@
     {% bundledcss %}
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <title>
       {{  title  | escape }}
     </title>
 
     <link rel="icon" type= “image/x-icon” href="/images/favicon.ico">
-    <a rel="me" href="https://hachyderm.io/@bastian">   
-    
+    <link rel="me" href="https://hachyderm.io/@bastian">
+
     <meta property="og:title" content="{{  title or site.name | escape }}">
     <meta property="og:site_name" content="{{ site.name }}"/>
     <meta property="og:type" content="website"/>
@@ -51,10 +51,15 @@
       <script>mermaid.initialize({startOnLoad:true});</script>
     {# Add mermaid -- end #}
   </head>
-  <body>
+  <body{% if layout == 'post' %} class="post-page"{% endif %}>
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress">
+      <div class="reading-progress-bar" id="reading-progress-bar"></div>
+    </div>
+    
     <div class="layout-wrapper">
 
-      <header class="header">
+      {% if layout != "home" %}<header class="header">
         <div class="header__content">
           <h1 class="site-title">
             <a href={{ "/" | url }}>
@@ -63,7 +68,8 @@
           </h1>
 
           {% if site.headerLinks %}
-            <nav class="nav">
+            <!-- Desktop Navigation -->
+            <nav class="nav desktop-nav">
               <ul class="nav__list">
                 {% for item in site.headerLinks %}
                   {% set currentAttribute = '' %}
@@ -73,7 +79,7 @@
                     {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
                   {% endif %}
 
-                  {% if page.url == item.url %}
+                  {% if page.url == item.url or (item.url != '/' and page.url.startsWith(item.url)) %}
                     {% set currentAttribute = 'aria-current="page"' %}
                   {% endif %}
 
@@ -84,12 +90,44 @@
               </ul>
             </nav>
 
+            <!-- Mobile Menu Button -->
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Mobile Navigation -->
+            <nav class="mobile-nav" id="mobileNav">
+              <!-- Close button -->
+              <div class="mobile-nav-close" id="mobileNavClose"></div>
+              
+              <ul class="mobile-nav__list">
+                {% for item in site.headerLinks %}
+                  {% set currentAttribute = '' %}
+                  {% set externalAttribute = '' %}
+
+                  {% if item.external %}
+                    {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
+                  {% endif %}
+
+                  {% if page.url == item.url or (item.url != '/' and page.url.startsWith(item.url)) %}
+                    {% set currentAttribute = 'aria-current="page"' %}
+                  {% endif %}
+
+                  <li class="mobile-nav-item">
+                    <a href="{{ item.url | url }}" {{ currentAttribute | safe }} {{ externalAttribute | safe }}>{{ item.text }}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+
           {% endif %}
 
         </div>
-      </header>
+      </header>{% endif %}
 
-      <main class="main">
+      <main class="main{% if layout == 'home' %} home-main{% endif %}">
         {{ content | safe }}
       </main>
 
@@ -128,16 +166,28 @@
           </ul>
 
           {% if site.showFooterAttribution %}
-            <p class="footer__attribution">
-              Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener">11ty,</a>
-        Checkout <a href="https://github.com/gruberb/bastiangruber.ca" target="_blank" rel="noopener noreferrer"> the project's GitHub repository</a>.
-            </p>
+
           {% endif %}
 
         </div>
       </div>
 
     </footer>
+
+    <!-- Table of Contents Mini Map -->
+    <div class="table-of-contents" id="table-of-contents">
+      <h3>Contents</h3>
+      <ul class="toc-list" id="toc-list">
+        <!-- Dynamically populated -->
+      </ul>
+    </div>
+    
+    <!-- Mobile TOC Toggle Button -->
+    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
+      <svg viewBox="0 0 24 24">
+        <path d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"/>
+      </svg>
+    </button>
 
     {% bundledjs %}
   </body>

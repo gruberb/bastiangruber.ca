@@ -1,7 +1,7 @@
 {
   "name": "Bastian Gruber",
   "description": "Personal blog of Bastian Gruber.",
-  "url": "https://eleventyduo.netlify.app",
+  "url": "https://bastiangruber.ca",
   "author": {
     "name": "Bastian Gruber",
     "email": "info@bastiangruber.ca",
@@ -11,12 +11,17 @@
   "headerLinks": [
     {
       "text": "Blog",
-      "url": "/blog",
+      "url": "/blog/",
       "external": false
     },
     {
       "text": "Talks & Interviews",
       "url": "/talks",
+      "external": false
+    },
+    {
+      "text": "Side Projects",
+      "url": "/projects",
       "external": false
     },
     {

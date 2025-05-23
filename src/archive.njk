@@ -3,11 +3,7 @@ layout: base.njk
 permalink: /blog/ 
 ---
 
-<h1>All Posts</h1>
-
-<div class="tags">
-  {% include "tags-list.njk" %}
+<div class="compact-blog">
+  {% set postslist = collections.posts %}
+  {% include "compact-posts-list.njk" %}
 </div>
-
-{% set postslist = collections.posts %}
-{% include "posts-list.njk" %}

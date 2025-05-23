@@ -1,0 +1,29 @@
+/* Reading Progress Bar */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: rgba(37, 99, 235, 0.1);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+  width: 0%;
+  transition: width 0.1s ease;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Adjust header to account for progress bar */
+.header {
+  border-top: 4px solid transparent;
+}
+
+/* Hide on non-post pages */
+body:not(.post-page) .reading-progress {
+  display: none;
+}

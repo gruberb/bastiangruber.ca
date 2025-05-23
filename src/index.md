@@ -3,8 +3,6 @@ layout: home
 title: 'Bastian Gruber'
 ---
 
-# Hello World
+Building the future with **Rust** at Mozilla. Author of **"Rust Web Development"** and passionate about creating robust, efficient software solutions that make a difference.
 
-This the personal website of Bastian Gruber, Software Engineer working at Mozilla. 
-
-He is also the author of the book "Rust Web Development", published by Manning.
+I share insights on systems programming, web development, and the art of writing maintainable code that scales.

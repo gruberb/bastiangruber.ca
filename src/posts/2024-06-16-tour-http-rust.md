@@ -12,7 +12,7 @@ This article is part of a chapter of <a href="https://www.manning.com/books/rust
 </div>
 
 ---
-<h4>TL;DR</h4>
+<h4 class="tldr">TL;DR</h4>
 <img src="https://github.com/gruberb/bastiangruber.ca/blob/main/src/images/tldr-rust.png?raw=true" />
 
 ---
@@ -92,7 +92,7 @@ If you are coming from Go, NodeJS or Java, this means a shift in perspective. Yo
 In addition to HTTP, you also need to make sure the connection between client and server is secure. This is handled via TLS (Transport Layer Security), a successor of SSL. Rust also hasn’t built-in TLS support, but there exist a few packages which support you in enabling TLS in your application.
 
 
-### Opening a connection
+## Opening a connection
 
 We look at an example where a browser application is sending a HTTP request to our web service which is written in Rust. We will dive shortly into how exactly the bytes arrive at the kernel, and how our Rust application is getting the bytes delivered into the running application. Note that this is all abstracted away through libraries, but you can later on choose not to use such library and implement something via the Rust core library itself.
 
@@ -151,7 +151,7 @@ There are many [different HTTP headers](https://developer.mozilla.org/en-US/docs
 
 When using a web framework later on, all the details are abstracted away. However it is vital to understand the flow how information arrives at your application so later on, you can choose asynchronous strategies, your own protocol and where to look for optimizations.
 
-### Adding HTTP
+## Adding HTTP
 
 The `TcpListener` gave us a stream, which we need to read and interpret. We have to somehow take this stream and read what’s in it. For this, we need a few components. First, we need to create a new function which takes an incoming stream and writes the bytes back to a local buffer. From there we can parse the data accordingly and send back an answer.
 
