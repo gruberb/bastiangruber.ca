@@ -30,3 +30,66 @@
     border-radius: 50%;
     width: 200px;
 }
+
+/* About Content Section */
+.about-content {
+    padding: 3rem 1rem;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.about-content__container {
+    background: var(--background);
+    border-radius: var(--radius-xl);
+    padding: 2rem;
+}
+
+.about-content h2 {
+    font-size: var(--text-2xl);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.about-journey {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-journey li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    font-size: var(--text-base);
+}
+
+.about-journey li:last-child {
+    margin-bottom: 0;
+}
+
+.about-journey li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+    width: 8px;
+    height: 8px;
+    background: var(--primary);
+    border-radius: 50%;
+    opacity: 0.8;
+}
+
+/* Vertical line connecting bullet points */
+.about-journey li:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 1rem;
+    width: 2px;
+    height: calc(100% + 0.5rem);
+    background: var(--border);
+}
