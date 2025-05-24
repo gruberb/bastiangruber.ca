@@ -147,7 +147,7 @@
     border: none;
     cursor: pointer;
     padding: 4px;
-    z-index: 10000;
+    z-index: 900;
     transition: all 0.3s ease;
     border-radius: 4px;
 }
@@ -287,7 +287,7 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 10001;
+    z-index: 10005;
     transition: all 0.2s ease;
 }
 
