@@ -18,9 +18,9 @@ const manifestPath = path.resolve(
 
 const manifest = isDev
   ? {
-      'main.js': '/assets/main.js',
-      'main.css': '/assets/main.css',
-    }
+    'main.js': '/assets/main.js',
+    'main.css': '/assets/main.css',
+  }
   : JSON.parse(fs.readFileSync(manifestPath, { encoding: 'utf8' }));
 
 module.exports = function (eleventyConfig) {
@@ -28,13 +28,27 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
-  // setup mermaid markdown highlighter
-  const highlighter = eleventyConfig.markdownHighlighter;
-  eleventyConfig.addMarkdownHighlighter((str, language) => {
-    if (language === 'mermaid') {
-      return `<pre class="mermaid">${str}</pre>`;
+  eleventyConfig.addTransform("wrapCodeblocks", (content, outputPath) => {
+    if (!outputPath || !outputPath.endsWith(".html")) {
+      return content;
     }
-    return highlighter(str, language);
+
+    return content.replace(
+      /<pre[\s\S]*?<\/pre>/g,
+      codeBlock => {
+        return `
+        <div class="code-block-container">
+          <button class="copy-code-button" aria-label="Copy snippet">
+            <!-- example: Lucide “copy” icon -->
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+            </svg>
+          </button>
+      ${codeBlock}
+    </div>`;
+      }
+    );
   });
 
   eleventyConfig.setDataDeepMerge(true);
@@ -118,8 +132,8 @@ module.exports = function (eleventyConfig) {
       });
   });
 
-  eleventyConfig.addTransform('htmlmin', function(content, outputPath) {
-    if ( outputPath && outputPath.endsWith(".html") && isProd) {
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html") && isProd) {
       return htmlmin.minify(content, {
         removeComments: true,
         collapseWhitespace: true,

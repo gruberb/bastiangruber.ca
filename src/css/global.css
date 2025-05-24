@@ -163,61 +163,6 @@ blockquote {
     font-style: italic;
 }
 
-pre {
-    white-space: pre-wrap;
-    tab-size: 2;
-    font-size: 0.95rem;
-    border: 1px solid var(--border);
-    padding: 1rem;
-    margin-top: 1rem;
-    background: var(--surface);
-}
-
-code,
-kbd {
-    font-feature-settings: normal;
-    background: rgba(217, 119, 6, 0.1);
-    color: var(--primary-light);
-    padding: 1px 6px;
-    margin: 0 2px;
-    font-size: 0.95rem;
-    border: 1px solid rgba(217, 119, 6, 0.2);
-    border-radius: 3px;
-}
-
-pre {
-    overflow: auto;
-    max-width: 90vw;
-    margin-left: auto;
-    margin-right: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-80);
-}
-
-pre::-webkit-scrollbar {
-    width: 6px;
-    height: 8px;
-}
-
-pre::-webkit-scrollbar-track {
-    background: var(--background);
-}
-
-pre::-webkit-scrollbar-thumb {
-    background-color: var(--color-80);
-}
-
-pre,
-code {
-    font-family: "Inconsolata", monospace;
-}
-
-pre code {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
-
 mark {
     background: var(--primary);
     color: var(--background);

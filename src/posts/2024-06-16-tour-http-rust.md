@@ -119,14 +119,15 @@ We learned earlier that Rust supports TCP right out of the box. Therefore, we ca
 
 Let’s open a socket, so the kernel knows where to forward incoming requests to. Each socket has to know the protocol being used (TCP in our case), the IP address and the port. In Rust, the TcpListener is handling the job for us, and we can use bind to tell the kernel the address and port we are listening to.
 
+
 ```rust
 use std::net::TcpListener;
 
 fn main() {
-	let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
-	for stream in listener.incoming() {
-            let stream = stream.unwrap();
-            println!("stream accepted {:?}", stream);
+    let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
+   	for stream in listener.incoming() {
+        let stream = stream.unwrap();
+        println!("stream accepted {:?}", stream);
 }
 ```
 
@@ -158,25 +159,18 @@ The `TcpListener` gave us a stream, which we need to read and interpret. We have
 We add a helper function which does exactly that for us.
 
 ```rust
-…
-
 fn handle_stream(mut stream: TcpStream) {
     let mut buffer = [0; 1024];
     stream.read(&mut buffer).unwrap();
     println!("Request: {}", String::from_utf8_lossy(&buffer[..]));
 }
-…
-
 ```
 
 All we have to do is to call this function in our iterator.
 
 ```rust
-
 use std::net::{TcpListener, TcpStream};
 use std::io::prelude::*;
-
-…
 
 fn main() {
 	let listener = TcpListener::bind("127.0.0.1:8080").unwrap();
@@ -226,8 +220,6 @@ Thankfully there are already crates published in the Rust ecosystem which help y
 After you opened your browser and navigated to localhost:8080, you saw an error page. That’s because we don’t return an answer yet, which the HTTP protocol requests we do. To solve this problem, we can write onto the stream and send bytes back to the client.
 
 ```rust
-...
-
 fn handle_stream(mut stream: TcpStream) {
     let mut buffer = [0; 512];
     stream.read(&mut buffer).unwrap();
@@ -237,9 +229,6 @@ fn handle_stream(mut stream: TcpStream) {
     stream.write(response.as_bytes()).unwrap();
     stream.flush().unwrap();
 }
-
-...
-
 ```
 
 When you open your browser now and navigate to localhost:8080, you will get a blank page instead of an error. We successfully communicated via HTTP to another application in just a few lines of code.

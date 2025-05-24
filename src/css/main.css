@@ -1,11 +1,10 @@
 @import 'global.css';
 @import 'variable.css';
 @import 'modern-base.css';
-@import 'prism-theme.css';
+@import "prism-themes/themes/prism-dracula.css";
 @import 'typography.css';
 @import 'post-list.css';
 @import 'hero.css';
-@import 'modern-blog.css';
 @import 'compact-blog.css';
 @import 'header.css';
 @import 'footer.css';
@@ -41,4 +40,103 @@
     padding-left: 0;
     padding-right: 0;
     max-width: none;
+}
+
+pre[class*="language-"],
+code[class*="language-"] {
+    font-family: "Fira Code", Menlo, monospace;
+    font-size: 1rem;
+}
+
+/* main.css */
+.code-block-container {
+    position: relative;
+    margin: 2rem calc((100% - min(60ch, 100%)) / -2);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.3rem;
+    color: #fff;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+
+.copy-code-button:active {
+    transform: scale(0.95);
+}
+
+.code-block-container pre,
+.code-block-container pre[class*="language-"] {
+    background-image: none !important;
+}
+
+.copy-code-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 0.3rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+}
+
+.code-block-container:hover .copy-code-button {
+    opacity: 1;
+}
+
+/* 1) Remove any background-stripes or line-highlighter gradients */
+pre[class*="language-"] {
+    background-image: none !important;
+}
+
+/* 2) Remove the theme’s <pre> border or shadow */
+pre[class*="language-"] {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* 3) If lines are individually bordered, kill that too */
+pre[class*="language-"] .token-line {
+    border: none !important;
+}
+
+/* 4) Make sure your wrapper still gives you that gentle rounded container */
+.code-block-container {
+    position: relative;
+    margin: 2rem calc((100% - min(60ch, 100%)) / -2);
+    padding: 1rem;
+    background: var(--code-bg, #282a36);
+    /* Dracula’s background */
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+/* kill any stray borders or highlights from Prism plugins */
+pre[class*="language-"] .token-line,
+pre[class*="language-"] .line-highlight,
+pre[data-line] .line-highlight {
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* make sure the wrapper is still nice and rounded */
+.code-block-container {
+    background: var(--code-bg, #282a36);
+    border-radius: .5rem;
+    overflow-x: auto;
 }
