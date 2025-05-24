@@ -1,21 +1,21 @@
 :root {
-  /* Primary Colors - Professional Golden Amber */
-  --accent: #d97706;
-  --primary: #d97706;
-  --primary-rgb: 217, 119, 6;
-  --primary-light: #f59e0b;
+  /* Primary Colors - Light Golden Yellow */
+  --accent: #fbbf24;
+  --primary: #fbbf24;
+  --primary-rgb: 251, 191, 36;
+  --primary-light: #fde047;
   --secondary: #64748b;
   
-  /* Background & Surface */
-  --background: #0f1419;
-  --surface: #1a1f29;
+  /* Background & Surface - Slightly Brighter */
+  --background: #1a1f29;
+  --surface: #252b37;
   
   /* Text Colors */
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
   
   /* Border & Dividers */
-  --border: #2d3748;
+  --border: #374151;
   
   /* Legacy color variables for backward compatibility */
   --color: #e2e8f0;
@@ -31,7 +31,7 @@
   
   /* Additional Semantic Colors */
   --success: #10b981;
-  --warning: #f59e0b;
+  --warning: #fbbf24;
   --error: #ef4444;
   --info: #0ea5e9;
   

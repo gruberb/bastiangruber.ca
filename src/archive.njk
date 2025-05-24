@@ -10,10 +10,48 @@ permalink: /blog/
     </p>
   </div>
 </section>
-    <div class="posts-grid">
-        {% set allPosts = collections.posts %}
-        {% for post in allPosts %}
-        {% include "post-card.njk" %}
-        {% endfor %}
+
+<section class="blog-list-section">
+  <div class="blog-list-container">
+    <div class="blog-list">
+      {% set allPosts = collections.posts %}
+      {% for post in allPosts %}
+        <article class="blog-list-item">
+          <a href="{{ post.url | url }}" class="blog-list-link">
+            <div class="blog-list-date">
+              <time datetime="{{ post.date | htmlDateString }}">
+                {{ post.date | readableDate }}
+              </time>
+            </div>
+            <div class="blog-list-content">
+              <h3 class="blog-list-title">{{ post.data.title }}</h3>
+              {% if post.data.description %}
+                <p class="blog-list-excerpt">{{ post.data.description }}</p>
+              {% else %}
+                <p class="blog-list-excerpt">{{ post.templateContent | excerpt }}</p>
+              {% endif %}
+            </div>
+            <div class="blog-list-meta">
+              {% if post.data.tags %}
+                {% set firstValidTag = '' %}
+                {% for tag in post.data.tags %}
+                  {% if tag != 'posts' and firstValidTag == '' %}
+                    {% set firstValidTag = tag %}
+                  {% endif %}
+                {% endfor %}
+                {% if firstValidTag %}
+                  <span class="blog-list-tag">{{ firstValidTag }}</span>
+                {% endif %}
+              {% endif %}
+            </div>
+            <div class="blog-list-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
+        </article>
+      {% endfor %}
     </div>
+  </div>
 </section>

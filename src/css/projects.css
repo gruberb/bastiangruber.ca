@@ -207,14 +207,14 @@
 
 .project-link--primary {
     background: var(--primary);
-    color: white;
+    color: var(--background);
     border: 2px solid var(--primary);
 }
 
 .project-link--primary:hover {
     background: var(--primary-light);
     border-color: var(--primary-light);
-    color: white;
+    color: var(--background);
     transform: translateY(-1px);
 }
 

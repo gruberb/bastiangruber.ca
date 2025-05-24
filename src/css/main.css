@@ -4,6 +4,7 @@
 @import "prism-themes/themes/prism-dracula.css";
 @import 'typography.css';
 @import 'post-list.css';
+@import 'blog-list.css';
 @import 'hero.css';
 @import 'compact-blog.css';
 @import 'header.css';
