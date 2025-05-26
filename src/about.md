@@ -12,7 +12,7 @@ image: '/images/me.png'
       <img src="{{ image }}" alt="{{ name }}" class="about__image">
     <h1 class="about-hero__title">{{ hero.title }}</h1>
     <p class="about-hero__description">
-        Software Craftsman, Ultra Runner and Tinkerer.
+        Software Craftsman, Ultra Runner and Tinkerer. <br /><br />I love APIs, servers and building helpful tools - be it a 3D printed Soundbox for my Kids, helper websites for my friends and community, or solve technical challenges.
     </p>
   </div>
 </section>
@@ -54,23 +54,6 @@ image: '/images/me.png'
           <li><strong>Problem solving</strong>: I am diving deep into a new problem, communicate my findings, and collaborate to reach the best outcome.</li>
           <li>Always having the <strong>endgoal</strong> of a task or product I built in mind.</li>
           <li> <strong>Know when </strong> to build for scale, when to prototype, when to ship fast and when to go slower</li>
-        </ul>
-      </div>
-      <!-- Beyond Code Card -->
-      <div class="skill-card">
-        <div class="skill-card__header">
-          <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 7a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-          <h3 class="skill-card__title">Beyond Code</h3>
-        </div>
-        <ul class="skill-card__list">
-          <li>I just love the Internet, APIs and communication between services</li>
-          <li>A well oiled team is better than a few 10x engineers</li>
-          <li>I spoke on MeetUps, Podcasts and got interviewed</li>
-          <li>I am a team player at heart</li>
-          <li>In my freetime, I run ultra marathons (~100km races)</li>
-          <li>I like to build helpful tools. Be it 3D printed soundboxes for my Kids, or websites to help my community and friends</li>
         </ul>
       </div>
     </div>

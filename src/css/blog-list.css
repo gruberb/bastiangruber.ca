@@ -58,7 +58,8 @@
 /* Content Column */
 .blog-list-content {
     flex: 1;
-    min-width: 0; /* Prevent text overflow */
+    min-width: 0;
+    /* Prevent text overflow */
 }
 
 .blog-list-title {
@@ -130,26 +131,26 @@
     .blog-list-section {
         padding: 2rem 1rem;
     }
-    
+
     .blog-list-container {
         padding: 0;
     }
-    
+
     .blog-list {
         gap: 0;
     }
-    
+
     .blog-list-item {
         border-bottom: 1px solid var(--border);
     }
-    
+
     .blog-list-link {
         grid-template-columns: 100px 1fr 16px;
         gap: 1.25rem;
         padding: 1rem 0;
         align-items: flex-start;
     }
-    
+
     .blog-list-date {
         font-size: var(--text-sm);
         color: var(--text-secondary);
@@ -157,14 +158,14 @@
         opacity: 0.8;
         font-variant-numeric: tabular-nums;
         line-height: 1.2;
-        padding-top: 0.125rem;
+        padding-top: 0.315rem;
     }
-    
+
     .blog-list-content {
         grid-column: 2;
         padding-top: 0;
     }
-    
+
     .blog-list-title {
         font-size: var(--text-lg);
         font-weight: 600;
@@ -173,21 +174,23 @@
         -webkit-line-clamp: 2;
         color: var(--text-primary);
     }
-    
+
     .blog-list-excerpt {
-        display: none; /* Hide excerpt on mobile for cleaner look */
+        display: none;
+        /* Hide excerpt on mobile for cleaner look */
     }
-    
+
     .blog-list-meta {
-        display: none; /* Hide tags on mobile */
+        display: none;
+        /* Hide tags on mobile */
     }
-    
+
     .blog-list-arrow {
         grid-column: 3;
         opacity: 0.4;
         padding-top: 0.25rem;
     }
-    
+
     .blog-list-link:hover {
         background: rgba(251, 191, 36, 0.08);
         margin-left: -1rem;
@@ -196,7 +199,7 @@
         padding-right: 1rem;
         border-radius: var(--radius-md);
     }
-    
+
     .blog-list-link:hover .blog-list-arrow {
         opacity: 0.8;
         transform: translateX(2px);
@@ -207,31 +210,31 @@
     .blog-list-section {
         padding: 1.5rem 0.75rem;
     }
-    
+
     .blog-list-link {
         grid-template-columns: 85px 1fr 14px;
         gap: 1rem;
         padding: 0.875rem 0;
     }
-    
+
     .blog-list-date {
         font-size: var(--text-xs);
         font-weight: 600;
         opacity: 0.75;
     }
-    
+
     .blog-list-title {
         font-size: var(--text-base);
         font-weight: 600;
         line-height: 1.4;
     }
-    
+
     .blog-list-arrow {
         width: 14px;
         height: 14px;
         opacity: 0.3;
     }
-    
+
     .blog-list-link:hover {
         margin-left: -0.75rem;
         margin-right: -0.75rem;
