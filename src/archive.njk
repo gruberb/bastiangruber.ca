@@ -14,7 +14,7 @@ permalink: /blog/
 <section class="blog-list-section">
   <div class="blog-list-container">
     <div class="blog-list">
-      {% set allPosts = collections.posts %}
+      {% set allPosts = collections.posts | reverse %}
       {% for post in allPosts %}
         <article class="blog-list-item">
           <a href="{{ post.url | url }}" class="blog-list-link">

@@ -68,7 +68,7 @@ layout: base
       <p class="section-subtitle">Thoughts on Rust, web development, and software engineering</p>
     </div>
     <div class="posts-grid">
-    {% set recentPosts = collections.posts | head(-3) %}
+    {% set recentPosts = collections.posts | head(-3) | reverse %}
     {% for post in recentPosts %}
       {% include "post-card.njk" %}
     {% endfor %}

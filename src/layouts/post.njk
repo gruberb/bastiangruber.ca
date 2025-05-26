@@ -19,12 +19,6 @@ layout: base.njk
   </main>
 
   <aside class="post__aside">
-    <div class="post__tags">
-      {% for tag in tags | pageTags %}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}">#{{ tag }}</a>
-      {% endfor %}
-    </div>
 
     <nav class="post__pagination">
       {%- set nextPost = collections.posts | getNextCollectionItem(page) %}

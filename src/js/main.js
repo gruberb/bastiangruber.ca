@@ -106,16 +106,16 @@ class ReadingProgress {
 
 // Table of Contents
 class TableOfContents {
-constructor() {
-this.tocContainer = document.getElementById('table-of-contents');
-this.tocList = document.getElementById('toc-list');
-this.tocToggle = document.getElementById('toc-toggle');
-this.headings = [];
-this.currentActive = null;
-this.isMobileOpen = false;
-this.isScrolling = false; // Prevent multiple rapid clicks
+  constructor() {
+    this.tocContainer = document.getElementById('table-of-contents');
+    this.tocList = document.getElementById('toc-list');
+    this.tocToggle = document.getElementById('toc-toggle');
+    this.headings = [];
+    this.currentActive = null;
+    this.isMobileOpen = false;
+    this.isScrolling = false; // Prevent multiple rapid clicks
 
-  this.init();
+    this.init();
   }
 
   init() {
@@ -129,8 +129,8 @@ this.isScrolling = false; // Prevent multiple rapid clicks
   }
 
   generateTOC() {
-    // Find all h1 and h2 elements in the main content
-    const headings = document.querySelectorAll('.main h1, .main h2');
+    // Find all h1, h2 and h3 elements in the main content
+    const headings = document.querySelectorAll('.main h1, .main h2, .main h3');
 
     if (headings.length === 0) {
       this.tocContainer.style.display = 'none';
@@ -161,18 +161,18 @@ this.isScrolling = false; // Prevent multiple rapid clicks
       link.textContent = heading.textContent;
       link.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         // Prevent multiple rapid clicks
         if (this.isScrolling) return;
-        
+
         this.isScrolling = true;
         this.scrollToHeading(heading);
-        
+
         // Close mobile TOC after navigation
         if (window.innerWidth < 1200) {
           this.closeMobileTOC();
         }
-        
+
         // Reset scrolling flag after animation
         setTimeout(() => {
           this.isScrolling = false;
@@ -229,71 +229,71 @@ this.isScrolling = false; // Prevent multiple rapid clicks
   }
 
   scrollToHeading(heading) {
-  // Use a more precise calculation
-  const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-  const progressBarHeight = 4; // Reading progress bar height
-  const extraOffset = 20; // Additional breathing room
-  const totalOffset = headerHeight + progressBarHeight + extraOffset;
-  
-  const elementPosition = heading.offsetTop;
-  const targetPosition = elementPosition - totalOffset;
-  
-  window.scrollTo({
-  top: Math.max(0, targetPosition),
-  behavior: 'smooth'
-  });
-  
-  // Force update active state after scroll completes
-  setTimeout(() => {
-  this.setActiveHeading(heading.id);
-  }, 300);
+    // Use a more precise calculation
+    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+    const progressBarHeight = 4; // Reading progress bar height
+    const extraOffset = 20; // Additional breathing room
+    const totalOffset = headerHeight + progressBarHeight + extraOffset;
+
+    const elementPosition = heading.offsetTop;
+    const targetPosition = elementPosition - totalOffset;
+
+    window.scrollTo({
+      top: Math.max(0, targetPosition),
+      behavior: 'smooth'
+    });
+
+    // Force update active state after scroll completes
+    setTimeout(() => {
+      this.setActiveHeading(heading.id);
+    }, 300);
   }
 
   setupScrollSpy() {
-  if (this.headings.length === 0) return;
-  
-  // Use scroll-based detection instead of intersection observer for more accuracy
-  let ticking = false;
-  
-  const updateActiveHeading = () => {
-  const scrollTop = window.pageYOffset;
-  const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-    const offset = headerHeight + 50; // Account for header + some breathing room
-  
-    // Find the heading that's currently visible
-    let activeHeading = null;
-    
-  for (let i = this.headings.length - 1; i >= 0; i--) {
-      const heading = this.headings[i];
+    if (this.headings.length === 0) return;
+
+    // Use scroll-based detection instead of intersection observer for more accuracy
+    let ticking = false;
+
+    const updateActiveHeading = () => {
+      const scrollTop = window.pageYOffset;
+      const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
+      const offset = headerHeight + 50; // Account for header + some breathing room
+
+      // Find the heading that's currently visible
+      let activeHeading = null;
+
+      for (let i = this.headings.length - 1; i >= 0; i--) {
+        const heading = this.headings[i];
         const headingTop = heading.element.offsetTop;
-        
+
         if (scrollTop + offset >= headingTop) {
           activeHeading = heading.id;
           break;
         }
       }
-      
+
       // If we're at the very top, activate the first heading
       if (!activeHeading && scrollTop < 100) {
         activeHeading = this.headings[0]?.id;
       }
-      
+
       if (activeHeading) {
         this.setActiveHeading(activeHeading);
       }
-      
+
       ticking = false;
     };
-    
+
     const onScroll = () => {
       if (!ticking) {
         requestAnimationFrame(updateActiveHeading);
         ticking = true;
       }
     };
-    
+
     window.addEventListener('scroll', onScroll);
-    
+
     // Initial call
     updateActiveHeading();
   }
