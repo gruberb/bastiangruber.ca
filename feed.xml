@@ -15,6 +15,34 @@
   
     
     <entry>
+      <title>Non-Negotiables</title>
+      <link href="https://bastiangruber.ca/posts/non-negotiables/"/>
+      <updated>2024-06-16T00:00:00Z</updated>
+      <id>https://bastiangruber.ca/posts/non-negotiables/</id>
+      <content type="html">
+        <![CDATA[
+      <h3>Understand the problem/feature to evaluate the possible solutions</h3>
+<p>Can it be efficetively solved with existing things or require new code?</p>
+<h3>Aim for simplicity</h3>
+<p>Think about what is necessary and sufficient to solve the problem, make interfaces and interactions as simple as they can be, don’t write “clever” or confusing code unless absolutely necessary.</p>
+<h3>Aim for elegance</h3>
+<p>Code should be readable and look beautiful, APIs should be small and well defined.</p>
+<h3>Aim for efficiency where possible</h3>
+<p>Avoid too many layers of abstraction or algorithms or structures that don’t scale.</p>
+<h3>Think about clear separation of policy and mechanism</h3>
+<p>Aim for simple clean mechanisms that you can layer different policies on as needed.</p>
+<h3>Think about extensibility</h3>
+<p>What things would your solution preclude being done in the future, try to spot leaky abstractions.</p>
+<h3>Think about failure scenarios and how to test for them and recover or fail as gracefully as possible.</h3>
+<h3>Use useful comments to help future maintainers</h3>
+<p>Including yourself!</p>
+
+    ]]>
+      </content>
+    </entry>
+  
+    
+    <entry>
       <title>Tour of a HTTP request in Rust</title>
       <link href="https://bastiangruber.ca/posts/tour-of-a-http-request-in-rust/"/>
       <updated>2024-06-16T00:00:00Z</updated>
