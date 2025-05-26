@@ -21,7 +21,9 @@
       <id>https://bastiangruber.ca/posts/non-negotiables/</id>
       <content type="html">
         <![CDATA[
-      <h3>Understand the problem/feature to evaluate the possible solutions</h3>
+      <p>I thought about &quot;What makes a &quot;good&quot; engineer&quot; for a long time, and probably will until my death bed. In the day to day, it's sometimes hard to figure out: Did I do a good job? For the technical aspect of my day to day work, I printed own my own &quot;Non Negotiables&quot; (inspired by <a href="https://www.youtube.com/watch?v=VMp0Ai-YnMk">The Bear</a>), and put it next to my desk on the wall. I aim to follow them.</p>
+<p>Here they are:</p>
+<h3>Understand the problem/feature to evaluate the possible solutions</h3>
 <p>Can it be efficetively solved with existing things or require new code?</p>
 <h3>Aim for simplicity</h3>
 <p>Think about what is necessary and sufficient to solve the problem, make interfaces and interactions as simple as they can be, don’t write “clever” or confusing code unless absolutely necessary.</p>
