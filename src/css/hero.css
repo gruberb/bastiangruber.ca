@@ -190,9 +190,8 @@
 
 /* Recent Posts Section */
 .recent-posts {
-    padding: 3rem 0;
+    padding: 3rem;
     background: var(--background);
-    padding-top: 20px;
     border-top: 1px solid var(--border);
 }
 
@@ -267,11 +266,11 @@
     }
 
     .recent-posts {
-        padding: 1.5rem 0;
+        padding: 1.5rem;
     }
 
     .recent-posts .container {
-        padding: 0 1rem;
+        padding: 1rem;
     }
 }
 
