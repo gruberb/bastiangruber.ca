@@ -29,11 +29,10 @@ image: '/images/me.png'
         </div>
         <ul class="skill-card__list">
           <li><strong>Rust</strong> - Published Author, working with Rust since 2018</li>
-          <li>Experience with codebases of hundreds of contributors</li>
+          <li><strong>Python</strong> - Web services serving thousands of requests a minute</li>
+          <li><strong>JavaScript</strong> - Frontend + Backend, React, VueJS, NodeJS, TypeScript</li>
           <li><strong>Rust FFI</strong> targeting Python, Swift, Kotlin and JavaScript</li>
           <li>Built <strong>distributed P2P systems</strong> with low latency in Rust</li>
-          <li><strong>JavaScript</strong> - Frontend + Backend, React, VueJS, NodeJS, TypeScript</li>
-          <li>Greenfield projects plus large Micro Services systems</li>
           <li><strong>Cloud Infrastructure</strong> - Docker, Kubernetes on AWS and Google Cloud</li>
           <li>Memory efficient <strong>data structures</strong></li>
           <li>Balance throughput and congestions in <strong>distributed systems</strong></li>
@@ -48,28 +47,13 @@ image: '/images/me.png'
           <h3 class="skill-card__title">Unique Value Proposition</h3>
         </div>
         <ul class="skill-card__list">
-          <li>A doer, who dives deep and gets things done</li>
-          <li>Both Greenfield, for StartUps in a very fast paced environment</li>
-          <li>Contributed to large codebases like Firefox</li>
-          <li>Problem solving: Communicate, Measure, build and poke at things</li>
-          <li>Thinking business proposition first</li>
-          <li>Know when to build for scale, when to prototype, when to ship fast and when to go slower</li>
-        </ul>
-      </div>
-      <!-- Professional Philosophy Card -->
-      <div class="skill-card">
-        <div class="skill-card__header">
-          <svg class="skill-card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v6l4 2"/>
-          </svg>
-          <h3 class="skill-card__title">Professional Philosophy</h3>
-        </div>
-        <ul class="skill-card__list">
-          <li>Extensive reading of technical books and papers</li>
-          <li>Likes to gather with the technical community</li>
-          <li>Published a book</li>
-          <li>Likes to write books and share ideas, learn from others</li>
+          <li>A <strong>doer</strong>, who dives deep and gets things done</li>
+          <li>Both <strong>Greenfield</strong>, for StartUps in a very fast paced environment</li>
+          <li>Maintaining, improving and refactoring <strong>legacy codebases</strong></li>
+          <li>Contributed to large codebases like <strong>Firefox</strong></li>
+          <li><strong>Problem solving</strong>: I am diving deep into a new problem, communicate my findings, and collaborate to reach the best outcome.</li>
+          <li>Always having the <strong>endgoal</strong> of a task or product I built in mind.</li>
+          <li> <strong>Know when </strong> to build for scale, when to prototype, when to ship fast and when to go slower</li>
         </ul>
       </div>
       <!-- Beyond Code Card -->
@@ -85,6 +69,8 @@ image: '/images/me.png'
           <li>A well oiled team is better than a few 10x engineers</li>
           <li>I spoke on MeetUps, Podcasts and got interviewed</li>
           <li>I am a team player at heart</li>
+          <li>In my freetime, I run ultra marathons (~100km races)</li>
+          <li>I like to build helpful tools. Be it 3D printed soundboxes for my Kids, or websites to help my community and friends</li>
         </ul>
       </div>
     </div>
