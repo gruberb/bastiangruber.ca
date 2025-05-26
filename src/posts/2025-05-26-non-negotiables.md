@@ -6,6 +6,10 @@ date: '2024-06-16'
 tags: [career]
 ---
 
+I thought about "What makes a "good" engineer" for a long time, and probably will until my death bed. In the day to day, it's sometimes hard to figure out: Did I do a good job? For the technical aspect of my day to day work, I printed own my own "Non Negotiables" (inspired by [The Bear](https://www.youtube.com/watch?v=VMp0Ai-YnMk)), and put it next to my desk on the wall. I aim to follow them.
+
+Here they are:
+
 ### Understand the problem/feature to evaluate the possible solutions
 Can it be efficetively solved with existing things or require new code?
 
