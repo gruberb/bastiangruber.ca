@@ -25,9 +25,20 @@
   
     
       <url>
+        <loc>https://bastiangruber.ca/posts/mass-quitting-apple/</loc>
+        
+          <lastmod>2025-12-22T00:00:00.000Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
         <loc>https://bastiangruber.ca/about/</loc>
         
-          <lastmod>2025-12-24T02:08:15.236Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.854Z</lastmod>
         
         
         
@@ -38,7 +49,7 @@
       <url>
         <loc>https://bastiangruber.ca/blog/</loc>
         
-          <lastmod>2025-12-24T02:08:15.236Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.854Z</lastmod>
         
         
         
@@ -49,7 +60,7 @@
       <url>
         <loc>https://bastiangruber.ca/</loc>
         
-          <lastmod>2025-12-24T02:08:15.256Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.874Z</lastmod>
         
         
         
@@ -60,7 +71,7 @@
       <url>
         <loc>https://bastiangruber.ca/projects/</loc>
         
-          <lastmod>2025-12-24T02:08:15.258Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
         
         
         
@@ -71,7 +82,7 @@
       <url>
         <loc>https://bastiangruber.ca/robots.txt</loc>
         
-          <lastmod>2025-12-24T02:08:15.258Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
         
         
         
@@ -82,7 +93,7 @@
       <url>
         <loc>https://bastiangruber.ca/tags/rust/</loc>
         
-          <lastmod>2025-12-24T02:08:15.258Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
         
         
         
@@ -93,7 +104,18 @@
       <url>
         <loc>https://bastiangruber.ca/tags/career/</loc>
         
-          <lastmod>2025-12-24T02:08:15.258Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/linux/</loc>
+        
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
         
         
         
@@ -104,7 +126,7 @@
       <url>
         <loc>https://bastiangruber.ca/talks/</loc>
         
-          <lastmod>2025-12-24T02:08:15.258Z</lastmod>
+          <lastmod>2025-12-24T15:34:59.875Z</lastmod>
         
         
         
