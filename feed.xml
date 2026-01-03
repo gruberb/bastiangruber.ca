@@ -43,7 +43,7 @@
 <li><a href="https://ticktick.com">TickTick</a> for ToDos</li>
 <li><a href="https://www.ynab.com/">YNAB</a> for finances</li>
 <li><a href="https://excalidraw.com/">Excalidraw</a> for diagrams</li>
-<li><a href="https://www.youtube.com/">YouTube</a> for...so many things honestly. I disable my browser history so no video recommendations and rabbit holes for me, perfect!</li>
+<li><a href="https://www.youtube.com/">YouTube</a> for...so many things honestly. I disable my <del>bowser</del> watch history so no video recommendations and rabbit holes for me, perfect!</li>
 <li><a href="https://miniflux.app/">Miniflux - Self hosted</a> for my own RSS needs</li>
 <li><a href="https://app.wakingup.com/">WakingUp</a> for meditation</li>
 <li><a href="https://github.com/gruberb">GitHub</a> for my coding projects.</li>
@@ -77,6 +77,9 @@
 <hr>
 <p>That's it - that's my setup. I use <a href="https://www.firefox.com/en-CA/features/sync/">Firefox Sync</a> to have my account stored not only on my laptop, and as soon I setup Firefox somehwere else, all my extensions and bookmarks are back. And I trust Mozilla with my data (I work there and can talk to the folks and they are all great :)).</p>
 <p>I don't expect that I change this setup very much in 2027 - the web feels much slower to change, but I still want to have this noted down somewhere.</p>
+<div class="info">
+Discussion on Lobsters: https://lobste.rs/s/awxarg/how_i_browse_web_2026
+</div>
 
     ]]>
       </content>
