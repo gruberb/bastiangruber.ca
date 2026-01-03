@@ -32,7 +32,8 @@
 <li><a href="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/?file=bypass_paywalls_clean-latest.xpi&amp;branch=main">Bypass Paywalls Clean</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/clearurls/">ClearURLs</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/hide-youtube-shorts/">Hide shorts for Youtube</a></li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/">I still don't care about cookies</a></li>
+<li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/">I still don't care about cookies</a></del></li>
+<li>Someone on lobste.rs pointed out <a href="https://addons.mozilla.org/en-US/firefox/addon/consent-o-matic/">Consent-O-Matic</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/">SponsorBlock for YouTube - Skip Sponsorships</a></li>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></li>
@@ -78,7 +79,7 @@
 <p>That's it - that's my setup. I use <a href="https://www.firefox.com/en-CA/features/sync/">Firefox Sync</a> to have my account stored not only on my laptop, and as soon I setup Firefox somehwere else, all my extensions and bookmarks are back. And I trust Mozilla with my data (I work there and can talk to the folks and they are all great :)).</p>
 <p>I don't expect that I change this setup very much in 2027 - the web feels much slower to change, but I still want to have this noted down somewhere.</p>
 <div class="info">
-Discussion on Lobsters: https://lobste.rs/s/awxarg/how_i_browse_web_2026
+Discussion on Lobsters: [https://lobste.rs/s/awxarg/how_i_browse_web_2026](https://lobste.rs/s/awxarg/how_i_browse_web_2026)
 </div>
 
     ]]>
