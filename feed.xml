@@ -5,13 +5,82 @@
   <link href="https://bastiangruber.ca/feed.xml" rel="self"/>
   <link href="https://bastiangruber.ca/"/>
   
-    <updated>2025-12-22T00:00:00Z</updated>
+    <updated>2026-01-03T00:00:00Z</updated>
   
   <id>https://bastiangruber.ca</id>
   <author>
     <name>Bastian Gruber</name>
     <email>info@bastiangruber.ca</email>
   </author>
+  
+    
+    <entry>
+      <title>How I browse the web in 2026</title>
+      <link href="https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/"/>
+      <updated>2026-01-03T00:00:00Z</updated>
+      <id>https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/</id>
+      <content type="html">
+        <![CDATA[
+      <p>This blog post should serve as a time capsule for my future self. How was it like serving the Internet in 2026? What is my set up, my most visitied bookmarks, websites I frequently go to? Let's find out.</p>
+<h3>Hardware excursion</h3>
+<p>For the very first time, I cleanly separated my work (MacBook Pro M3 Pro) and my private digital life (Framework AMD 13&quot; with Arch + COSMIC). I deinstalled all work related apps and logins from my phone (iPhone 13 Pro Max). I use Firefox on all devices, Thunderbird on my Framework laptop (and use GMail via the browser on my work laptop). On my iPhone, I use the default Mail client. I also unplugged completely from <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">Apple</a> and hope to get a <a href="https://tbot.substack.com/p/grapheneos-new-oem-partnership">GrapheneOS native Android phone soon</a>.</p>
+<h3>My (Firefox) extensions</h3>
+<ul>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-for-youtube/">AdBlocker for YouTube™</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/are-na/">Are.na</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/">Bitwarden Password Manager</a></li>
+<li><a href="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/?file=bypass_paywalls_clean-latest.xpi&amp;branch=main">Bypass Paywalls Clean</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/clearurls/">ClearURLs</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/hide-youtube-shorts/">Hide shorts for Youtube™</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/">I still don't care about cookies</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/">SponsorBlock for YouTube - Skip Sponsorships</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></li>
+<li><a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer/">YouTube Enhancer</a></li>
+</ul>
+<h3>Web Services I use</h3>
+<ul>
+<li><a href="https://ticktick.com">TickTick</a> for ToDos</li>
+<li><a href="https://www.ynab.com/">YNAB</a> for finances</li>
+<li><a href="https://excalidraw.com/">Excalidraw</a> for diagrams</li>
+<li><a href="https://www.youtube.com/">YouTube</a> for...so many things honestly. I disable my browser history so no video recommendations and rabbit holes for me, perfect!</li>
+<li><a href="https://miniflux.app/">Miniflux - Self hosted</a> for my own RSS needs</li>
+<li><a href="https://app.wakingup.com/">WakingUp</a> for meditation</li>
+<li><a href="https://github.com/gruberb">GitHub</a> for my coding projects.</li>
+</ul>
+<h3>Go-to websites I often browse</h3>
+<ol start="0">
+<li><a href="https://isthelclcpoolopen.ca/">isthelclcpoolopen.ca</a> - A dashboard I created for our local community pool.</li>
+<li><a href="https://www.theverge.com/">The Verge</a></li>
+<li><a href="https://www.are.na">Are.na</a></li>
+<li><a href="https://pinboard.in/popular/">Popular Pinboard posts</a></li>
+<li><a href="https://lobste.rs/">Lobsters</a></li>
+<li><a href="https://news.ycombinator.com/">HackerNews</a></li>
+<li><a href="https://www.newsminimalist.com/">NewsMinimalist</a></li>
+<li><a href="https://letterboxd.com/">Letterbox</a></li>
+</ol>
+<h3>Flow</h3>
+<p>I often times open the browser mindlessly, click on the suggested shortcuts in Firefox of my last visited websites, and see what's new. Once a day or around 3 times a week, I check my RSS feed. I really enjoy going to the websites directly, and RSS seems to... clean and stripped down. But I also don't want to check 15 blogs manually every day, so it's good enough.</p>
+<p>I save websites (articles really) to my <a href="https://www.are.na/bastian-foreach-me-com/channels">Are.na account</a> and promised myself to read it later. Which... I barely do. I started a TickTick list with an every day task to read at least 2 articles from my <a href="https://www.are.na/bastian-foreach-me-com/aha-coding">&quot;Aha! Coding&quot;</a> channel. And I want to read more papers and watch tutorials this year. It's always a nice attempt, and once work is heating up, I read up on so many things I need at that moment, that I don't have much time or energy left to read &quot;general purpose&quot; content. But every time I come across a new problem, I find a saved article months later which would have helped me - at least partly - with that. So I want to make a new attempt of being religious about reading tech articles again.</p>
+<p><a href="https://news.ycombinator.com/">HackerNews</a> is still one of my most visited website. I barely read the comments anymore, maybe the first one. But it's a good hub to know what's generally going on in the wider industry. Same with <a href="https://lobste.rs/">Lobsters</a>, but I enjoy going through the comments there, even of posts I am not interested in. <a href="https://pinboard.in/popular/">Pinboard</a> is another one where I go through the popular saved articles, but don't use the service myself anymore.</p>
+<p>For meditation and introspection, I enjoy <a href="https://app.wakingup.com/">WakingUp</a>. It's sometimes &quot;too far out there&quot;, but it's less cluttered than the other suppose-to-be meditation apps. And I still need some prompts or guidance, especially during a hectic day with work, family, hobbies and friends.</p>
+<p>For my ToDos: I actually managed to have 0 ToDo apps during most of 2025. They always stress me out seeing all the open things in my life I currently can't make progress on. Work is manged separete, and life is happening so much at the moment with kids and family, that the top 3-5 priority tasks are always obvious. But I also realized I am missing out on cleaning out my (digital) life and experimenting with project ideas or blog posts. It's good to have a place to store them again. I start to use <a href="https://ticktick.com/">TickTick</a>. I wish OmniFocus, Things and TickTick would have a baby. But TickTick is the best multi-platform tool I found, and it's &quot;good enough&quot;. I really miss going nerdy in OmniFocus, and I miss the sheer beauty and simplicity of Things. But oh well. Can't have it all it seems.</p>
+<p>I mange my finances for the past 15 years with <a href="https://www.ynab.com/">YNAB</a>. It is slowly not the best tool anymore, and I want to try <a href="https://www.monarch.com/">Monarch</a>, but their Canadian bank account support doesn't seem to be working reliably. But hey, they actually have a <a href="https://www.monarch.com/connection-status">dashboard</a> for it!</p>
+<p>Coding projects still live in <a href="https://github.com">GitHub</a>, and it slowly time to self host my projects. I never really collaborate much on these projects, but just want to store them somewhere where I can run workers. I would miss the hosting static websites via GitHub pages, so I have to figure out how to do that.</p>
+<p>A bigger part takes <a href="https://www.youtube.com/">YouTube</a>. I listen to DJ sets, follow a few channels and often times watch tutorials or talks on it. YouTube is I think the only service which I am very happy to pay money for. Now it's owned by Google and I am sure there are some shady things going on with pushing videos front and center. I disabled my browsing history, so I see a black blank page when I open the general website. <strong>I have three YouTube bookmarks</strong>:</p>
+<ul>
+<li>Subscription view</li>
+<li>&quot;Watch it later&quot; playlist</li>
+<li>My own &quot;Music&quot; playlist</li>
+</ul>
+<p>So I never browse YouTube mindlessly, and get no video recommendations (disabled also via one of the YouTube extensions).</p>
+<hr>
+<p>That's it - that's my setup. I use <a href="https://www.firefox.com/en-CA/features/sync/">Firefox Sync</a> to have my account stored not only on my laptop, and as soon I setup Firefox somehwere else, all my extensions and bookmarks are back. And I trust Mozilla with my data (I work there and can talk to the folks and they are all great :)).</p>
+<p>I don't expect that I change this setup very much in 2027 - the web feels much slower to change, but I still want to have this noted down somewhere.</p>
+
+    ]]>
+      </content>
+    </entry>
   
     
     <entry>
