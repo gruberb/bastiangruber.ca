@@ -23,7 +23,7 @@
         <![CDATA[
       <p>This blog post should serve as a time capsule for my future self. How was it like serving the Internet in 2026? What is my set up, my most visitied bookmarks, websites I frequently go to? Let's find out.</p>
 <h3>Hardware excursion</h3>
-<p>For the very first time, I cleanly separated my work (MacBook Pro M3 Pro) and my private digital life (Framework AMD 13&quot; with Arch + COSMIC). I deinstalled all work related apps and logins from my phone (iPhone 13 Pro Max). I use Firefox on all devices, Thunderbird on my Framework laptop (and use GMail via the browser on my work laptop). On my iPhone, I use the default Mail client. I also unplugged completely from <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">Apple</a> and hope to get a <a href="https://tbot.substack.com/p/grapheneos-new-oem-partnership">GrapheneOS native Android phone soon</a>.</p>
+<p>For the very first time, I cleanly separated my work (MacBook Pro M3 Pro) and my private digital life (Framework AMD 13&quot; with Arch + COSMIC). I deinstalled all work related apps and logins from my phone (iPhone 13 Pro Max). I use Firefox on all devices, Thunderbird on my Framework laptop (and use GMail via the browser on my work laptop). On my iPhone, I use the default Mail client. I also <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">unplugged completely from Apple</a> and hope to get a <a href="https://tbot.substack.com/p/grapheneos-new-oem-partnership">GrapheneOS native Android phone soon</a>.</p>
 <h3>My (Firefox) extensions</h3>
 <ul>
 <li><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-for-youtube/">AdBlocker for YouTube</a></li>
@@ -43,7 +43,7 @@
 <li><a href="https://ticktick.com">TickTick</a> for ToDos</li>
 <li><a href="https://www.ynab.com/">YNAB</a> for finances</li>
 <li><a href="https://excalidraw.com/">Excalidraw</a> for diagrams</li>
-<li><a href="https://www.youtube.com/">YouTube</a> for...so many things honestly. I disable my <del>bowser</del> watch history so no video recommendations and rabbit holes for me, perfect!</li>
+<li><a href="https://www.youtube.com/">YouTube</a> for...so many things honestly. I disable my <del>browser</del> watch history so no video recommendations and rabbit holes for me, perfect!</li>
 <li><a href="https://miniflux.app/">Miniflux - Self hosted</a> for my own RSS needs</li>
 <li><a href="https://app.wakingup.com/">WakingUp</a> for meditation</li>
 <li><a href="https://github.com/gruberb">GitHub</a> for my coding projects.</li>
