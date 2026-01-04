@@ -26,19 +26,37 @@
 <p>For the very first time, I cleanly separated my work (MacBook Pro M3 Pro) and my private digital life (Framework AMD 13&quot; with Arch + COSMIC). I deinstalled all work related apps and logins from my phone (iPhone 13 Pro Max). I use Firefox on all devices, Thunderbird on my Framework laptop (and use GMail via the browser on my work laptop). On my iPhone, I use the default Mail client. I also <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">unplugged completely from Apple</a> and hope to get a <a href="https://tbot.substack.com/p/grapheneos-new-oem-partnership">GrapheneOS native Android phone soon</a>.</p>
 <h3>My (Firefox) extensions</h3>
 <ul>
-<li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/hide-youtube-shorts/">Hide shorts for Youtube</a></del> Using <a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-vc/">YouTube Enhancer</a> now for this.</li>
-<li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/">I still don't care about cookies</a></del></li>
-<li>Someone on lobste.rs pointed out <a href="https://addons.mozilla.org/en-US/firefox/addon/consent-o-matic/">Consent-O-Matic</a></li>
-<li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/">SponsorBlock for YouTube - Skip Sponsorships</a></del> <a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a> might do the trick for this one as well.</li>
+<li>
+<p><del><a href="https://addons.mozilla.org/en-US/firefox/addon/hide-youtube-shorts/">Hide shorts for Youtube</a></del> Using <a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-vc/">YouTube Enhancer</a> now for this.</p>
+</li>
+<li>
+<p><del><a href="https://addons.mozilla.org/en-US/firefox/addon/istilldontcareaboutcookies/">I still don't care about cookies</a></del></p>
+</li>
+<li>
+<p>Someone on lobste.rs pointed out <a href="https://addons.mozilla.org/en-US/firefox/addon/consent-o-matic/">Consent-O-Matic</a></p>
+</li>
+<li>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></p>
+<ul>
+<li>A commenter pointed out these are redundant if you use uBlock Origin (which has URL tracking protection and tracker blocking built-in):</li>
+<li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/sponsorblock/">SponsorBlock for YouTube - Skip Sponsorships</a></del></li>
 <li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/adblock-for-youtube/">AdBlocker for YouTube</a></del></li>
 <li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/clearurls/">ClearURLs</a></del></li>
 <li><del><a href="https://addons.mozilla.org/en-US/firefox/addon/privacy-badger17/">Privacy Badger</a></del></li>
-<li>A commenter pointed out these are redundant if you use uBlock Origin (which has URL tracking protection and tracker blocking built-in). Firefox also has &quot;Copy Link Without Site Tracking&quot; in the right-click menu now.</li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/">uBlock Origin</a></li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-vc/">YouTube Enhancer</a></li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/are-na/">Are.na</a></li>
-<li><a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/">Bitwarden Password Manager</a></li>
-<li><a href="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/?file=bypass_paywalls_clean-latest.xpi&amp;branch=main">Bypass Paywalls Clean</a></li>
+</ul>
+</li>
+<li>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/youtube-enhancer-vc/">YouTube Enhancer</a></p>
+</li>
+<li>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/are-na/">Are.na</a></p>
+</li>
+<li>
+<p><a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/">Bitwarden Password Manager</a></p>
+</li>
+<li>
+<p><a href="https://gitflic.ru/project/magnolia1234/bpc_uploads/blob/?file=bypass_paywalls_clean-latest.xpi&amp;branch=main">Bypass Paywalls Clean</a></p>
+</li>
 </ul>
 <h4>Configuring uBlock Origin for maximum coverage</h4>
 <p>Open uBlock Origin settings (click the extension icon → three gear icon) and go to <strong>Filter lists</strong>. Make sure these are enabled:</p>
