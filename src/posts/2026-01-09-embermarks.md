@@ -10,16 +10,7 @@ I created a Firefox Extensions!! It is called [Embermarks](https://addons.mozill
 
 And this is what it looks like:
 
-<table>
-  <tr>
-    <td><img src="/images/embermarks_popup.png" width="300" alt="Embermarks popup"></td>
-    <td><img src="/images/embermarks_settings.png" width="300" alt="Embermarks settings"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Popup</em></td>
-    <td align="center"><em>Settings</em></td>
-  </tr>
-</table>
+<img src="/images/embermarks_popup.png" width="300" alt="Embermarks popup">
 
 ### Why I created it
 
@@ -38,6 +29,8 @@ A year is busy, so I forget to actually go to these websites. And for some websi
 I always created my own little Firefox extensions in the past - whenver a website annoys me or I needed something quick, and needed JS code do something for me, I put it in a Firefox extension and feel so proud and powerful. This time around though, I wanted to do something "official" and publish it to [Firefox Addons](https://addons.mozilla.org/en-CA/firefox/).
 
 I never really thought about how to properly create an extension, just quick and dirty. So here is a recipe for my future self in case I forget again what to do.
+
+<img src="/images/embermarks_popup.png" alt="Embermarks popup" style="max-width: 350px; display: block; margin: 2rem auto;">
 
 ## 1. Starting a Firefox Extension Project
 
