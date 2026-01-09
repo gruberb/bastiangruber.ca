@@ -23,16 +23,7 @@
         <![CDATA[
       <p>I created a Firefox Extensions!! It is called <a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a> and it should help you discovering old and and/or forgotten bookmarks. It is also <a href="https://github.com/gruberb/embermarks">open source</a>.</p>
 <p>And this is what it looks like:</p>
-<table>
-  <tr>
-    <td><img src="/images/embermarks_popup.png" width="300" alt="Embermarks popup"></td>
-    <td><img src="/images/embermarks_settings.png" width="300" alt="Embermarks settings"></td>
-  </tr>
-  <tr>
-    <td align="center"><em>Popup</em></td>
-    <td align="center"><em>Settings</em></td>
-  </tr>
-</table>
+<img src="/images/embermarks_popup.png" width="300" alt="Embermarks popup">
 <h3>Why I created it</h3>
 <p>Part of my routine in December to clean up my digital landscape (I <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">left Apple Services</a> and <a href="https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/">re-setup my Firefox profiles</a>), is to really clean up and just take with me into the new year which I actually (use | read | consume | need).</p>
 <p>Bookmarks was another one. I am usually quite organized when it comes to my bookmarks, and store every article or things I want to read or watch in my <a href="https://www.are.na/bastian-foreach-me-com/channels">Are.na account</a>. But, one of the folders I have is &quot;Exercises&quot;. Websites I store which hopefully improve my skills. For example:</p>
@@ -45,6 +36,7 @@
 <p>A year is busy, so I forget to actually go to these websites. And for some websites -real gems - I totally forgot I had them bookmarked. Hence, my next little side project: <a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a>.</p>
 <p>I always created my own little Firefox extensions in the past - whenver a website annoys me or I needed something quick, and needed JS code do something for me, I put it in a Firefox extension and feel so proud and powerful. This time around though, I wanted to do something &quot;official&quot; and publish it to <a href="https://addons.mozilla.org/en-CA/firefox/">Firefox Addons</a>.</p>
 <p>I never really thought about how to properly create an extension, just quick and dirty. So here is a recipe for my future self in case I forget again what to do.</p>
+<img src="/images/embermarks_popup.png" alt="Embermarks popup" style="max-width: 350px; display: block; margin: 2rem auto;">
 <h2>1. Starting a Firefox Extension Project</h2>
 <p>What files do you need? What's the minimal setup?</p>
 <p><strong>Key files:</strong></p>
