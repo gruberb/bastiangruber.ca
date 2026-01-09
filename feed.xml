@@ -21,8 +21,8 @@
       <id>https://bastiangruber.ca/posts/embermarks-a-firefox-extension/</id>
       <content type="html">
         <![CDATA[
-      <p>I created a Firefox Extensions!!!</p>
-<p><a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a> | <a href="https://github.com/gruberb/embermarks">Source Code</a></p>
+      <p>I created a Firefox Extensions!! It is called <a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a> and it should help you discovering old and and/or forgotten bookmarks. It is also <a href="https://github.com/gruberb/embermarks">open source</a>.</p>
+<p>And this is what it looks like:</p>
 <table>
   <tr>
     <td><img src="/images/embermarks-popup.png" width="300" alt="Embermarks popup"></td>
@@ -33,6 +33,7 @@
     <td align="center"><em>Settings</em></td>
   </tr>
 </table>
+<h3>Why I created it</h3>
 <p>Part of my routine in December to clean up my digital landscape (I <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">left Apple Services</a> and <a href="https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/">re-setup my Firefox profiles</a>), is to really clean up and just take with me into the new year which I actually (use | read | consume | need).</p>
 <p>Bookmarks was another one. I am usually quite organized when it comes to my bookmarks, and store every article or things I want to read or watch in my <a href="https://www.are.na/bastian-foreach-me-com/channels">Are.na account</a>. But, one of the folders I have is &quot;Exercises&quot;. Websites I store which hopefully improve my skills. For example:</p>
 <ul>
