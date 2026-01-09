@@ -22,6 +22,7 @@
       <content type="html">
         <![CDATA[
       <p>I created a Firefox Extensions!! It is called <a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a> and it should help you discovering old and and/or forgotten bookmarks. It is also <a href="https://github.com/gruberb/embermarks">open source</a>.</p>
+<p>It goes through all your bookmarks (everything is happening locally, nothing leaves your computer) and stores all bookmarks which haven't been opened. You have options to say: &quot;Show me all bookmarks which haven't at least been opened 2 times in the past 180 days) for example. You can either refresh the list on every click on the icon, or once a day etc.</p>
 <p>And this is what it looks like:</p>
 <img src="/images/embermarks_popup.png" alt="Embermarks popup" style="max-width: 350px; display: block; margin: 2rem auto;">
 <h3>Why I created it</h3>
