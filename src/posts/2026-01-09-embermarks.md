@@ -1,5 +1,5 @@
 ---
-title: Firefox Extension: Embermarks
+title: Embermarks - A Firefox Extension 
 description: Rediscover your forgotten bookmarks
 permalink: posts/{{ title | slug }}/index.html
 date: '2026-01-09'
