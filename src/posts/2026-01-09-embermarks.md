@@ -10,6 +10,17 @@ I created a Firefox Extensions!!!
 
 [Embermarks](https://addons.mozilla.org/en-US/firefox/addon/embermarks1/) | [Source Code](https://github.com/gruberb/embermarks)
 
+<table>
+  <tr>
+    <td><img src="/images/embermarks-popup.png" width="300" alt="Embermarks popup"></td>
+    <td><img src="/images/embermarks-settings.png" width="300" alt="Embermarks settings"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Popup</em></td>
+    <td align="center"><em>Settings</em></td>
+  </tr>
+</table>
+
 Part of my routine in December to clean up my digital landscape (I [left Apple Services](https://bastiangruber.ca/posts/mass-quitting-apple/) and [re-setup my Firefox profiles](https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/)), is to really clean up and just take with me into the new year which I actually (use | read | consume | need).
 
 Bookmarks was another one. I am usually quite organized when it comes to my bookmarks, and store every article or things I want to read or watch in my [Are.na account](https://www.are.na/bastian-foreach-me-com/channels). But, one of the folders I have is "Exercises". Websites I store which hopefully improve my skills. For example:
@@ -31,6 +42,7 @@ I never really thought about how to properly create an extension, just quick and
 What files do you need? What's the minimal setup?
 
 **Key files:**
+
 - `manifest.json` — The extension's configuration file
 - `background.js` — Background script for core logic
 - `popup/` — UI that appears when clicking the extension icon
@@ -184,9 +196,10 @@ The `action` field is just a convention — you're sending a plain object, so yo
 How to package it for distribution?
 
 **Using web-ext:**
+
 ```sh
-npm install -g web-ext
-web-ext build
+> npm install -g web-ext
+> web-ext build
 ```
 
 This creates a `.zip` file in `web-ext-artifacts/` ready for submission.
@@ -201,15 +214,17 @@ How to load and test the extension during development?
 
 **Two ways to test:**
 
-1. **about:debugging** — Load temporary extension
-   - Go to `about:debugging#/runtime/this-firefox`
-   - Click "Load Temporary Add-on..."
-   - Select your `manifest.json`
+1. about:debugging - Load temporary extension
+   
+- Go to `about:debugging#/runtime/this-firefox`
+- Click "Load Temporary Add-on..."
+- Select your `manifest.json`
 
-2. **web-ext run** — Auto-reload on changes
-   ```sh
-   web-ext run
-   ```
+2. web-ext run - Auto-reload on changes
+   
+```sh
+> web-ext run
+```
 
 **Links:**
 - [Temporary installation in Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
