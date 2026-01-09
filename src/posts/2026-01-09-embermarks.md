@@ -6,9 +6,9 @@ date: '2026-01-09'
 tags: [firefox]
 ---
 
-I created a Firefox Extensions!!!
+I created a Firefox Extensions!! It is called [Embermarks](https://addons.mozilla.org/en-US/firefox/addon/embermarks1/) and it should help you discovering old and and/or forgotten bookmarks. It is also [open source](https://github.com/gruberb/embermarks).
 
-[Embermarks](https://addons.mozilla.org/en-US/firefox/addon/embermarks1/) | [Source Code](https://github.com/gruberb/embermarks)
+And this is what it looks like:
 
 <table>
   <tr>
@@ -20,6 +20,8 @@ I created a Firefox Extensions!!!
     <td align="center"><em>Settings</em></td>
   </tr>
 </table>
+
+### Why I created it
 
 Part of my routine in December to clean up my digital landscape (I [left Apple Services](https://bastiangruber.ca/posts/mass-quitting-apple/) and [re-setup my Firefox profiles](https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/)), is to really clean up and just take with me into the new year which I actually (use | read | consume | need).
 
