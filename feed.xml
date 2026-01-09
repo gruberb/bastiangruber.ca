@@ -23,6 +23,16 @@
         <![CDATA[
       <p>I created a Firefox Extensions!!!</p>
 <p><a href="https://addons.mozilla.org/en-US/firefox/addon/embermarks1/">Embermarks</a> | <a href="https://github.com/gruberb/embermarks">Source Code</a></p>
+<table>
+  <tr>
+    <td><img src="/images/embermarks-popup.png" width="300" alt="Embermarks popup"></td>
+    <td><img src="/images/embermarks-settings.png" width="300" alt="Embermarks settings"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Popup</em></td>
+    <td align="center"><em>Settings</em></td>
+  </tr>
+</table>
 <p>Part of my routine in December to clean up my digital landscape (I <a href="https://bastiangruber.ca/posts/mass-quitting-apple/">left Apple Services</a> and <a href="https://bastiangruber.ca/posts/how-i-browse-the-web-in-2026/">re-setup my Firefox profiles</a>), is to really clean up and just take with me into the new year which I actually (use | read | consume | need).</p>
 <p>Bookmarks was another one. I am usually quite organized when it comes to my bookmarks, and store every article or things I want to read or watch in my <a href="https://www.are.na/bastian-foreach-me-com/channels">Are.na account</a>. But, one of the folders I have is &quot;Exercises&quot;. Websites I store which hopefully improve my skills. For example:</p>
 <ul>
@@ -136,7 +146,7 @@
 <h2>7. Bundling the Extension</h2>
 <p>How to package it for distribution?</p>
 <p><strong>Using web-ext:</strong></p>
-<pre class="language-sh"><code class="language-sh"><span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> web-ext<br>web-ext build</code></pre>
+<pre class="language-sh"><code class="language-sh"><span class="token operator">></span> <span class="token function">npm</span> <span class="token function">install</span> <span class="token parameter variable">-g</span> web-ext<br><span class="token operator">></span> web-ext build</code></pre>
 <p>This creates a <code>.zip</code> file in <code>web-ext-artifacts/</code> ready for submission.</p>
 <p><strong>Links:</strong></p>
 <ul>
@@ -147,19 +157,17 @@
 <p>How to load and test the extension during development?</p>
 <p><strong>Two ways to test:</strong></p>
 <ol>
-<li>
-<p><strong>about:debugging</strong> — Load temporary extension</p>
+<li>about:debugging - Load temporary extension</li>
+</ol>
 <ul>
 <li>Go to <code>about:debugging#/runtime/this-firefox</code></li>
 <li>Click &quot;Load Temporary Add-on...&quot;</li>
 <li>Select your <code>manifest.json</code></li>
 </ul>
-</li>
-<li>
-<p><strong>web-ext run</strong> — Auto-reload on changes</p>
-<pre class="language-sh"><code class="language-sh">web-ext run</code></pre>
-</li>
+<ol start="2">
+<li>web-ext run - Auto-reload on changes</li>
 </ol>
+<pre class="language-sh"><code class="language-sh"><span class="token operator">></span> web-ext run</code></pre>
 <p><strong>Links:</strong></p>
 <ul>
 <li><a href="https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/">Temporary installation in Firefox</a></li>
