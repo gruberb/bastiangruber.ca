@@ -8,6 +8,8 @@ tags: [firefox]
 
 I created a Firefox Extensions!! It is called [Embermarks](https://addons.mozilla.org/en-US/firefox/addon/embermarks1/) and it should help you discovering old and and/or forgotten bookmarks. It is also [open source](https://github.com/gruberb/embermarks).
 
+It goes through all your bookmarks (everything is happening locally, nothing leaves your computer) and stores all bookmarks which haven't been opened. You have options to say: "Show me all bookmarks which haven't at least been opened 2 times in the past 180 days) for example. You can either refresh the list on every click on the icon, or once a day etc. 
+
 And this is what it looks like:
 
 <img src="/images/embermarks_popup.png" alt="Embermarks popup" style="max-width: 350px; display: block; margin: 2rem auto;">
