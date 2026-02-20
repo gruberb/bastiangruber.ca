@@ -78,9 +78,18 @@ i {
     font-style: italic;
 }
 
+:not(pre) > code {
+    background-color: rgba(251, 191, 36, 0.1);
+    color: var(--primary-light);
+    padding: 0.15em 0.4em;
+    border-radius: var(--radius-sm);
+    font-family: "Fira Code", Menlo, monospace;
+    font-size: 0.9em;
+}
+
 blockquote {
     margin: var(--space-xl) 0;
-    padding: var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
     background-color: var(--surface);
     border-left: 4px solid var(--primary);
     border-radius: var(--radius-md);
@@ -88,14 +97,21 @@ blockquote {
     color: var(--text-secondary);
 }
 
+blockquote > *:last-child {
+    margin-bottom: 0;
+}
+
 a {
     color: var(--primary);
-    text-decoration: none;
-    transition: color 0.2s ease;
+    text-decoration: underline;
+    text-decoration-color: rgba(251, 191, 36, 0.4);
+    text-underline-offset: 0.15em;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 a:hover {
     color: var(--primary-light);
+    text-decoration-color: var(--primary-light);
 }
 
 /* Improved list styling */

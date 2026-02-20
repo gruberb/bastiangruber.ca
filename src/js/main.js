@@ -124,8 +124,30 @@ class TableOfContents {
     }
 
     this.generateTOC();
+    this.setupCollapse();
     this.setupScrollSpy();
     this.setupMobileToggle();
+  }
+
+  setupCollapse() {
+    const h3 = this.tocContainer.querySelector('h3');
+    if (!h3) return;
+
+    // Wrap h3 in a clickable header with a chevron button
+    const header = document.createElement('div');
+    header.classList.add('toc-header');
+    h3.parentNode.insertBefore(header, h3);
+    header.appendChild(h3);
+
+    const btn = document.createElement('button');
+    btn.classList.add('toc-collapse-btn');
+    btn.setAttribute('aria-label', 'Toggle table of contents');
+    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>';
+    header.appendChild(btn);
+
+    header.addEventListener('click', () => {
+      this.tocContainer.classList.toggle('collapsed');
+    });
   }
 
   generateTOC() {

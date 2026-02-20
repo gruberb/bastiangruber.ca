@@ -31,7 +31,7 @@
 .main:not(.home-main) {
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 48.75rem;
+    max-width: 64rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -52,7 +52,7 @@ code[class*="language-"] {
 /* main.css */
 .code-block-container {
     position: relative;
-    margin: 2rem calc((100% - min(60ch, 100%)) / -2);
+    margin: 2rem -1.5rem;
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
@@ -108,7 +108,7 @@ pre[class*="language-"] .token-line {
 /* 4) Make sure your wrapper still gives you that gentle rounded container */
 .code-block-container {
     position: relative;
-    margin: 2rem calc((100% - min(60ch, 100%)) / -2);
+    margin: 2rem -1.5rem;
     padding: 1rem;
     background: var(--code-bg, #282a36);
     /* Dracula’s background */
@@ -130,4 +130,21 @@ pre[data-line] .line-highlight {
     background: var(--code-bg, #282a36);
     border-radius: .5rem;
     overflow-x: auto;
+}
+
+pre[class*="language-text"],
+code[class*="language-text"] {
+    white-space: pre;
+    word-break: normal;
+    word-wrap: normal;
+}
+
+pre[class*="language-text"] {
+    display: flex;
+    justify-content: center;
+}
+
+pre[class*="language-text"] > code {
+    display: inline-block;
+    text-align: left;
 }

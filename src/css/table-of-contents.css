@@ -17,8 +17,16 @@
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
+.toc-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+}
+
 .table-of-contents h3 {
-    margin: 0 0 0.75rem 0;
+    margin: 0;
     font-size: var(--text-sm);
     font-weight: 600;
     color: var(--text-secondary);
@@ -26,10 +34,45 @@
     letter-spacing: 0.05em;
 }
 
+.toc-collapse-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.toc-collapse-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.table-of-contents.collapsed .toc-collapse-btn {
+    transform: rotate(-90deg);
+}
+
+.toc-list {
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+    max-height: 60vh;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.table-of-contents.collapsed .toc-list {
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+}
+
 .toc-list {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.75rem 0 0 0;
 }
 
 .toc-item {
@@ -42,6 +85,10 @@
 
 .toc-item.toc-h2 {
     margin-left: 1rem;
+}
+
+.toc-item.toc-h3 {
+    margin-left: 2rem;
 }
 
 .toc-link {
@@ -67,6 +114,10 @@
     background-color: var(--primary);
     border-left-color: var(--primary);
     font-weight: 500;
+}
+
+.toc-link.toc-h3 {
+    font-size: var(--text-xs);
 }
 
 .toc-link.toc-h1 {
