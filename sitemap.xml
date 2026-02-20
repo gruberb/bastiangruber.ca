@@ -47,17 +47,6 @@
   
     
       <url>
-        <loc>https://bastiangruber.ca/posts/embermarks-a-firefox-extension/</loc>
-        
-          <lastmod>2026-01-09T00:00:00.000Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
         <loc>https://bastiangruber.ca/posts/my-setup-for-an-ad-free-life-(featuring-adguard-home)/</loc>
         
           <lastmod>2026-01-16T00:00:00.000Z</lastmod>
@@ -69,9 +58,20 @@
   
     
       <url>
+        <loc>https://bastiangruber.ca/posts/how-i-built-a-minimal-knowledge-sync-for-workledger/</loc>
+        
+          <lastmod>2026-02-20T00:00:00.000Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
         <loc>https://bastiangruber.ca/about/</loc>
         
-          <lastmod>2026-02-12T15:12:38.389Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.379Z</lastmod>
         
         
         
@@ -82,7 +82,7 @@
       <url>
         <loc>https://bastiangruber.ca/blog/</loc>
         
-          <lastmod>2026-02-12T15:12:38.389Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.379Z</lastmod>
         
         
         
@@ -93,7 +93,7 @@
       <url>
         <loc>https://bastiangruber.ca/cv/</loc>
         
-          <lastmod>2026-02-12T15:12:38.390Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.380Z</lastmod>
         
         
         
@@ -104,7 +104,7 @@
       <url>
         <loc>https://bastiangruber.ca/</loc>
         
-          <lastmod>2026-02-12T15:12:38.413Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.418Z</lastmod>
         
         
         
@@ -115,7 +115,7 @@
       <url>
         <loc>https://bastiangruber.ca/projects/</loc>
         
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
         
         
         
@@ -126,29 +126,7 @@
       <url>
         <loc>https://bastiangruber.ca/robots.txt</loc>
         
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/career/</loc>
-        
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/linux/</loc>
-        
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
         
         
         
@@ -159,18 +137,7 @@
       <url>
         <loc>https://bastiangruber.ca/tags/rust/</loc>
         
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/firefox/</loc>
-        
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
         
         
         
@@ -181,7 +148,40 @@
       <url>
         <loc>https://bastiangruber.ca/tags/internet/</loc>
         
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/career/</loc>
+        
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/linux/</loc>
+        
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/encryption/</loc>
+        
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
         
         
         
@@ -192,7 +192,7 @@
       <url>
         <loc>https://bastiangruber.ca/talks/</loc>
         
-          <lastmod>2026-02-12T15:12:38.414Z</lastmod>
+          <lastmod>2026-02-20T15:37:32.419Z</lastmod>
         
         
         
