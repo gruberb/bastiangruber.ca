@@ -14,7 +14,7 @@ Now there are moments of silence of course, when I can sit down with a cup of co
 
 Nevertheless, the time was ripe to "Build it yourself". I am always inspired by [Excalidraw](https://excalidraw.com/). I can open it, don't need an account, draw to my heart's content, and then save the finished drawing as a PNG to my local hard drive and take it anywhere. I wanted to build something seamless like that for writing. Hence, [WorkLedger was born](https://workledger.org/). 
 
->The <a href="" target="_blank">landing page</a> gives you a nice feature overview.
+>The <a href="https://about.workledger.org" target="_blank">landing page</a> gives you a nice feature overview.
 
 > Shout out to [BlockNote](https://www.blocknotejs.org/) for offering a superb text editing experience.
 
