@@ -101,7 +101,7 @@ blockquote > *:last-child {
     margin-bottom: 0;
 }
 
-a {
+.post__content a {
     color: var(--primary);
     text-decoration: underline;
     text-decoration-color: rgba(251, 191, 36, 0.4);
@@ -109,7 +109,7 @@ a {
     transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
-a:hover {
+.post__content a:hover {
     color: var(--primary-light);
     text-decoration-color: var(--primary-light);
 }
