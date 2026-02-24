@@ -34,7 +34,9 @@ The list goes on. A few months later, friends of mine wanted to start a NHL Play
 
 ## Building Tools for Every Day
 
-With the time, the tools got better, and I can finally build tools I can - and want to - use every day. I always wanted a seamless writing experience in the browser without logins and complex UI. So I built [WorkLedger](https://workledger.org/). I am using it every day now for a week and it truly changed my workday. After that, I was tired of keeping my Brag Document in a Google Doc, so I build a fully customizable work stream "collector" called [Brag Frog](https://brag-frog.org/), which syncs all my resources into one place, and I can prep meetings, add items to OKRs and let myself draft a self review every half year based on all the work I am doing from across 7 different platforms.
+With the time, the tools got better, and I can finally build tools I can - and want to - use every day. I always wanted a seamless writing experience in the browser without logins and complex UI. So I built [WorkLedger](https://workledger.org/). I am using it every day now for a week and it truly changed my workday. Afer using it even more than I expected, I build a backend-sync server, and could nerd out with a close to ["zero-knowledge" sync](https://bastiangruber.ca/posts/how-i-built-a-minimal-knowledge-sync-for-workledger/) I always wanted to try out. The sheer fun of using something every day, and it works magically behind the scenes. 
+
+After that, I was tired of keeping my Brag Document in a Google Doc, so I build a fully customizable work stream "collector" called [Brag Frog](https://brag-frog.org/), which syncs all my resources into one place, and I can prep meetings, add items to OKRs and let myself draft a self review every half year based on all the work I am doing from across 7 different platforms.
 
 I can open source this work, it runs fairly cheap on a fly.io instance. The static websites either run on GitHub or Vercel. It is fast and easy to setup and ship.
 
@@ -43,3 +45,7 @@ I can open source this work, it runs fairly cheap on a fly.io instance. The stat
 And for the quality? My god, you can really fine tune and throw stuff at Claude Opus 4.6. The [Brag Fox project](https://github.com/gruberb/brag-frog) particual was a mess. I constantly added and refined features, and the code ended up like expected: Messy. But hey, I wrote down a plan, guidelines how a proper code structure should look like for this type of project. Added guidelines from DDD and let it work. It took 2h, and 25 different tasks, and it refactored the whole codebase.
 
 Is it perfect? Hell no. But so wouldn't be my code for a side project I build. I would even say, it is way better than what I would have come up with. Why? Becasue I build it on the side. I can now focus on guidelines and best practices, let it run for hours, and the solution is so close to "very good", that I can manually go through each module and do adjustments if I feel like it. But often times: Really not needed.
+
+## Why it works so well for me
+
+I am a very pragmatic person. I need to see and touch things to understand them. I can read tutorials or study codebases, but I need to get my hands dirty. Spinning something up, jumping between RFC docs and then building it out, seeing if it works, and then going back to higher-level thinking: That's the stuff I love. I can do that now every time I like. And even with problems at work: I can spin up example implementations, see if they make sense, and then either throw them out or iterate until they meet my quality standards. All the while learning a ton of new things along the way.
