@@ -6,7 +6,6 @@ date: '2024-06-16'
 tags: [rust]
 ---
 
-
 <div class="info">
 This article is part of a chapter of <a href="https://www.manning.com/books/rust-web-development" target="_blank">Rust Web Development</a> which didn't make the cut to be in the book.
 </div>
