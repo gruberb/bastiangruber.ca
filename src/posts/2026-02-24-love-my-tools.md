@@ -14,7 +14,7 @@ The way I entered the field might be how I always act, or it defined how I appro
 
 A few years forward, and I found myself in the StartUp world in Berlin. I loved the pace, the atmosphere, and the building, pivoting, trying out new tools to solve problems faster and better. Working at a company didn't satisfy my lust for exploring, so I wanted to develop my ideas outside of work. The city always provided enough UX/UI people to partner and tinker with. None of the toy projects ever succeeded, but that was not the point, really.
 
-## A New Chapter: Family Meets LLMs
+## Family Meets LLMs
 
 Life changes, I have a family now, went through the first hard years of being a parent, and I slowly feel more free time to explore this lust of building and solving problems. Now, in this phase, the tech ecosystem throws new tools my way to help me exactly with that: LLMs.
 
