@@ -54,9 +54,10 @@ class="td00">Git: <a href="https://code.novanexus.ca/gruberb">code.novanexus.ca/
 <h4 class="sectionHead"><a 
  id="x1-10000"></a><div  
 class="centerline">                                        SUMMARY                                        </div></h4><div class="section">
-<!--l. 55--><p class="noindent" >Staff Software Engineer at Mozilla, shipping Rust, C++, and Python to hundreds of millions of Firefox users.
-Published author (&#8220;Rust Web Development&#8221; &#8211; Manning). Founder of Rust&amp;Tell Berlin, the largest Rust meetup
-globally.
+<!--l. 55--><p class="noindent" >Staff Engineer at Mozilla, shipping Rust, C++, and Python to hundreds of millions of Firefox users across Desktop,
+Android, and iOS. Promoted for leading cross-team projects and getting complex, multi-platform features shipped.
+12+ years of backend and systems work, published author (&#8220;Rust Web Development&#8221;), and 13 years of technical
+writing for outlets like c&#8217;t and iX.
 </p>
 </div><h4 class="sectionHead"><a 
  id="x1-20000"></a><div  
@@ -64,130 +65,167 @@ class="centerline">                                         SKILLS              
 <!--l. 68--><p class="noindent" ><span 
 class="cmbx-10">Languages: </span>Rust, C++, Python, TypeScript, Go <br 
 class="newline" /><span 
-class="cmbx-10">Backend &amp; Systems: </span>Rust (Actix, Warp, Axum), Python (FastAPI), Node.js, async Rust, FFI/UniFFI
+class="cmbx-10">Systems &amp; Backend: </span>async Rust (Axum, Actix), Python/FastAPI, Node.js, FFI/UniFFI, gRPC, REST
 <br 
 class="newline" /><span 
-class="cmbx-10">Patterns: </span>REST, GraphQL, gRPC, distributed systems (P2P), microservices <br 
+class="cmbx-10">Architecture: </span>distributed systems, P2P protocols, system design, cross-platform (Desktop/Android/iOS)
+<br 
 class="newline" /><span 
-class="cmbx-10">Infrastructure: </span>AWS, Google Cloud, Docker, Kubernetes, CI/CD, Grafana <br 
-class="newline" /><span 
-class="cmbx-10">AI Tooling: </span>Claude Code, GitHub Copilot
+class="cmbx-10">Infrastructure &amp; Observability: </span>AWS, GCP, Docker, Kubernetes, CI/CD, Grafana, performance
+profiling
 </p>
 </div><h4 class="sectionHead"><a 
  id="x1-30000"></a><div  
 class="centerline">                               PROFESSIONAL EXPERIENCE                               </div></h4><div class="section">
-<!--l. 86--><p class="noindent" ><span 
-class="cmsl-10">Staff Software Engineer (promoted from Senior)                                                    </span>July 2024 - Present
+<!--l. 85--><p class="noindent" ><span 
+class="cmsl-10">Staff Software Engineer                                                                                      </span>Feb 2026 - Present
+<br 
+class="newline" /><span class="company">Mozilla</span>, Remote <br 
+class="newline" />Promoted for cross-team technical leadership and delivering multi-platform privacy features. </p>
+     <ul class="itemize1">
+     <li class="itemize">
+     <!--l. 89--><p class="noindent" >Leading  the  Image  Service  project:  replaced  3  fragile,  duplicated  favicon  systems  with  a  single
+     GCS-backed API serving 4+ internal teams. Extended an existing Python/Airflow pipeline instead of
+     building a new service, reducing maintenance burden across the board
+     </p></li>
+     <li class="itemize">
+     <!--l. 90--><p class="noindent" >Implemented   Oblivious   HTTP   (OHTTP)   in   application-services   (shared   Rust   component
+     cross-compiled to Swift/Kotlin via UniFFI) and wrote the C++ integration for Firefox Desktop. Now
+     live on Firefox iOS, Android, and Desktop, covering millions of users
+     </p></li>
+     <li class="itemize">
+     <!--l. 91--><p class="noindent" >Maintaining  the  Firefox  Push  notification  service  (Rust  backend,  50k  req/s,  sub-200ms  latency).
+     Reduced memory footprint, added circuit breakers, built Grafana dashboards for observability</p></li></ul>
+
+<!--l. 94--><p class="noindent" ><span 
+class="cmsl-10">Senior Software Engineer                                                                                 </span>Jun 2024 - Jan 2026
 <br 
 class="newline" /><span class="company">Mozilla</span>, Remote <br 
 class="newline" /></p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 89--><p class="noindent" >Implemented Oblivious HTTP (OHTTP) from scratch in application-services (shared Rust component
-     cross-compiled to Swift/Kotlin via UniFFI) plus C++ and Rust for Firefox Desktop &#8211; users are now
-     unidentifiable when making privacy-sensitive requests across all platforms
+     <!--l. 97--><p class="noindent" >Core  maintainer  of  Merino,  the  Python/FastAPI  service  powering  Firefox  Suggest.  All  search
+     suggestions in Firefox route through Merino, which enriches and serves them in a privacy-preserving
+     way
      </p></li>
      <li class="itemize">
-     <!--l. 90--><p class="noindent" >Consolidated four separate favicon implementations into a single Image Service &#8211; extended an existing
-     Python/Airflow  pipeline  rather  than  building  a  new  microservice,  now  serving  4  teams  from  one
-     manifest behind a GCS-backed API
+     <!--l. 98--><p class="noindent" >Code reviewer for UniFFI, Mozilla&#8217;s multi-language bindings generator (Rust to Kotlin, Swift, Python,
+     JavaScript)
      </p></li>
      <li class="itemize">
-     <!--l. 91--><p class="noindent" >Maintained Firefox Push notification service (50k req/s, sub-200ms latency): reduced memory footprint,
-     added circuit breakers, built Grafana dashboards
+     <!--l. 99--><p class="noindent" >Contributing directly to Firefox Desktop (mozilla-central): shipping Rust and C++ code
      </p></li>
      <li class="itemize">
-     <!--l. 92--><p class="noindent" >Contributor and code reviewer for UniFFI, Mozilla&#8217;s multi-language bindings generator (Rust to Kotlin,
-
-     Swift, Python, JavaScript)
-     </p></li>
-     <li class="itemize">
-     <!--l. 93--><p class="noindent" >Led  &#8220;Rusty  Fridays&#8221;  internal  education  sessions,  mentoring  engineers  across  teams  through  Rust
-     adoption</p></li></ul>
-<!--l. 96--><p class="noindent" ><span 
-class="cmsl-10">Senior Systems Engineer, Team Lead                                                                             </span>2023 - 2024
+     <!--l. 100--><p class="noindent" >Led &#8220;Rusty Fridays&#8221; sessions (6&#8211;10 engineers per session), building internal Rust knowledge across
+     teams</p></li></ul>
+<!--l. 103--><p class="noindent" ><span 
+class="cmsl-10">Technical Editor, &#8220;From C to Rust&#8221;                                                                     </span>Feb 2026 - Present
 <br 
-class="newline" /><span class="company">Toposware</span>, Remote <br 
-class="newline" />Core team of 4 building a peer-to-peer distributed network protocol from scratch in Rust. </p>
+class="newline" /><span class="company">Manning Publications</span> (Contract, Part-time) <br 
+class="newline" />Reviewing technical accuracy and pedagogical quality for Manning&#8217;s C-to-Rust migration guide.
+</p><!--l. 109--><p class="noindent" ><span 
+class="cmsl-10">Senior Systems Engineer, Team Lead                                                                 </span>Apr 2023 - Jun 2024
+<br 
+class="newline" /><span class="company">Toposware</span> (acquired by <span class="company">Polygon Labs</span>), Remote <br 
+class="newline" />Core team of 4 building a peer-to-peer distributed network protocol from scratch in Rust. Our core implementation
+of the double echo protocol and the Ethereum bridge became part of the Polygon stack after acquisition.
+</p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 100--><p class="noindent" >Achieved 10x throughput per node by profiling the actual bottleneck &#8211; optimized batch processing and
-     serialization paths rather than redesigning the consensus layer
+     <!--l. 113--><p class="noindent" >Achieved  10x  message  throughput  per  node  by  profiling  the  actual  bottleneck:  optimized  batch
+     processing and serialization paths after discovering nodes were compute-bound on crypto operations,
+     not network-limited
      </p></li>
      <li class="itemize">
-     <!--l. 101--><p class="noindent" >Led  benchmark  initiative  that  revealed  nodes  were  compute-bound  on  crypto  operations,  not
-     network-limited &#8211; redirected optimization effort accordingly
+     <!--l. 114--><p class="noindent" >Built the EVM bridge connecting external Ethereum-compatible chains to the core network
      </p></li>
      <li class="itemize">
-     <!--l. 102--><p class="noindent" >Built an EVM bridge connecting external Ethereum-compatible chains to the core network</p></li></ul>
-<!--l. 105--><p class="noindent" ><span 
-class="cmsl-10">Senior Software Engineer                                                                                             </span>2022 - 2023
+     <!--l. 115--><p class="noindent" >Led the internal benchmarking initiative that changed where the team focused optimization effort</p></li></ul>
+<!--l. 118--><p class="noindent" ><span 
+class="cmsl-10">Senior Software Engineer                                                                                 </span>Aug 2022 - Feb 2023
 <br 
 class="newline" /><span class="company">Centrifuge</span>, Remote <br 
-class="newline" />Protocol team building DeFi applications on Substrate/Polkadot in Rust. </p>
+class="newline" />Protocol team building DeFi infrastructure on Substrate/Polkadot in Rust. </p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 109--><p class="noindent" >Implemented on-chain fund pool mutations &#8211; core feature for the lending protocol enabling live capital
-     allocation adjustments
+     <!--l. 122--><p class="noindent" >Implemented on-chain fund pool mutations, the core feature enabling live capital allocation adjustments
+     in the lending protocol
+
      </p></li>
      <li class="itemize">
-     <!--l. 110--><p class="noindent" >Replaced  manual  documentation  with  CI-driven  auto-generation  from  Rust  source  &#8211;  eliminated
+     <!--l. 123--><p class="noindent" >Replaced  manual  documentation  with  CI-driven  auto-generation  from  Rust  source,  eliminating
      persistent drift between code and public docs</p></li></ul>
-<!--l. 113--><p class="noindent" ><span 
-class="cmsl-10">Author, &#8220;Rust Web Development&#8221;                                                                                 </span>2020 - 2022
+<!--l. 126--><p class="noindent" ><span 
+class="cmsl-10">Author, &#8220;Rust Web Development&#8221;                                                                     </span>Oct 2020 - Dec 2022
 <br 
 class="newline" /><span class="company">Manning Publications</span> <br 
-class="newline" />Published end-to-end guide covering async Rust, web frameworks, and production deployment.
-</p><!--l. 119--><p class="noindent" ><span 
-class="cmsl-10">Sr. Solutions Architect (promoted from SA)                                                                    </span>2020 - 2022
+class="newline" />Wrote and published an end-to-end guide covering async Rust, web frameworks, and production deployment.
+</p><!--l. 132--><p class="noindent" ><span 
+class="cmsl-10">Sr. Solutions Architect (promoted from SA)                                                         </span>Jun 2020 - Jul 2022
 <br 
 class="newline" /><span class="company">Twilio Inc.</span>, Remote <br 
 class="newline" /></p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 122--><p class="noindent" >Technical lead for Fortune 500 engagements: debugged latency issues, redesigned messaging flows,
-     advised on architectures matching client team size and resources
+     <!--l. 135--><p class="noindent" >Technical lead for Fortune 500 professional services engagements: diagnosed latency issues, redesigned
+     messaging architectures, delivered implementation roadmaps sized to each client&#8217;s team and resources
      </p></li>
      <li class="itemize">
-     <!--l. 123--><p class="noindent" >Created reusable engagement playbooks adopted across the EMEA Professional Services team</p></li></ul>
-
-<!--l. 126--><p class="noindent" ><span 
-class="cmsl-10">Systems Engineer                                                                                                       </span>2019 - 2020
+     <!--l. 136--><p class="noindent" >Created reusable engagement playbooks adopted across the EMEA Professional Services team</p></li></ul>
+<!--l. 139--><p class="noindent" ><span 
+class="cmsl-10">Systems Engineer, Core Backend                                                                      </span>Aug 2019 - May 2020
 <br 
-class="newline" /><span class="company">Kraken Digital Currency Exchange</span>, Remote <br 
-class="newline" /></p>
+class="newline" /><span class="company">Kraken Digital Asset Exchange</span>, Remote <br 
+class="newline" />Part of the first Rust team rewriting Kraken&#8217;s core infrastructure from PHP. </p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 129--><p class="noindent" >Migrated  core  banking  services  and  API  gateway  from  PHP  to  Rust,  achieving  100x  throughput
-     improvement &#8211; enabling order-of-magnitude traffic growth without scaling hardware
+     <!--l. 143--><p class="noindent" >Rewrote core banking services and API gateway in Rust, replacing legacy PHP services. The new stack
+     handled significantly higher throughput with a smaller hardware footprint
      </p></li>
      <li class="itemize">
-     <!--l. 130--><p class="noindent" >Worked directly with the CTO on privacy-focused architectural decisions for the trading platform</p></li></ul>
-<!--l. 135--><p class="noindent" ><span 
-class="cmsl-10">Earlier Career                                                                                                           </span>2014 - 2019
+     <!--l. 144--><p class="noindent" >Shipped the first version of the automated KYC verification flow, replacing manual processing right as
+     COVID drove a massive spike in new customer sign-ups</p></li></ul>
+<!--l. 149--><p class="noindent" ><span 
+class="cmsl-10">Earlier Career                                                                                                           </span>2013 - 2019
 <br 
-class="newline" />Sr. Software Engineer across enterprise clients (<span class="company">OSRAM</span>, Körber Digital, <span class="company">GIATA</span>, <span class="company">Avenga</span>) and startups (Dalia
-Research, blogfoster, smartB) in Berlin. </p>
+class="newline" />Sr. Software Engineer (freelance from 2016) across enterprise clients (<span class="company">OSRAM</span>, Körber Digital, <span class="company">GIATA</span>, <span class="company">Avenga</span>) and
+startups (Dalia Research, blogfoster, smartB) in Berlin. </p>
      <ul class="itemize1">
      <li class="itemize">
-     <!--l. 138--><p class="noindent" >Founded &#8220;Rust &amp; Tell Berlin&#8221; meetup &#8211; grew it into the largest Rust meetup globally, still running
-     years later
+     <!--l. 152--><p class="noindent" >Founded &#8220;Rust &amp; Tell Berlin&#8221; meetup, grew it into the largest Rust meetup globally. Coordinated with
+     companies for venue sponsorship, organized speakers, photographers, and videographers. Gave talks
+     and created a welcoming space for the Rust community
      </p></li>
      <li class="itemize">
-     <!--l. 139--><p class="noindent" >Designed IoT authentication infrastructure at <span class="company">OSRAM</span> for thousands of connected devices (Node.js,
+     <!--l. 153--><p class="noindent" >Designed IoT authentication infrastructure at <span class="company">OSRAM</span> for thousands of connected devices (Node.js,
      Go, Lua)
      </p></li>
      <li class="itemize">
-     <!--l. 140--><p class="noindent" >First engineering hire at Körber Digital: built real-time sensor data pipelines on AWS
+     <!--l. 154--><p class="noindent" >First engineering hire at Körber Digital: built real-time sensor data pipelines on AWS (Lambda, ECS,
+     Route53)
+
      </p></li>
      <li class="itemize">
-     <!--l. 141--><p class="noindent" >Decomposed <span class="company">GIATA</span>&#8217;s monolithic ERP into 6 Docker-based microservices, improving system scalability</p></li></ul>
+     <!--l. 155--><p class="noindent" >Decomposed <span class="company">GIATA</span>&#8217;s monolithic PHP system into 6 Docker-based services, taught the existing team
+     Scrum and JavaScript
+     </p></li>
+     <li class="itemize">
+     <!--l. 156--><p class="noindent" >Contributed to the Rust compiler and standard library during a self-directed sabbatical (2019)</p></li></ul>
+<!--l. 159--><p class="noindent" ><span 
+class="cmsl-10">Technical Writer                                                                                                        </span>2008 - 2020
+<br 
+class="newline" />Freelance (Contract) <br 
+class="newline" />13 years writing for technical publications including c&#8217;t, iX, Macwelt (IDG/Heise), and tech blogs
+(LogRocket, stadt-bremerhaven.de, mobilegeeks.de). Also authored &#8220;OS X für Einsteiger&#8221; (Bookboon,
+2012).
+</p>
 </div><h4 class="sectionHead"><a 
  id="x1-40000"></a><div  
 class="centerline">                                       EDUCATION                                       </div></h4><div class="section">
-<!--l. 148--><p class="noindent" ><span 
-class="cmsl-10">Bachelor of Science, Computer Science </span><br 
-class="newline" /><span class="company">TH Ingolstadt</span> &#8211; Scholarship from Allianz Deutschland AG (fully funded)
+<!--l. 171--><p class="noindent" ><span 
+class="cmsl-10">Bachelor of Science, Computer Science                                                                              </span>Mar 2014
+<br 
+class="newline" /><span class="company">TH Ingolstadt</span>. Scholarship from Allianz Deutschland AG (fully funded dual-study program, 2010&#8211;2014)
 </p>
 </div></div>
  
