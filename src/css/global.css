@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
 
 body {
     scrollbar-width: thin;
-    scrollbar-color: var(--color-80) var(--background);
+    scrollbar-color: var(--color-30) var(--background);
 }
 
 body::-webkit-scrollbar-track {
@@ -23,7 +23,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--color-80);
+    background-color: var(--color-30);
+    border-radius: 3px;
 }
 
 *,
@@ -162,8 +163,8 @@ blockquote {
 }
 
 mark {
-    background: var(--primary);
-    color: var(--background);
+    background: #fef3c7;
+    color: var(--text-primary);
     padding: 1px 6px;
     margin: 0 2px;
     font-size: 0.95rem;

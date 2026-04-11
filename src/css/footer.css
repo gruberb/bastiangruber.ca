@@ -34,12 +34,19 @@
     margin-right: 2rem;
 }
 
+.footer a {
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.footer a:hover {
+    color: var(--primary);
+}
+
 @media (max-width: 640px) {
     .hero__social-links {
         flex-direction: column;
         align-items: center;
-        /* or flex-start, if you want left-aligned */
         gap: 0.5rem;
-        /* a little less space vertically */
     }
 }

@@ -79,8 +79,8 @@ i {
 }
 
 :not(pre) > code {
-    background-color: rgba(251, 191, 36, 0.1);
-    color: var(--primary-light);
+    background-color: #f5f0eb;
+    color: var(--primary);
     padding: 0.15em 0.4em;
     border-radius: var(--radius-sm);
     font-family: "Fira Code", Menlo, monospace;
@@ -90,7 +90,7 @@ i {
 blockquote {
     margin: var(--space-xl) 0;
     padding: var(--space-md) var(--space-lg);
-    background-color: var(--surface);
+    background-color: #f5f0eb;
     border-left: 4px solid var(--primary);
     border-radius: var(--radius-md);
     font-style: italic;
@@ -104,7 +104,7 @@ blockquote > *:last-child {
 .post__content a {
     color: var(--primary);
     text-decoration: underline;
-    text-decoration-color: rgba(251, 191, 36, 0.4);
+    text-decoration-color: rgba(180, 83, 9, 0.3);
     text-underline-offset: 0.15em;
     transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }

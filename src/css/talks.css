@@ -114,9 +114,9 @@
 }
 
 .talk-card__type--audio {
-  background: rgba(251, 191, 36, 0.1);
+  background: #fef3c7;
   color: var(--primary);
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  border: 1px solid #fde68a;
 }
 
 .talk-card__type--slides {

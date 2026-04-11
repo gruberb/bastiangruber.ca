@@ -1,7 +1,7 @@
 @import 'global.css';
 @import 'variable.css';
 @import 'modern-base.css';
-@import "prism-themes/themes/prism-dracula.css";
+@import "prism-themes/themes/prism-one-light.css";
 @import 'typography.css';
 @import 'post-list.css';
 @import 'blog-list.css';
@@ -74,14 +74,12 @@ code[class*="language-"] {
     opacity: 0;
     font-size: 0.8rem;
     transition: opacity 0.2s ease;
-    padding: 0.3rem 0.6rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: #fff;
     padding: 0.3rem;
+    background: rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
     border-radius: 0.25rem;
     cursor: pointer;
-    backdrop-filter: blur(4px);
     z-index: 10005;
 }
 
@@ -110,8 +108,8 @@ pre[class*="language-"] .token-line {
     position: relative;
     margin: 2rem -1.5rem;
     padding: 1rem;
-    background: var(--code-bg, #282a36);
-    /* Dracula’s background */
+    background: hsl(230, 1%, 98%);
+    border: 1px solid var(--border);
     border-radius: 0.5rem;
     overflow-x: auto;
 }
@@ -123,13 +121,6 @@ pre[data-line] .line-highlight {
     background: none !important;
     border: none !important;
     box-shadow: none !important;
-}
-
-/* make sure the wrapper is still nice and rounded */
-.code-block-container {
-    background: var(--code-bg, #282a36);
-    border-radius: .5rem;
-    overflow-x: auto;
 }
 
 pre[class*="language-text"],
