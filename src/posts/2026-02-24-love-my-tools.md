@@ -30,7 +30,7 @@ It was fun, exhilarting, and reminded me of the pure joy I felt when I was young
 
 ## The NHL Playoff Dashboard
 
-The list goes on. A few months later, friends of mine wanted to start a NHL Playoff Fantasy team. We picked the teams, our friend forwarded the free website he set it up. And it was - aweful. I thought: I can do it better! Span up Claude inside Zed, and with the help of GitHub repos for unofficial NHL API documentation, span up a [fully functional, live score and live data NHL dashboard](https://fantasy-frontend.fly.dev/) for the playoffs, with each of our teams and players. It took about a week to get right, but without the help of the LLM, I would have taken so much longer (and probably lost interest) in setting up all the edge cases, details, parse API responses which were not documented etc. 
+The list goes on. A few months later, friends of mine wanted to start a NHL Playoff Fantasy team. We picked the teams, our friend forwarded the free website he set it up. And it was - aweful. I thought: I can do it better! Span up Claude inside Zed, and with the help of GitHub repos for unofficial NHL API documentation, span up a [fully functional, live score and live data NHL dashboard](https://fantasy-puck.ca/) for the playoffs, with each of our teams and players. It took about a week to get right, but without the help of the LLM, I would have taken so much longer (and probably lost interest) in setting up all the edge cases, details, parse API responses which were not documented etc. 
 
 ## Building Tools for Every Day
 
