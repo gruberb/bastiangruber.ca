@@ -1,5 +1,5 @@
 ---
-title: It is important who teaches you
+title: It matters who teaches you
 description: Replacing human teaching with LLMs is a dead end.
 permalink: posts/{{ title | slug }}/index.html
 date: '2026-09-05'
