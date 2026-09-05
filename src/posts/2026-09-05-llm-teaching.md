@@ -26,21 +26,23 @@ And further on:
 
 > [...] Is there a lineage behind your instructor and their instructions? If so, good, because we don't want any made up bullshit.
 
+Using an LLM is exactly that. There is no lineage behind it and nobody who stands behind the answer, it's made up bullshit that sounds convincing. You should learn from people who are free of bullshit.
+
 ## The people who shaped me
 
 I am currently writing [the second edition of my book "Rust Web Development"](https://hachyderm.io/@bastian/117214313351803468). When I approached Manning with the idea, I wondered why I would even write a book in this day and age. While writing the first edition, I kept thinking of all the teachers, senior engineers, and managers who shaped me into the professional I am today. They contributed as much to my growth and to who I am as all the work I put into my career myself.
 
-Their guidance, their wisdom, their view of the industry and my profession (and, to be honest, what kind of humans they were) still shape my worldview today. Later in the book, Susan Piver suggests holding someone in mind while you meditate — a way to give back and connect with the people who inspire you and mean something to you.
+Their guidance, their wisdom, their view of the industry and my profession (and, to be honest, what kind of humans they were) still shape my worldview today. Later in the book, Susan Piver suggests holding someone in mind while you meditate, as a way to give back and connect with the people who inspire you and mean something to you.
 
-Before starting my professional software engineering career, I did an apprenticeship as an electrician, and it wasn't even a question that you had a foreman who guided and taught you. Depending on your skills and aspirations, you would (ideally) be paired with the right foreman, one who could challenge you and grow you in the way you wanted and needed.
+Before starting my professional software engineering career, I did an apprenticeship as an electrician, and it wasn't even a question that you had a foreman who guided and taught you. Depending on your skills and aspirations, you would (ideally) be paired with the right foreman, one who could challenge you and grow you in the way you wanted and needed. This person looked you in the eye, had a gut feeling and experience, and decided what you were ready for - and capable of.
 
 I still think fondly of all the guidance, mentorship, and teaching I received. Every day, at work and in my private life, their teachings and work are part of my own.
 
 ## What gets lost
 
-What will all of this look like if we let profit-seeking corporations streamline our day-to-day lives even more? If we let smart-sounding machines replace real human connection and teaching? I love having these LLMs at my fingertips, but after two or three hours of bouncing ideas back and forth, I more often than not feel empty and burned out. When I pair program, or sit in a room with other people trying to find a solution, I almost always come out of those long sessions inspired and motivated. I often keep working after my normal workday is done, because I still feel the fire in me, the urge to create.
+What will all of this look like if we let smart-sounding machines replace real human connection and teaching? I love having these LLMs at my fingertips, but after two or three hours of bouncing ideas back and forth, I more often than not feel empty and burned out. When I pair program, or sit in a room with other people trying to find a solution, I almost always come out of those long sessions inspired and motivated. I often keep working after my normal workday is done, because I still feel the fire in me, the urge to create.
 
-If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans: Moments that shaped and defined who I am today.
+An LLM has no sense of who you are as a person. It interprets your text and spits out paragraphs that sound right. There is no teaching, no connection. If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans, and the teaching that comes with it. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans: moments that shaped and defined who I am today.
 
 ## Final thoughts
 
