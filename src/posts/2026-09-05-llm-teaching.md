@@ -40,7 +40,7 @@ I still think fondly of all the guidance, mentorship, and teaching I received. E
 
 What will all of this look like if we let profit-seeking corporations streamline our day-to-day lives even more? If we let smart-sounding machines replace real human connection and teaching? I love having these LLMs at my fingertips, but after two or three hours of bouncing ideas back and forth, I more often than not feel empty and burned out. When I pair program, or sit in a room with other people trying to find a solution, I almost always come out of those long sessions inspired and motivated. I often keep working after my normal workday is done, because I still feel the fire in me, the urge to create.
 
-If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans — moments that shaped and defined who I am today.
+If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans: Moments that shaped and defined who I am today.
 
 ## Final thoughts
 
