@@ -80,7 +80,7 @@
   
     
       <url>
-        <loc>https://bastiangruber.ca/posts/it-is-important-who-teaches-you/</loc>
+        <loc>https://bastiangruber.ca/posts/it-matters-who-teaches-you/</loc>
         
           <lastmod>2026-09-05T00:00:00.000Z</lastmod>
         
@@ -93,7 +93,7 @@
       <url>
         <loc>https://bastiangruber.ca/about/</loc>
         
-          <lastmod>2026-09-05T17:39:51.496Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.849Z</lastmod>
         
         
         
@@ -104,7 +104,7 @@
       <url>
         <loc>https://bastiangruber.ca/blog/</loc>
         
-          <lastmod>2026-09-05T17:39:51.497Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.851Z</lastmod>
         
         
         
@@ -115,7 +115,7 @@
       <url>
         <loc>https://bastiangruber.ca/cv/</loc>
         
-          <lastmod>2026-09-05T17:39:51.497Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.851Z</lastmod>
         
         
         
@@ -126,7 +126,7 @@
       <url>
         <loc>https://bastiangruber.ca/</loc>
         
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.897Z</lastmod>
         
         
         
@@ -137,7 +137,7 @@
       <url>
         <loc>https://bastiangruber.ca/projects/</loc>
         
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
         
         
         
@@ -148,73 +148,7 @@
       <url>
         <loc>https://bastiangruber.ca/robots.txt</loc>
         
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/career/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/linux/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/internet/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/encryption/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/teaching/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/building/</loc>
-        
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
         
         
         
@@ -225,7 +159,73 @@
       <url>
         <loc>https://bastiangruber.ca/tags/rust/</loc>
         
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/career/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/linux/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/internet/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/teaching/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/building/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/encryption/</loc>
+        
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
         
         
         
@@ -236,7 +236,7 @@
       <url>
         <loc>https://bastiangruber.ca/talks/</loc>
         
-          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+          <lastmod>2026-09-05T17:44:45.898Z</lastmod>
         
         
         
