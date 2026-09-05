@@ -3,14 +3,14 @@ title: It is important who teaches you
 description: Replacing human teaching with LLMs is a dead end.
 permalink: posts/{{ title | slug }}/index.html
 date: '2026-09-05'
-tags: [llm]
+tags: [teaching]
 ---
 
 ## Falling in love with the machine
 
 I struggled throughout my time at school. I always loved learning, and still do, but the structure and environment of school never really worked for me. So now, at 37, watching the rise of tools where you type a few sentences and an LLM spits out a hundred different explanations of a topic, I naturally fell in love.
 
-Even though their answers are statistical predictions, with good inference they more often than not come close to a real, "true" answer. And even when they don't, bouncing ideas back and forth has already unlocked insights I would never have had otherwise; especially as a remote worker sitting at home. I wonder what would have happened to my academic career if these tools had been available back then. I could have taken notes in class, gone home, and spent hours trying to really understand a topic I was too shy to ask follow-up questions about, or one I had missed because I wasn't paying attention.
+Even though their answers are statistical predictions, with good inference they more often than not come close to a real, "true" answer. And even when they don't, bouncing ideas back and forth has already unlocked insights I would never have had otherwise - especially as a remote worker sitting at home. I wonder what would have happened to my academic career if these tools had been available back then. I could have taken notes in class, gone home, and spent hours trying to really understand a topic I was too shy to ask follow-up questions about, or one I had missed because I wasn't paying attention.
 
 This thought sat with me for a long time, and it shifted my overall position towards seeing LLMs as a net positive (provided we get the regulatory environment for building data centers, training, and usage in order).
 
@@ -40,7 +40,7 @@ I still think fondly of all the guidance, mentorship, and teaching I received. E
 
 What will all of this look like if we let profit-seeking corporations streamline our day-to-day lives even more? If we let smart-sounding machines replace real human connection and teaching? I love having these LLMs at my fingertips, but after two or three hours of bouncing ideas back and forth, I more often than not feel empty and burned out. When I pair program, or sit in a room with other people trying to find a solution, I almost always come out of those long sessions inspired and motivated. I often keep working after my normal workday is done, because I still feel the fire in me, the urge to create.
 
-If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans: Moments that shaped and defined who I am today.
+If anything, I am writing this as a reminder to myself that nothing will ever replace the emotional connection we build with other humans. We carry their thoughts, ideas, and outlook with us, let them shape us, and carry them forward to the next generation. I don't think I will ever tell my children tales of my long coding sessions with an LLM, but I will tell them about the long nights and intense sessions I had with other humans — moments that shaped and defined who I am today.
 
 ## Final thoughts
 
