@@ -93,7 +93,7 @@
       <url>
         <loc>https://bastiangruber.ca/about/</loc>
         
-          <lastmod>2026-09-05T17:14:06.944Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.496Z</lastmod>
         
         
         
@@ -104,7 +104,7 @@
       <url>
         <loc>https://bastiangruber.ca/blog/</loc>
         
-          <lastmod>2026-09-05T17:14:06.945Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.497Z</lastmod>
         
         
         
@@ -115,7 +115,7 @@
       <url>
         <loc>https://bastiangruber.ca/cv/</loc>
         
-          <lastmod>2026-09-05T17:14:06.945Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.497Z</lastmod>
         
         
         
@@ -126,7 +126,7 @@
       <url>
         <loc>https://bastiangruber.ca/</loc>
         
-          <lastmod>2026-09-05T17:14:06.988Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -137,7 +137,7 @@
       <url>
         <loc>https://bastiangruber.ca/projects/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -148,18 +148,7 @@
       <url>
         <loc>https://bastiangruber.ca/robots.txt</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/rust/</loc>
-        
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -170,18 +159,7 @@
       <url>
         <loc>https://bastiangruber.ca/tags/career/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/internet/</loc>
-        
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -192,7 +170,7 @@
       <url>
         <loc>https://bastiangruber.ca/tags/linux/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -201,20 +179,9 @@
   
     
       <url>
-        <loc>https://bastiangruber.ca/tags/building/</loc>
+        <loc>https://bastiangruber.ca/tags/internet/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
-        
-        
-        
-      </url>
-    
-  
-    
-      <url>
-        <loc>https://bastiangruber.ca/tags/llm/</loc>
-        
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -225,7 +192,40 @@
       <url>
         <loc>https://bastiangruber.ca/tags/encryption/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/teaching/</loc>
+        
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/building/</loc>
+        
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
+        
+        
+        
+      </url>
+    
+  
+    
+      <url>
+        <loc>https://bastiangruber.ca/tags/rust/</loc>
+        
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
@@ -236,7 +236,7 @@
       <url>
         <loc>https://bastiangruber.ca/talks/</loc>
         
-          <lastmod>2026-09-05T17:14:06.989Z</lastmod>
+          <lastmod>2026-09-05T17:39:51.544Z</lastmod>
         
         
         
