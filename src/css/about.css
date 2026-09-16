@@ -142,6 +142,16 @@
     letter-spacing: -0.02em;
 }
 
+.about-content p {
+    font-size: var(--text-base);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.about-journey + h2 {
+    margin-top: 2.5rem;
+}
+
 .about-journey {
     list-style: none;
     padding: 0;
