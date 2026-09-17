@@ -1,8 +1,9 @@
 ---
 layout: home
 title: 'Bastian Gruber'
+description: 'Staff Software Engineer at Mozilla and author of Rust Web Development. Services, APIs, cross-platform integration and technical leadership.'
 ---
 
-Currently working at Mozilla. Author of **"Rust Web Development"** and passionate about creating robust, efficient software solutions that makes a difference.
+At **Mozilla**, I build services, APIs and shared Rust components for Firefox. I take technical work from investigation through production, helping teams agree on interfaces and ship reliable integrations.
 
-I share insights on systems programming, web development, and the art of writing maintainable code that scales.
+Author of **[Rust Web Development](https://www.manning.com/books/rust-web-development)**.

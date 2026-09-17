@@ -7,7 +7,7 @@ layout: base
     <div class="hero-content">
       <div class="hero-text">
         <h1>{{ site.name }}</h1>
-        <p class="hero-subtitle">Software Engineer & Author</p>
+        <p class="hero-subtitle">Staff Software Engineer &amp; Author</p>
         <div class="hero-description">
           {{ content | safe }}
         </div>
@@ -66,7 +66,6 @@ layout: base
   <div class="container">
     <div class="section-header">
       <h2 class="section-title">Recent Posts</h2>
-      <p class="section-subtitle">Thoughts on Rust, web development, and software engineering</p>
     </div>
     <div class="posts-grid">
     {% set recentPosts = collections.posts | head(-3) | reverse %}
