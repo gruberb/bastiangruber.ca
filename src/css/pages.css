@@ -1,0 +1,73 @@
+/* Brings the older page-specific stylesheets (about, projects, talks) in line with
+   the new type scale without rewriting them: lighter hero titles on the grid band. */
+
+.talks-hero,
+.projects-hero,
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  /* Break out of the page container so the divider spans the viewport like other heroes. */
+  margin: 0 calc(50% - 50vw) 1rem;
+  border-bottom: 1px solid var(--line);
+  background: none;
+}
+
+.talks-hero::before,
+.projects-hero::before,
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  background-position: center top;
+  mask-image: radial-gradient(ellipse 70% 90% at 50% 40%, #000 20%, transparent 75%);
+}
+
+.talks-hero > *,
+.projects-hero > *,
+.about-hero > * {
+  position: relative;
+}
+
+.talks-hero__title,
+.projects-hero__title,
+.about-hero__title {
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.talks-hero__description,
+.projects-hero__description,
+.about-hero__description {
+  font-size: 1.125rem;
+}
+
+.not-found {
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.not-found h1 {
+  font-family: var(--mono);
+  font-size: 5rem;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.not-found p {
+  color: var(--text-2);
+  font-size: 1.25rem;
+}
+
+.not-found a {
+  border-bottom: 1px solid var(--accent-line);
+  color: var(--accent);
+}

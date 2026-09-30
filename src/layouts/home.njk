@@ -1,80 +1,79 @@
 ---
 layout: base
+fullBleed: true
 ---
-
-<section class="hero grid-background">
-  <div class="container">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>{{ site.name }}</h1>
-        <p class="hero-subtitle">Staff Software Engineer &amp; Author</p>
-        <div class="hero-description">
-          {{ content | safe }}
+<section class="gridhero home-hero">
+  <div class="wrap home-hero__grid">
+    <div>
+      <span class="chip">Staff Software Engineer · Mozilla</span>
+      <h1>{{ site.name }}</h1>
+      <div class="lede">{{ content | safe }}</div>
+      <dl class="facts">
+        <div>
+          <dt class="mono-label">Book</dt>
+          <dd><a href="https://rustwebdevelopment.com" target="_blank" rel="noopener">Rust Web Development</a><span class="sep">·</span>Manning, 2nd ed. in progress</dd>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="code-window">
-          <div class="window-header">
-            <div class="window-dot dot-red"></div>
-            <div class="window-dot dot-yellow"></div>
-            <div class="window-dot dot-green"></div>
-          </div>
-          <div class="code-display">
-            <div class="code-line">
-              <span class="line-number">1</span>
-              <span class="code-content"><span class="rust-keyword">use</span> <span class="rust-type">axum</span>::{response::Json, routing::get, Router};</span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">2</span>
-              <span class="code-content"></span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">3</span>
-              <span class="code-content"><span class="rust-keyword">async fn</span> <span class="rust-type">hello</span>() -> Json&lt;&amp;'static str&gt; {</span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">4</span>
-              <span class="code-content">&nbsp;&nbsp;&nbsp;&nbsp;Json(<span class="rust-string">"Building with Rust!"</span>)</span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">5</span>
-              <span class="code-content">}</span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">6</span>
-              <span class="code-content"></span>
-            </div>
-            <div class="code-line">
-              <span class="line-number">7</span>
-              <span class="code-content"><span class="rust-comment">// "Building with Rust!" 🦀</span></span>
-            </div>
-          </div>
+        <div>
+          <dt class="mono-label">Find me</dt>
+          <dd>
+            {%- for item in site.socialLinks %}{% if item.text != "Book" %}
+            {%- if not loop.first %}<span class="sep">·</span>{% endif -%}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.text }}</a>
+            {%- endif %}{% endfor -%}
+          </dd>
         </div>
-      </div>
+        <div>
+          <dt class="mono-label">Résumé</dt>
+          <dd><a href="{{ '/cv/' | url }}">View CV</a></dd>
+        </div>
+      </dl>
     </div>
-    <div class="cta-buttons">
-        <a href="{{ '/blog/' | url }}" class="btn btn-secondary">Blog</a>
-        <a href="{{ '/talks/' | url }}" class="btn btn-secondary">Talks & Interviews</a>
-        <a href="{{ '/projects/' | url }}" class="btn btn-secondary">Side Projects</a>
-        <a href="{{ '/about/' | url }}" class="btn btn-secondary">About Me</a>
-        <a href="{{ '/cv/' | url }}" class="btn btn-secondary">CV</a>
-        <a href="https://rustwebdevelopment.com" class="btn btn-secondary" target="_blank" rel="noopener">My Book →</a>
+
+    <div class="codecard" aria-hidden="true">
+      <div class="codecard__head"><span class="mono-label">src/main.rs</span><span class="mono-label">Rust</span></div>
+      <pre class="codecard__code"><span class="ln">1</span><span class="k">use</span> axum::{response::<span class="t">Json</span>, routing::get, <span class="t">Router</span>};
+<span class="ln">2</span>
+<span class="ln">3</span><span class="k">async fn</span> <span class="f">hello</span>() -&gt; <span class="t">Json</span>&lt;&amp;<span class="k">'static</span> <span class="t">str</span>&gt; {
+<span class="ln">4</span>    <span class="t">Json</span>(<span class="s">"Building with Rust!"</span>)
+<span class="ln">5</span>}
+<span class="ln">6</span>
+<span class="ln">7</span><span class="c">// "Building with Rust!" 🦀</span></pre>
     </div>
   </div>
 </section>
-<section class="recent-posts">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Recent Posts</h2>
-    </div>
-    <div class="posts-grid">
-    {% set recentPosts = collections.posts | head(-3) | reverse %}
-    {% for post in recentPosts %}
-      {% include "post-card.njk" %}
-    {% endfor %}
-    </div>
-    <div style="text-align: center; margin-top: 2rem;">
-      <a class="all-posts-link" href="{{ '/blog/' | url }}">View All Posts →</a>
-    </div>
+
+<section class="wrap section">
+  <div class="section__head">
+    <h2>Recent writing</h2>
+    <a href="{{ '/blog/' | url }}">All posts →</a>
+  </div>
+  <div class="rows">
+    {%- for post in collections.posts | head(-4) | reverse %}
+    {% include "post-row.njk" %}
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="wrap section section--flush">
+  <div class="section__head"><h2>Beyond the blog</h2></div>
+  <div class="tiles">
+    <a class="tile" href="{{ '/talks/' | url }}">
+      <span class="mono-label">Talks &amp; Interviews</span>
+      <h3>Speaking</h3>
+      <p>Podcasts, videos and conference talks about Rust, web development and freelancing.</p>
+      <span class="tile__go">View talks →</span>
+    </a>
+    <a class="tile" href="{{ '/projects/' | url }}">
+      <span class="mono-label">Side Projects</span>
+      <h3>Tools I built for myself</h3>
+      <p>Brag Frog, WorkLedger, When Should I Go To The Beach? and other small, focused apps.</p>
+      <span class="tile__go">View projects →</span>
+    </a>
+    <a class="tile" href="https://rustwebdevelopment.com" target="_blank" rel="noopener">
+      <span class="mono-label">Book</span>
+      <h3>Rust Web Development</h3>
+      <p>Building production web services in Rust, published by Manning.</p>
+      <span class="tile__go">rustwebdevelopment.com ↗</span>
+    </a>
   </div>
 </section>

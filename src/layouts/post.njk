@@ -1,46 +1,84 @@
 ---
 layout: base.njk
+fullBleed: true
 ---
+{%- set doc = content | outline -%}
+{%- set topic = (tags | pageTags) | first -%}
+{%- set olderPost = collections.posts | getPreviousCollectionItem(page) -%}
+{%- set newerPost = collections.posts | getNextCollectionItem(page) -%}
 
 <article class="post">
-  <header class="post__header">
-    <h1>{{ title }}</h1>
-    <div class="post__details">
-      <time datetime="{{ page.date | htmlDateString }}">
-        {{ page.date | readableDate }}
-      </time>
-      <span> | </span>
-      <span>{{ content | readingTime }} read</span>
+  <header class="gridhero">
+    <div class="post-grid post-hero">
+      <div class="post-grid__main">
+        <div class="kicker">
+          {%- if topic %}<a class="chip" href="{{ ('/tags/' + topic + '/') | url }}">{{ topic }}</a>{% endif %}
+        </div>
+        <h1>{{ title }}</h1>
+        {%- if description %}
+        <p class="lede">{{ description }}</p>
+        {%- endif %}
+      </div>
     </div>
   </header>
 
-  <main class="post__content">
-    {{ content | safe }}
-  </main>
+  <dl class="meta">
+    <div class="meta__row"><div class="post-grid">
+      <dt class="mono-label">Published</dt>
+      <dd><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></dd>
+    </div></div>
+    <div class="meta__row"><div class="post-grid">
+      <dt class="mono-label">Reading</dt>
+      <dd>{{ content | readingTime }} · {{ content | wordCount }} words</dd>
+    </div></div>
+  </dl>
 
-  <aside class="post__aside">
+  <div class="post-grid post-body">
+    <div class="post-grid__main">
+      {%- if doc.toc.length %}
+      <details class="toc-inline">
+        <summary><span class="mono-label">Contents</span></summary>
+        <ol>
+          {%- for item in doc.toc %}
+          <li class="toc__item--d{{ item.depth }}"><a href="#{{ item.id }}">{{ item.text | safe }}</a></li>
+          {%- endfor %}
+        </ol>
+      </details>
+      {%- endif %}
 
-    <nav class="post__pagination">
-      {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-      {%- if nextPost %}
+      <div class="prose">
+        {{ doc.html | safe }}
+      </div>
 
-        <a href="{{ nextPost.url | url }}">
-          <span>←</span>
-          <span>{{ nextPost.data.title }}</span>
-        </a>
+      <nav class="pager" aria-label="More posts">
+        {%- if olderPost %}
+        <a href="{{ olderPost.url | url }}"><span class="mono-label">← Older</span><span>{{ olderPost.data.title }}</span></a>
+        {%- else %}
+        <a href="{{ '/blog/' | url }}"><span class="mono-label">Index</span><span>All posts</span></a>
+        {%- endif %}
+        {%- if newerPost %}
+        <a href="{{ newerPost.url | url }}"><span class="mono-label">Newer →</span><span>{{ newerPost.data.title }}</span></a>
+        {%- else %}
+        <a href="{{ '/blog/' | url }}"><span class="mono-label">Index</span><span>All posts →</span></a>
+        {%- endif %}
+      </nav>
+    </div>
 
-      {% endif %}
-
-      {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-      {%- if previousPost %}
-
-        <a href="{{ previousPost.url | url }}">
-          <span>{{ previousPost.data.title }}</span>
-          <span>→</span>
-        </a>
-
-      {% endif %}
-    </nav>
-  </aside>
-
+    {%- if doc.toc.length %}
+    <aside class="post-grid__side">
+      <nav class="toc" id="toc" aria-label="Table of contents">
+        <span class="mono-label">Contents</span>
+        <ol>
+          {%- for item in doc.toc %}
+          <li class="toc__item--d{{ item.depth }}"><a href="#{{ item.id }}">{{ item.text | safe }}</a></li>
+          {%- endfor %}
+        </ol>
+        <div class="toc__foot">
+          <a href="#main">↑ Back to top</a>
+          <a href="{{ '/feed.xml' | url }}">RSS feed ↗</a>
+        </div>
+      </nav>
+    </aside>
+    {%- endif %}
+  </div>
 </article>

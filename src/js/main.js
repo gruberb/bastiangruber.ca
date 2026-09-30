@@ -1,364 +1,151 @@
-// Mobile Navigation JavaScript
-class MobileNavigation {
-  constructor() {
-    this.mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    this.mobileNav = document.getElementById('mobileNav');
-    this.body = document.body;
-    this.isOpen = false;
+function setupThemeToggle() {
+  const button = document.getElementById('theme-toggle');
+  if (!button) return;
 
-    this.init();
-  }
-
-  init() {
-    if (!this.mobileMenuBtn || !this.mobileNav) {
-      return;
+  const root = document.documentElement;
+  button.addEventListener('click', () => {
+    const isDark = root.dataset.theme
+      ? root.dataset.theme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.dataset.theme = isDark ? 'light' : 'dark';
+    try {
+      localStorage.setItem('theme', root.dataset.theme);
+    } catch (_) {
+      // Storage can be blocked (private mode); the toggle still works for this page.
     }
-
-    // Add event listeners
-    this.mobileMenuBtn.addEventListener('click', (e) => this.toggleMenu(e));
-
-    // Close button in mobile menu
-    const mobileNavClose = document.getElementById('mobileNavClose');
-    if (mobileNavClose) {
-      mobileNavClose.addEventListener('click', () => this.closeMenu());
-    }
-
-    // Close menu when clicking on nav links
-    const mobileNavLinks = this.mobileNav.querySelectorAll('a');
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', () => this.closeMenu());
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.isOpen) {
-        this.closeMenu();
-      }
-    });
-
-    // Close menu when clicking outside content area
-    this.mobileNav.addEventListener('click', (e) => {
-      if (e.target === this.mobileNav) {
-        this.closeMenu();
-      }
-    });
-
-    // Handle window resize
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 768 && this.isOpen) {
-        this.closeMenu();
-      }
-    });
-  }
-
-  toggleMenu(e) {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if (this.isOpen) {
-      this.closeMenu();
-    } else {
-      this.openMenu();
-    }
-  }
-
-  openMenu() {
-    this.isOpen = true;
-    this.mobileMenuBtn.classList.add('active');
-    this.mobileNav.classList.add('active');
-    this.body.classList.add('mobile-menu-open');
-    document.documentElement.classList.add('mobile-menu-open');
-  }
-
-  closeMenu() {
-    this.isOpen = false;
-    this.mobileMenuBtn.classList.remove('active');
-    this.mobileNav.classList.remove('active');
-    this.body.classList.remove('mobile-menu-open');
-    document.documentElement.classList.remove('mobile-menu-open');
-  }
+  });
 }
 
-// Reading Progress Bar
-class ReadingProgress {
-  constructor() {
-    this.progressBar = document.getElementById('reading-progress-bar');
-    this.init();
-  }
+function setupMobileNav() {
+  const button = document.getElementById('menubtn');
+  const nav = document.getElementById('nav');
+  if (!button || !nav) return;
 
-  init() {
-    if (!this.progressBar || !document.body.classList.contains('post-page')) {
-      return;
-    }
+  const setOpen = (open) => {
+    nav.classList.toggle('open', open);
+    button.setAttribute('aria-expanded', String(open));
+  };
 
-    window.addEventListener('scroll', () => this.updateProgress());
-    window.addEventListener('resize', () => this.updateProgress());
-  }
-
-  updateProgress() {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-
-    this.progressBar.style.width = Math.min(scrolled, 100) + '%';
-  }
+  button.addEventListener('click', () => setOpen(!nav.classList.contains('open')));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') setOpen(false);
+  });
 }
 
-// Table of Contents
-class TableOfContents {
-  constructor() {
-    this.tocContainer = document.getElementById('table-of-contents');
-    this.tocList = document.getElementById('toc-list');
-    this.tocToggle = document.getElementById('toc-toggle');
-    this.headings = [];
-    this.currentActive = null;
-    this.isMobileOpen = false;
-    this.isScrolling = false; // Prevent multiple rapid clicks
+function setupReadingProgress() {
+  const bar = document.getElementById('reading-progress');
+  if (!bar) return;
 
-    this.init();
-  }
-
-  init() {
-    if (!this.tocContainer || !document.body.classList.contains('post-page')) {
-      return;
-    }
-
-    this.generateTOC();
-    this.setupCollapse();
-    this.setupScrollSpy();
-    this.setupMobileToggle();
-  }
-
-  setupCollapse() {
-    const h3 = this.tocContainer.querySelector('h3');
-    if (!h3) return;
-
-    // Wrap h3 in a clickable header with a chevron button
-    const header = document.createElement('div');
-    header.classList.add('toc-header');
-    h3.parentNode.insertBefore(header, h3);
-    header.appendChild(h3);
-
-    const btn = document.createElement('button');
-    btn.classList.add('toc-collapse-btn');
-    btn.setAttribute('aria-label', 'Toggle table of contents');
-    btn.innerHTML = '<svg viewBox="0 0 24 24"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6z"/></svg>';
-    header.appendChild(btn);
-
-    header.addEventListener('click', () => {
-      this.tocContainer.classList.toggle('collapsed');
-    });
-  }
-
-  generateTOC() {
-    // Find all h1, h2 and h3 elements in the main content
-    const headings = document.querySelectorAll('.main h1, .main h2, .main h3');
-
-    if (headings.length === 0) {
-      this.tocContainer.style.display = 'none';
-      if (this.tocToggle) this.tocToggle.style.display = 'none';
-      return;
-    }
-
-    headings.forEach((heading, index) => {
-      // Add ID if it doesn't exist
-      if (!heading.id) {
-        heading.id = `heading-${index}`;
-      }
-
-      this.headings.push({
-        element: heading,
-        id: heading.id,
-        text: heading.textContent,
-        level: heading.tagName.toLowerCase()
-      });
-
-      // Create TOC entry
-      const li = document.createElement('li');
-      li.classList.add('toc-item', `toc-${heading.tagName.toLowerCase()}`);
-
-      const link = document.createElement('a');
-      link.classList.add('toc-link', `toc-${heading.tagName.toLowerCase()}`);
-      link.href = `#${heading.id}`;
-      link.textContent = heading.textContent;
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-
-        // Prevent multiple rapid clicks
-        if (this.isScrolling) return;
-
-        this.isScrolling = true;
-        this.scrollToHeading(heading);
-
-        // Close mobile TOC after navigation
-        if (window.innerWidth < 1200) {
-          this.closeMobileTOC();
-        }
-
-        // Reset scrolling flag after animation
-        setTimeout(() => {
-          this.isScrolling = false;
-        }, 800);
-      });
-
-      li.appendChild(link);
-      this.tocList.appendChild(li);
-    });
-  }
-
-  setupMobileToggle() {
-    if (!this.tocToggle) return;
-
-    this.tocToggle.addEventListener('click', () => {
-      this.toggleMobileTOC();
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && this.isMobileOpen) {
-        this.closeMobileTOC();
-      }
-    });
-
-    // Close when clicking outside on mobile
-    document.addEventListener('click', (e) => {
-      if (this.isMobileOpen &&
-        !this.tocContainer.contains(e.target) &&
-        !this.tocToggle.contains(e.target)) {
-        this.closeMobileTOC();
-      }
-    });
-  }
-
-  toggleMobileTOC() {
-    if (this.isMobileOpen) {
-      this.closeMobileTOC();
-    } else {
-      this.openMobileTOC();
-    }
-  }
-
-  openMobileTOC() {
-    this.isMobileOpen = true;
-    this.tocContainer.classList.add('open');
-    this.tocToggle.classList.add('open');
-  }
-
-  closeMobileTOC() {
-    this.isMobileOpen = false;
-    this.tocContainer.classList.remove('open');
-    this.tocToggle.classList.remove('open');
-  }
-
-  scrollToHeading(heading) {
-    // Use a more precise calculation
-    const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-    const progressBarHeight = 4; // Reading progress bar height
-    const extraOffset = 20; // Additional breathing room
-    const totalOffset = headerHeight + progressBarHeight + extraOffset;
-
-    const elementPosition = heading.offsetTop;
-    const targetPosition = elementPosition - totalOffset;
-
-    window.scrollTo({
-      top: Math.max(0, targetPosition),
-      behavior: 'smooth'
-    });
-
-    // Force update active state after scroll completes
-    setTimeout(() => {
-      this.setActiveHeading(heading.id);
-    }, 300);
-  }
-
-  setupScrollSpy() {
-    if (this.headings.length === 0) return;
-
-    // Use scroll-based detection instead of intersection observer for more accuracy
-    let ticking = false;
-
-    const updateActiveHeading = () => {
-      const scrollTop = window.pageYOffset;
-      const headerHeight = document.querySelector('.header')?.offsetHeight || 0;
-      const offset = headerHeight + 50; // Account for header + some breathing room
-
-      // Find the heading that's currently visible
-      let activeHeading = null;
-
-      for (let i = this.headings.length - 1; i >= 0; i--) {
-        const heading = this.headings[i];
-        const headingTop = heading.element.offsetTop;
-
-        if (scrollTop + offset >= headingTop) {
-          activeHeading = heading.id;
-          break;
-        }
-      }
-
-      // If we're at the very top, activate the first heading
-      if (!activeHeading && scrollTop < 100) {
-        activeHeading = this.headings[0]?.id;
-      }
-
-      if (activeHeading) {
-        this.setActiveHeading(activeHeading);
-      }
-
-      ticking = false;
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(updateActiveHeading);
-        ticking = true;
-      }
-    };
-
-    window.addEventListener('scroll', onScroll);
-
-    // Initial call
-    updateActiveHeading();
-  }
-
-  setActiveHeading(id) {
-    // Remove active class from current active link
-    if (this.currentActive) {
-      this.currentActive.classList.remove('active');
-    }
-
-    // Add active class to new active link
-    const newActive = this.tocList.querySelector(`a[href="#${id}"]`);
-    if (newActive) {
-      newActive.classList.add('active');
-      this.currentActive = newActive;
-    }
-  }
+  const update = () => {
+    const doc = document.documentElement;
+    const max = doc.scrollHeight - doc.clientHeight;
+    bar.style.width = `${max > 0 ? Math.min(100, (doc.scrollTop / max) * 100) : 0}%`;
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 }
 
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-  new MobileNavigation();
-  new ReadingProgress();
-  new TableOfContents();
-});
+// Highlights the section currently at the top of the viewport in the sidebar.
+function setupScrollSpy() {
+  const links = [...document.querySelectorAll('#toc li a')];
+  if (links.length === 0) return;
 
-// Smooth scrolling for anchor links
-document.addEventListener('DOMContentLoaded', () => {
-  const anchorLinks = document.querySelectorAll('a[href^="#"]');
+  const headings = links.map((a) => document.getElementById(a.hash.slice(1)));
+  const offset = 120;
+  let ticking = false;
 
-  anchorLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href === '#') return;
+  const update = () => {
+    ticking = false;
+    let active = 0;
+    headings.forEach((h, i) => {
+      if (h && h.getBoundingClientRect().top < offset) active = i;
+    });
+    // A short final section can never scroll up to the offset line, so once the page
+    // bottoms out, the last heading is the one being read.
+    const doc = document.documentElement;
+    if (doc.scrollTop + doc.clientHeight >= doc.scrollHeight - 2) {
+      active = headings.length - 1;
+    }
+    links.forEach((a, i) => a.classList.toggle('active', i === active));
+  };
 
-      const target = document.querySelector(href);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+  }, { passive: true });
+  update();
+}
+
+function setupCopyButtons() {
+  document.querySelectorAll('.codeblock .copybtn').forEach((button) => {
+    // Promise chain instead of async/await: preset-env would need regenerator-runtime.
+    button.addEventListener('click', () => {
+      const code = button.closest('.codeblock').querySelector('pre code, pre');
+      navigator.clipboard.writeText(code.innerText)
+        .then(() => { button.textContent = 'Copied'; })
+        .catch(() => { button.textContent = 'Failed'; })
+        .then(() => setTimeout(() => { button.textContent = 'Copy'; }, 2000));
     });
   });
+}
+
+// Blog index: filter rows by free text and topic. The server renders every post, so
+// without JS the controls stay hidden and the full list is still there.
+function setupPostFilter() {
+  const input = document.getElementById('post-filter');
+  const filters = document.getElementById('topic-filters');
+  if (!input || !filters) return;
+
+  document.querySelectorAll('[data-js-only]').forEach((el) => { el.hidden = false; });
+
+  const rows = [...document.querySelectorAll('.blog-index .row')];
+  const groups = [...document.querySelectorAll('.year-group')];
+  const count = document.getElementById('post-count');
+  const empty = document.getElementById('post-empty');
+  let topic = '';
+
+  const apply = () => {
+    const needle = input.value.trim().toLowerCase();
+    let visible = 0;
+    rows.forEach((row) => {
+      const show = (!topic || row.dataset.topic === topic)
+        && (!needle || row.dataset.search.includes(needle));
+      row.hidden = !show;
+      if (show) visible += 1;
+    });
+    groups.forEach((g) => { g.hidden = !g.querySelector('.row:not([hidden])'); });
+    count.textContent = `Posts: ${visible}`;
+    empty.hidden = visible > 0;
+  };
+
+  input.addEventListener('input', apply);
+  filters.addEventListener('click', (e) => {
+    const button = e.target.closest('.filter');
+    if (!button) return;
+    topic = button.dataset.topic;
+    filters.querySelectorAll('.filter').forEach((b) => {
+      b.setAttribute('aria-pressed', String(b === button));
+    });
+    apply();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+    if (e.key === '/' && !typing) {
+      e.preventDefault();
+      input.focus();
+    }
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  setupThemeToggle();
+  setupMobileNav();
+  setupReadingProgress();
+  setupScrollSpy();
+  setupCopyButtons();
+  setupPostFilter();
 });

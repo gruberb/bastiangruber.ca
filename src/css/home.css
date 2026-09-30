@@ -1,0 +1,232 @@
+.home-hero {
+  padding: 5rem 0 4.5rem;
+}
+
+.home-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+}
+
+/* Grid items default to min-width: auto; without this the code card's long lines
+   widen the column past the viewport on phones instead of scrolling inside the card. */
+.home-hero__grid > * {
+  min-width: 0;
+}
+
+.home-hero h1 {
+  margin: 0.9rem 0 1.25rem;
+  font-size: 3.5rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.home-hero .lede {
+  max-width: 32rem;
+  color: var(--text-body);
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+
+.home-hero .lede strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.facts {
+  max-width: 32rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--line);
+}
+
+.facts > div {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.9375rem;
+}
+
+.facts dt {
+  padding-top: 0.2rem;
+}
+
+/* Flex so the link list wraps: the minified HTML has no spaces between the links. */
+.facts dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+.facts dd a {
+  border-bottom: 1px solid var(--accent-line);
+}
+
+.facts dd a:hover {
+  color: var(--accent);
+}
+
+.facts .sep {
+  margin: 0 0.35rem;
+  color: var(--text-3);
+}
+
+/* The code card stays dark in both themes. */
+.codecard {
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: #1c1917;
+}
+
+:root[data-theme="dark"] .codecard {
+  background: #0b0a0a;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .codecard {
+    background: #0b0a0a;
+  }
+}
+
+.codecard__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.55rem 0.9rem;
+  border-bottom: 1px solid rgb(255 255 255 / 0.08);
+}
+
+.codecard__head .mono-label {
+  color: #8a837d;
+}
+
+.codecard__code {
+  overflow-x: auto;
+  padding: 1.1rem 0.9rem 1.3rem;
+  color: #e7e5e4;
+  font-family: var(--mono);
+  font-size: 0.8125rem;
+  line-height: 1.75;
+}
+
+.codecard .ln { display: inline-block; width: 1.75rem; color: #57524d; user-select: none; }
+.codecard .k { color: #f0a15a; }
+.codecard .t { color: #9ecbff; }
+.codecard .s { color: #b5d88a; }
+.codecard .f { color: #e6d38a; }
+.codecard .c { color: #6f6964; font-style: italic; }
+
+.section {
+  padding: 4rem 1.5rem;
+}
+
+.section--flush {
+  padding-top: 0;
+}
+
+.section__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.section__head h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+}
+
+.section__head a {
+  color: var(--text-2);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section__head a:hover {
+  color: var(--accent);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.tile {
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition: border-color 0.15s;
+}
+
+.tile:hover {
+  border-color: var(--line-strong);
+}
+
+.tile:hover .tile__go {
+  color: var(--accent);
+}
+
+.tile h3 {
+  font-size: 1.0625rem;
+}
+
+.tile p {
+  flex: 1;
+  color: var(--text-2);
+  font-size: 0.9rem;
+}
+
+.tile__go {
+  color: var(--text-3);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 860px) {
+  .home-hero__grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .home-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .tiles {
+    grid-template-columns: 1fr;
+  }
+
+  .tile {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .home-hero {
+    padding-top: 3rem;
+  }
+
+  .facts > div {
+    grid-template-columns: 5.5rem 1fr;
+  }
+
+  .section {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

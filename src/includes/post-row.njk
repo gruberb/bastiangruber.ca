@@ -1,0 +1,11 @@
+{%- set topic = (post.data.tags | pageTags) | first -%}
+{%- set summary = post.data.description or (post.templateContent | excerpt) -%}
+<a class="row" href="{{ post.url | url }}" data-topic="{{ topic }}" data-search="{{ [post.data.title, summary, topic] | join(' ') | lower | escape }}">
+  <time class="row__date" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  <span class="row__main">
+    <span class="row__title">{{ post.data.title }}</span>
+    <span class="row__desc">{{ summary }}</span>
+  </span>
+  <span class="row__tag">{% if topic %}<span class="chip">{{ topic }}</span>{% endif %}</span>
+  <span class="row__arrow" aria-hidden="true">→</span>
+</a>

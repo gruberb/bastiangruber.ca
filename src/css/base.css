@@ -1,0 +1,209 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-padding-top: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  flex: 1;
+  /* clip, not hidden: full-bleed bands can't cause sideways scroll, and sticky still works. */
+  overflow-x: clip;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.25;
+  font-weight: 500;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+strong,
+b {
+  font-weight: 600;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  z-index: 100;
+  padding: 0.5rem 0.75rem;
+  background: var(--text);
+  color: var(--bg);
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: 0.5rem;
+}
+
+/* ---------- Shared primitives ---------- */
+
+.wrap {
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.mono-label {
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.3rem 0.45rem;
+  border: 1px solid var(--accent-line);
+  border-radius: 2px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+a.chip:hover {
+  border-color: var(--accent);
+}
+
+.iconbtn {
+  flex: none;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: var(--surface);
+  color: var(--text-2);
+}
+
+.iconbtn:hover {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.iconbtn svg {
+  width: 15px;
+  height: 15px;
+}
+
+/* Hero band with a faded blueprint grid behind it. */
+.gridhero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+}
+
+.gridhero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  background-position: center top;
+  mask-image: radial-gradient(ellipse 70% 90% at 50% 40%, #000 20%, transparent 75%);
+}
+
+.gridhero > * {
+  position: relative;
+}
+
+.page-hero {
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 2.75rem;
+  font-weight: 400;
+  letter-spacing: -0.025em;
+}
+
+.page-hero p {
+  max-width: 40rem;
+  margin: 0.5rem auto 0;
+  color: var(--text-2);
+}
+
+.page-hero p a:hover {
+  color: var(--accent);
+}
+
+@media (max-width: 680px) {
+  .wrap {
+    padding: 0 1.25rem;
+  }
+
+  .page-hero {
+    padding-top: 3rem;
+  }
+
+  .page-hero h1 {
+    font-size: 2.25rem;
+  }
+}

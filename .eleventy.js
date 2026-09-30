@@ -28,24 +28,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  // Frames fenced code blocks (Prism output, or a bare <pre> for fences without a
+  // language) with a label and copy button. A <pre> with any other class, like the
+  // home code card, is left alone.
   eleventyConfig.addTransform("wrapCodeblocks", (content, outputPath) => {
     if (!outputPath || !outputPath.endsWith(".html")) {
       return content;
     }
 
-    return content.replace(/<pre[\s\S]*?<\/pre>/g, (codeBlock) => {
-      return `
-        <div class="code-block-container">
-          <button class="copy-code-button" aria-label="Copy snippet">
-            <!-- example: Lucide “copy” icon -->
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-          </button>
-      ${codeBlock}
-    </div>`;
-    });
+    return content.replace(
+      /<pre(?: class="language-([\w-]+)")?>[\s\S]*?<\/pre>/g,
+      (codeBlock, language = "text") => `<div class="codeblock">
+        <div class="codeblock__head">
+          <span class="mono-label">${language}</span>
+          <button class="copybtn" type="button">Copy</button>
+        </div>
+        ${codeBlock}
+      </div>`,
+    );
   });
 
   eleventyConfig.setDataDeepMerge(true);
@@ -58,6 +58,8 @@ module.exports = function (eleventyConfig) {
       ? `<link href="${manifest["main.css"]}" rel="stylesheet" />`
       : "";
   });
+
+  eleventyConfig.addShortcode("year", () => String(new Date().getFullYear()));
 
   eleventyConfig.addShortcode("bundledjs", function () {
     return manifest["main.js"]
@@ -74,6 +76,65 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat(
       "dd LLL yyyy",
     );
+  });
+
+  eleventyConfig.addFilter("year", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, { zone: "utc" }).toFormat("yyyy");
+  });
+
+  // Posts arrive oldest first; the blog index lists newest first, grouped by year.
+  eleventyConfig.addFilter("groupByYear", (posts) => {
+    const groups = new Map();
+    for (const post of [...posts].reverse()) {
+      const year = post.date.getUTCFullYear();
+      if (!groups.has(year)) groups.set(year, []);
+      groups.get(year).push(post);
+    }
+    return [...groups].map(([year, items]) => ({ year, posts: items }));
+  });
+
+  eleventyConfig.addFilter("wordCount", (html) => {
+    return html.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length;
+  });
+
+  // Adds ids and section numbers to h2/h3 and returns the table of contents, so the
+  // outline is rendered at build time and works without JS. The shallowest level
+  // present counts as top level because some posts only use h3.
+  eleventyConfig.addFilter("outline", (html) => {
+    const slugify = eleventyConfig.getFilter("slugify");
+    const headingRe = /<h([23])>([\s\S]*?)<\/h\1>/g;
+    const levels = [...html.matchAll(headingRe)].map((m) => Number(m[1]));
+    if (levels.length === 0) {
+      return { html, toc: [] };
+    }
+
+    const topLevel = Math.min(...levels);
+    const usedIds = new Set();
+    const toc = [];
+    let major = 0;
+    let minor = 0;
+
+    const out = html.replace(headingRe, (_, level, inner) => {
+      const depth = Number(level) - topLevel;
+      if (depth === 0) {
+        major += 1;
+        minor = 0;
+      } else {
+        minor += 1;
+      }
+      const number = depth === 0 ? `${major}.` : `${major}.${minor}`;
+      const text = inner.replace(/<[^>]+>/g, "").trim();
+
+      const baseId = slugify(text) || "section";
+      let id = baseId;
+      for (let n = 2; usedIds.has(id); n += 1) id = `${baseId}-${n}`;
+      usedIds.add(id);
+
+      toc.push({ id, text, depth });
+      return `<h${level} id="${id}"><span class="heading-no" aria-hidden="true">${number}</span>${inner.trim()}<a class="heading-anchor" href="#${id}" aria-label="Link to this section">#</a></h${level}>`;
+    });
+
+    return { html: out, toc };
   });
 
   eleventyConfig.addFilter("htmlDateString", (dateObj) => {

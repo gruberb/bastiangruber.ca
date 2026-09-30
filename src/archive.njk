@@ -1,57 +1,46 @@
 ---
 layout: base.njk
+title: Blog
 permalink: /blog/
+fullBleed: true
 ---
-<section class="projects-hero">
-  <div class="projects-hero__content">
-    <h1 class="projects-hero__title">Blog</h1>
-    <p class="projects-hero__description">
-      Thoughts and in-depth articles about Software Engineering and anything which just comes to my mind.
-    </p>
+<section class="gridhero page-hero">
+  <div class="wrap">
+    <h1>Blog</h1>
+    <p>Thoughts and in-depth articles about Software Engineering and anything which just comes to my mind.</p>
+    <label class="search" data-js-only hidden>
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="7" cy="7" r="5"/><path d="m11 11 3.5 3.5"/></svg>
+      <span class="visually-hidden">Filter posts</span>
+      <input id="post-filter" type="search" placeholder="Filter by title, description or topic" autocomplete="off">
+      <kbd class="kbd">/</kbd>
+    </label>
   </div>
 </section>
 
-<section class="blog-list-section">
-  <div class="blog-list-container">
-    <div class="blog-list">
-      {% set allPosts = collections.posts | reverse %}
-      {% for post in allPosts %}
-        <article class="blog-list-item">
-          <a href="{{ post.url | url }}" class="blog-list-link">
-            <div class="blog-list-date">
-              <time datetime="{{ post.date | htmlDateString }}">
-                {{ post.date | readableDate }}
-              </time>
-            </div>
-            <div class="blog-list-content">
-              <h3 class="blog-list-title">{{ post.data.title }}</h3>
-              {% if post.data.description %}
-                <p class="blog-list-excerpt">{{ post.data.description }}</p>
-              {% else %}
-                <p class="blog-list-excerpt">{{ post.templateContent | excerpt }}</p>
-              {% endif %}
-            </div>
-            <div class="blog-list-meta">
-              {% if post.data.tags %}
-                {% set firstValidTag = '' %}
-                {% for tag in post.data.tags %}
-                  {% if tag != 'posts' and firstValidTag == '' %}
-                    {% set firstValidTag = tag %}
-                  {% endif %}
-                {% endfor %}
-                {% if firstValidTag %}
-                  <span class="blog-list-tag">{{ firstValidTag }}</span>
-                {% endif %}
-              {% endif %}
-            </div>
-            <div class="blog-list-arrow">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </div>
-          </a>
-        </article>
-      {% endfor %}
+<section class="wrap blog-index">
+  <div class="toolbar">
+    <div class="filters" id="topic-filters" data-js-only hidden>
+      <button class="filter" type="button" data-topic="" aria-pressed="true">All</button>
+      {%- for tag in collections.tagList | sort %}
+      <button class="filter" type="button" data-topic="{{ tag }}" aria-pressed="false">{{ tag }}</button>
+      {%- endfor %}
     </div>
+    <span class="mono-label" id="post-count">Posts: {{ collections.posts.length }}</span>
   </div>
+
+  <div class="rows__head" aria-hidden="true">
+    <span class="mono-label">Date</span><span class="mono-label">Title</span><span class="mono-label">Topic</span><span></span>
+  </div>
+
+  {%- for group in collections.posts | groupByYear %}
+  <section class="year-group">
+    <h2 class="year mono-label">{{ group.year }}</h2>
+    <div class="rows">
+      {%- for post in group.posts %}
+      {% include "post-row.njk" %}
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+  <p class="empty" id="post-empty" hidden>No posts match.</p>
 </section>

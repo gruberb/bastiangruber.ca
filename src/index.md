@@ -5,5 +5,3 @@ description: 'Staff Software Engineer at Mozilla and author of Rust Web Developm
 ---
 
 At **Mozilla**, I build services, APIs and shared Rust components for Firefox. I take technical work from investigation through production, helping teams agree on interfaces and ship reliable integrations.
-
-Author of **[Rust Web Development](https://www.manning.com/books/rust-web-development)**.

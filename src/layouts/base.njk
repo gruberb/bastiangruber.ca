@@ -8,13 +8,14 @@
 
     {% bundledcss %}
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap" rel="stylesheet" />
-    <title>
-      {{  title  | escape }}
-    </title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+      // Runs before first paint so a saved theme choice doesn't flash the default.
+      try { var theme = localStorage.getItem("theme"); if (theme) document.documentElement.dataset.theme = theme; } catch (e) {}
+    </script>
+    <title>{{ title | escape }}</title>
 
     <link rel="icon" type="image/png" href="/images/favicons/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="/images/favicons/favicon.svg" />
@@ -59,175 +60,67 @@
       <script>mermaid.initialize({startOnLoad:true});</script>
     {# Add mermaid -- end #}
   </head>
-  <body{% if layout == 'post' %} class="post-page"{% endif %}>
-    <!-- Reading Progress Bar -->
-    <div class="reading-progress">
-      <div class="reading-progress-bar" id="reading-progress-bar"></div>
-    </div>
+  <body>
+    {%- set isPost = layout == "post" -%}
+    {%- set section = "" -%}
+    {%- for item in site.headerLinks -%}
+      {%- if page.url.startsWith(item.url) -%}{%- set section = item.text -%}{%- endif -%}
+    {%- endfor %}
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="layout-wrapper">
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="brand" href="{{ '/' | url }}">
+          <span class="brand__mark" aria-hidden="true">BG</span>
+          <span class="brand__text">
+            {%- if isPost %}
+            <span class="mono-label">Blog · {{ page.date | readableDate }}</span>
+            <span class="brand__title">{{ title }}</span>
+            {%- elif page.url == "/" %}
+            <span class="mono-label">{{ site.url | replace("https://", "") }}</span>
+            <span class="brand__title">{{ site.name }}</span>
+            {%- else %}
+            <span class="mono-label">{{ site.name }}</span>
+            <span class="brand__title">{{ section or title }}</span>
+            {%- endif %}
+          </span>
+        </a>
 
-      {% if layout != "home" %}<header class="header">
-        <div class="header__content">
-          <h1 class="site-title">
-            <a href={{ "/" | url }}>
-              {{site.name}}
-            </a>
-          </h1>
+        <nav class="nav" id="nav" aria-label="Main">
+          {%- for item in site.headerLinks %}
+          <a href="{{ item.url | url }}"
+            {%- if page.url.startsWith(item.url) %} aria-current="page"{% endif %}
+            {%- if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.text }}</a>
+          {%- endfor %}
+        </nav>
 
-          {% if site.headerLinks %}
-            <!-- Desktop Navigation -->
-            <nav class="nav desktop-nav">
-              <ul class="nav__list">
-                {% for item in site.headerLinks %}
-                  {% set currentAttribute = '' %}
-                  {% set externalAttribute = '' %}
-
-                  {% if item.external %}
-                    {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-                  {% endif %}
-
-                  {% if page.url == item.url or (item.url != '/' and page.url.startsWith(item.url)) %}
-                    {% set currentAttribute = 'aria-current="page"' %}
-                  {% endif %}
-
-                  <li class="nav-item">
-                    <a href="{{ item.url | url }}" {{ currentAttribute | safe }} {{ externalAttribute | safe }}>{{ item.text }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </nav>
-
-            <!-- Mobile Menu Button -->
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle mobile menu">
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-              <span class="hamburger-line"></span>
-            </button>
-
-            <!-- Mobile Navigation -->
-            <nav class="mobile-nav" id="mobileNav">
-              <!-- Close button -->
-              <div class="mobile-nav-close" id="mobileNavClose"></div>
-
-              <ul class="mobile-nav__list">
-                {% for item in site.headerLinks %}
-                  {% set currentAttribute = '' %}
-                  {% set externalAttribute = '' %}
-
-                  {% if item.external %}
-                    {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-                  {% endif %}
-
-                  {% if page.url == item.url or (item.url != '/' and page.url.startsWith(item.url)) %}
-                    {% set currentAttribute = 'aria-current="page"' %}
-                  {% endif %}
-
-                  <li class="mobile-nav-item">
-                    <a href="{{ item.url | url }}" {{ currentAttribute | safe }} {{ externalAttribute | safe }}>{{ item.text }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
-            </nav>
-
-          {% endif %}
-
-        </div>
-      </header>{% endif %}
-
-      <main class="main{% if layout == 'home' %} home-main{% endif %}">
-        {{ content | safe }}
-      </main>
-
-      <footer class="footer">
-        <div class="footer__content">
-
-          <ul class="hero__social-links">
-            {% if site.socialLinks %}
-              {% for item in site.socialLinks %}
-                {% set externalAttribute = '' %}
-
-                {% if item.external %}
-                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-                {% endif %}
-
-                <li>
-                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
-                </li>
-              {% endfor %}
-            {% endif %}
-
-            {% if site.footerLinks %}
-
-              {% for item in site.footerLinks %}
-                {% set externalAttribute = '' %}
-
-                {% if item.external %}
-                  {% set externalAttribute = 'target="_blank" rel="noopener noreferrer"' %}
-                {% endif %}
-
-                <li>
-                  <a href="{{ item.url | url }}" {{ externalAttribute | safe }} >{{ item.text }}</a>
-                </li>
-              {% endfor %}
-            {% endif %}
-          </ul>
-
-          {% if site.showFooterAttribution %}
-
-          {% endif %}
-
-        </div>
+        <button class="iconbtn menubtn" id="menubtn" type="button" aria-label="Menu" aria-controls="nav" aria-expanded="false">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 4h12M2 8h12M2 12h12"/></svg>
+        </button>
+        <button class="iconbtn" id="theme-toggle" type="button" aria-label="Toggle dark mode">
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M8 2a6 6 0 0 0 0 12z" fill="currentColor"/></svg>
+        </button>
       </div>
+      {%- if isPost %}
+      <div class="progress" id="reading-progress"></div>
+      {%- endif %}
+    </header>
 
+    <main id="main" class="{{ 'main--bleed' if fullBleed else 'main--page' }}">
+      {{ content | safe }}
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <span class="mono-label">© {% year %} {{ site.name }}</span>
+        <ul>
+          {%- for item in site.socialLinks.concat(site.footerLinks) %}
+          <li><a href="{{ item.url | url }}"{% if item.external %} target="_blank" rel="noopener noreferrer"{% endif %}>{{ item.text }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
     </footer>
 
-    <!-- Table of Contents Mini Map -->
-    <div class="table-of-contents" id="table-of-contents">
-      <h3>Contents</h3>
-      <ul class="toc-list" id="toc-list">
-        <!-- Dynamically populated -->
-      </ul>
-    </div>
-
-    <!-- Mobile TOC Toggle Button -->
-    <button class="toc-toggle" id="toc-toggle" aria-label="Toggle table of contents">
-      <svg viewBox="0 0 24 24">
-        <path d="M3 9h14V7H3v2zm0 4h14v-2H3v2zm0 4h14v-2H3v2zm16 0h2v-2h-2v2zm0-10v2h2V7h-2zm0 6h2v-2h-2v2z"/>
-      </svg>
-    </button>
-
     {% bundledjs %}
-    <script>
-    const copySvg = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-    </svg>
-    `;
-    const checkSvg = `
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check-icon lucide-check"><path d="M20 6 9 17l-5-5"/></svg>
-    `;
-
-    document.querySelectorAll(".copy-code-button").forEach(btn => {
-        // initialize with copy icon
-        btn.innerHTML = copySvg;
-
-        btn.addEventListener("click", () => {
-            let code = btn.nextElementSibling.querySelector("code");
-            if (!code) return;
-
-            navigator.clipboard.writeText(code.innerText).then(() => {
-            // swap to check
-            btn.innerHTML = checkSvg;
-
-            // back to copy icon after 2s
-            setTimeout(() => {
-                btn.innerHTML = copySvg;
-            }, 2000);
-            });
-        });
-    });
-    </script>
   </body>
 </html>
